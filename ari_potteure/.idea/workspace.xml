@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2336eab7-043e-452a-9f3e-0323a39b18cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ari_potteure.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ari_potteure/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cli.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CliLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoopInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StoryFetch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserInteract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/story/en.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/story/fr.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pieces/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pieces/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pieces/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pieces/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pieces/pieces.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pieces/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../piecesv2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../piecesv2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../piecesv2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../piecesv2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../piecesv2/piecesv2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../piecesv2/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../echec2/src/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../echec2/src/Partie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../echec2/src/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/../echec2/src/Plateau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,18 +31,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Maxime/Downloads/dom-2.3.0-jaxb-1.0.6.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maxime/Downloads/dom-2.3.0-jaxb-1.0.6.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
