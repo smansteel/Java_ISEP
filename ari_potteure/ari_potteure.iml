@@ -16,5 +16,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="openjfx-19.0.2.1_windows-x86_bin-sdk" level="project" />
   </component>
 </module>

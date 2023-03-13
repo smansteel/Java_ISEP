@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+
+<GridPane prefHeight="475.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="info.tardieu.maxime.aripo_teure.HelloController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="335.0" prefWidth="530.0">
+         <children>
+            <Pane prefHeight="390.0" prefWidth="610.0">
+               <children>
+                  <ProgressBar layoutX="88.0" layoutY="14.0" prefHeight="18.0" prefWidth="508.0" progress="0.0" />
+                  <Label layoutX="466.0" layoutY="359.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="116.0" text="ur name &lt;3" />
+                  <ProgressBar layoutX="14.0" layoutY="359.0" prefHeight="18.0" prefWidth="446.0" progress="0.0" />
+                  <Label layoutX="14.0" layoutY="15.0" text="Boss Naem" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="382.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <GridPane prefHeight="105.0" prefWidth="534.0" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" text="Clean Wand" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </Pane>
+            <Pane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" text="manaagement" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </Pane>
+            <Pane GridPane.rowIndex="1">
+               <children>
+                  <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" text="hael (speel)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </Pane>
+            <Pane GridPane.rowIndex="2">
+               <children>
+                  <Button layoutX="35.0" layoutY="3.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" text="eastpak" />
+               </children>
+            </Pane>
+            <Pane>
+               <children>
+                  <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" text="attac (wipon)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </Pane>
+            <Pane GridPane.columnIndex="1">
+               <children>
+                  <Button layoutX="35.0" layoutY="2.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" text="say majic words" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
