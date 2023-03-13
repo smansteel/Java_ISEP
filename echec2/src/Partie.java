@@ -4,11 +4,5 @@ private Plateau plateau;
         this.plateau = new Plateau();
     }
 
-    public boolean check(boolean color){
-        return color;
-    }
 
-    public boolean check_mate(boolean color){
-        return color;
-    }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 public class Plateau {
     private List<Piece> pieces_noires = new ArrayList<>();
     private List<Piece> pieces_blanches = new ArrayList<>();
-
+    private List<List> pieces = new ArrayList<>();
     public void init(){
 
         pieces_blanches.add(new Rook(0, 0, true));
@@ -31,6 +31,17 @@ public class Plateau {
             pieces_blanches.add(new Pawn(i,6, false));
         }
 
+        pieces.add(pieces_blanches);
+        pieces.add(pieces_noires);
+
+    }
+
+    public boolean check(boolean color){
+        return color;
+    }
+
+    public boolean check_mate(boolean color){
+        return color;
     }
 
 }
