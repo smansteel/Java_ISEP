@@ -11,6 +11,7 @@ public class GameLoop  {
     private UserInteract UserInterface;
     private int level;
     private int stage;
+    private String language;
 
     public String getIoMethod() {
         return ioMethod;
@@ -20,28 +21,30 @@ public class GameLoop  {
         this.ioMethod = ioMethod;
     }
 
-    public GameLoop(String ioMethod) throws Exception {
+    public GameLoop(String ioMethod, String language) throws Exception {
         this.ioMethod = ioMethod;
         this.level = 0;
         this.stage = 0;
+        this.language = language;
         if(this.ioMethod.equalsIgnoreCase("gui")){
             this.UserInterface = new Gui();
             UserInterface.start();
         }
         else {
-            this.UserInterface = new Cli();
+            this.UserInterface = new Cli(language);
         }
     }
 
     public void start(){
         this.UserInterface.displayMessage(System.getProperty("os.name"));
+        this.UserInterface.displayStory(this.level, this.stage);
 
     }
 
     public void play() throws ParserConfigurationException, IOException, SAXException {
         while(true){
             StoryFetch doggo = new StoryFetch();
-            doggo.getLevelStage(this.level, this.stage);
+           
         }
     }
 

@@ -2,10 +2,12 @@ package info.tardieu.maxime.aripo_teure;
 import java.io.IOException;
 import java.util.Scanner;
 
+
 public class Main {
 
     public static void startGame(String ioMethod) throws Exception {
-        GameLoop game = new GameLoop(ioMethod);
+        String language = System.getenv("LANG");
+        GameLoop game = new GameLoop(ioMethod, language);
         game.start();
     }
 

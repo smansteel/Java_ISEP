@@ -1,6 +1,6 @@
 <story>
-    <level>
-        <stage>
+    <level id="0">
+        <stage id="1">
             <type>
                 story
             </type>

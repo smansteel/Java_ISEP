@@ -3,15 +3,17 @@
 USE !!player for player name
 
 -->
-<strings>
+<strings  id="en">
     <string>
-        <title>
+        <str_0>
+            Game DESC
+        </str_0>
+        <str_1>
             Introduction
-        </title>
-        <blabla>
+        </str_1>
+        <str_2>
             Welcome player, what is your name ?
-        </blabla>
-
+        </str_2>
     </string>
 
 </strings>
