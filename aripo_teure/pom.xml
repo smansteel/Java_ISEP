@@ -6,7 +6,7 @@
 
     <groupId>info.tardieu.maxime</groupId>
     <artifactId>aripo_teure</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-DEV</version>
     <name>aripo_teure</name>
 
     <properties>
@@ -86,7 +86,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                info.tardieu.maxime.aripo_teure/info.tardieu.maxime.aripo_teure.HelloApplication
+                                info.tardieu.maxime.aripo_teure/info.tardieu.maxime.aripo_teure.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
