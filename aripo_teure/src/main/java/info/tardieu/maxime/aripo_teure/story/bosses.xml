@@ -1,0 +1,47 @@
+<bosses>
+    <boss>
+        <name>str_28</name>
+        <hp>500</hp>
+        <attacks>
+        <attack>
+            <name_ref>
+                str_75
+            </name_ref>
+            <desc_ref>
+                str_76
+            </desc_ref>
+            <damage>
+                30
+            </damage>
+            <likelyhood>0.9</likelyhood>
+        </attack>
+        <attack>
+            <str_ref>
+
+            </str_ref>
+            <damage>
+
+            </damage>
+            <likelyhood>
+
+            </likelyhood>
+
+        </attack>
+        <attack>
+            <str_ref>
+
+            </str_ref>
+            <damage>
+
+            </damage>
+            <likelyhood>
+
+            </likelyhood>
+
+        </attack>
+        </attacks>
+
+
+    </boss>
+
+</bosses>

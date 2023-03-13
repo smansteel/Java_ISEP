@@ -1,18 +1,17 @@
 package info.tardieu.maxime.aripo_teure;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void startGame(String ioMethod){
+    public static void startGame(String ioMethod) throws Exception {
         GameLoop game = new GameLoop(ioMethod);
         game.start();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         if(args[0].equalsIgnoreCase("cli")){
-
-            System.out.println("Cli started");
             startGame("cli");
         }else if(args[0].equalsIgnoreCase("gui")){
             startGame("gui");
@@ -24,10 +23,7 @@ public class Main {
                 startGame("gui");
 
             }else{
-                System.out.println("Starting cli");
                 startGame("cli");
-
-
             }
 
         }

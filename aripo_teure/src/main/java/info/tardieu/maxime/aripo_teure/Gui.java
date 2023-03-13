@@ -8,17 +8,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Gui extends Application implements UserInteract {
+public class Gui implements UserInteract {
+
+    GuiExtended JFXImplementation;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(info.tardieu.maxime.aripo_teure.HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
+    public void start() throws Exception {
+        this.JFXImplementation = new GuiExtended();
+            this.JFXImplementation.demarre();
 
+    }
 
     @Override
     public void displayStory(int level, int stage){

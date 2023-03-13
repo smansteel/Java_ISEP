@@ -28,4 +28,10 @@ public class Cli implements UserInteract{
 
     }
 
+    @Override
+    public void start(){
+        System.out.println("Cli started");
+
+    }
+
 }

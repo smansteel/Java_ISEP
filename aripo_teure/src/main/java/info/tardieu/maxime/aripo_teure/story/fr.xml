@@ -1,9 +1,17 @@
-<level>
-    <story>
-    Say potate
-    </story>
-    <boss>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+USE !!player for player name
 
-    </boss>
+-->
+<strings>
+    <string>
+        <title>
+            Introduction
+        </title>
+        <blabla>
+            Bienvenue joueur, Comment vous appelez vous ?
+        </blabla>
 
-</level>
+    </string>
+
+</strings>

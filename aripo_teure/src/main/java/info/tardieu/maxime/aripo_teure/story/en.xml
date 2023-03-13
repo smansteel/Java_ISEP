@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+USE !!player for player name
+
+-->
+<strings>
+    <string>
+        <title>
+            Introduction
+        </title>
+        <blabla>
+            Welcome player, what is your name ?
+        </blabla>
+
+    </string>
+
+</strings>
