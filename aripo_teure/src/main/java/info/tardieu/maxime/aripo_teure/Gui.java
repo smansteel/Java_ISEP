@@ -20,10 +20,15 @@ public class Gui implements UserInteract {
     }
 
     @Override
-    public void displayStory(int level, int stage){
-        int papte = level;
-        int papte2 = stage;
+    public void displayStory(int id, String language){
 
+    }
+
+    @Override
+    public int getMaxStoryid(){
+        StoryFetch doggo = new StoryFetch();
+
+        return  doggo.getMaxId();
     }
     @Override
     public void displayMessage(String message){

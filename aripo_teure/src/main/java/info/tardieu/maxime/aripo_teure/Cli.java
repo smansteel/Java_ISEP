@@ -9,14 +9,21 @@ public class Cli implements UserInteract{
     }
 
     @Override
-    public void displayStory(int level, int stage){
+    public void displayStory(int id, String language){
         StoryFetch doggo = new StoryFetch();
-        int id = 0;
 
         doggo.getString(id, this.language);
 
 
     }
+
+    @Override
+    public int getMaxStoryid(){
+        StoryFetch doggo = new StoryFetch();
+        return doggo.getMaxId();
+    }
+
+
     @Override
     public void displayMessage(String message){
         System.out.println(message);

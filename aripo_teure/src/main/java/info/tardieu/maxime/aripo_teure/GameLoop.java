@@ -11,6 +11,7 @@ public class GameLoop  {
     private UserInteract UserInterface;
     private int level;
     private int stage;
+    private int storyId;
     private String language;
 
     public String getIoMethod() {
@@ -37,14 +38,20 @@ public class GameLoop  {
 
     public void start(){
         this.UserInterface.displayMessage(System.getProperty("os.name"));
-        this.UserInterface.displayStory(this.level, this.stage);
+        this.UserInterface.displayStory(this.level, this.language);
+        this.play();
 
     }
 
-    public void play() throws ParserConfigurationException, IOException, SAXException {
+
+
+    public void play() {
+        storyId = 1;
         while(true){
-            StoryFetch doggo = new StoryFetch();
-           
+            for(int i = 0; i<= this.UserInterface.getMaxStoryid();i++)
+            this.UserInterface.displayStory(this.storyId+i, this.language);
+
+
         }
     }
 

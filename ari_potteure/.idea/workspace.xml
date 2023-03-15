@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2336eab7-043e-452a-9f3e-0323a39b18cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_19_0_2_1_windows_x86_bin_sdk.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ari_potteure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ari_potteure.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/info/tardieu/maxime/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/info/tardieu/maxime/Gui.java" afterDir="false" />
-    </list>
+    <list default="true" id="2336eab7-043e-452a-9f3e-0323a39b18cb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Maxime/Downloads/openjfx-19.0.2.1_windows-x86_bin-sdk.zip",
+    "last_opened_file_path": "C:/Users/Maxime/Documents/GitHub/Java_ISEP/aripo_teure",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
