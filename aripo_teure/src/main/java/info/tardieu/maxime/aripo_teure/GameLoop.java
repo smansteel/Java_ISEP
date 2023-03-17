@@ -49,7 +49,7 @@ public class GameLoop  {
         storyId = 1;
         while(true){
             for(int i = 0; i<= this.UserInterface.getMaxStoryid();i++)
-            this.UserInterface.displayStory(this.storyId+i, this.language);
+                this.UserInterface.displayStory(this.storyId+i, this.language);
 
 
         }
