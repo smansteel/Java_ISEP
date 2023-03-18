@@ -17,6 +17,7 @@ public class Wizard extends Character{
     private Hashtable<String, Potion> potions;
 
 
+
     @Override
     public void attack(Character target, Spell spell) {
 

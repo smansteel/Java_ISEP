@@ -1,4 +1,8 @@
 package info.tardieu.maxime.aripo_teure.gameClasses.attributes;
 
-public class Pet {
+public enum Pet {
+    OWL,
+    RAT,
+    CAT,
+    TOAD
 }
