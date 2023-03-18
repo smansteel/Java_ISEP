@@ -15,7 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.*;
 public class StoryFetch {
-    //Using w3c DOM Parser to get data from XML files
+    //Using w3c DOM Parser to get data from XML files*
+    private String language;
     private static String getValue(String tag, Element element) {
         NodeList nodes = element.getElementsByTagName(tag).item(0).getChildNodes();
         Node node = (Node) nodes.item(0);
@@ -52,10 +53,12 @@ public class StoryFetch {
         }
     }
 
+    public StoryFetch(String language) {
+        this.language = language;
+    }
+//Read more: https://javarevisited.blogspot.com/2011/12/parse-xml-file-in-java-example-tutorial.html#ixzz7vrn3fCU7
 
-    //Read more: https://javarevisited.blogspot.com/2011/12/parse-xml-file-in-java-example-tutorial.html#ixzz7vrn3fCU7
-
-    public void getString(int id, String language) {
+    public String getString(int id) {
 
         // Instantiate the Factory
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -71,8 +74,8 @@ public class StoryFetch {
 
             doc.getDocumentElement().normalize();
 
-            System.out.println("Root Element :" + doc.getDocumentElement().getNodeName());
-            System.out.println("------");
+            //System.out.println("Root Element :" + doc.getDocumentElement().getNodeName());
+            //System.out.println("------");
 
             // get <staff>
             NodeList list = doc.getElementsByTagName("strings");
@@ -82,20 +85,20 @@ public class StoryFetch {
                 Node node = list.item(temp);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    System.out.println("Title Symbol: " + getValue("str_"+id, element));
-
-
-
+                    //System.out.println("Title Symbol: " + getValue("str_"+id, element));
+                    return getValue("str_"+id, element);
 
                     //Read more: https://javarevisited.blogspot.com/2011/12/parse-xml-file-in-java-example-tutorial.html#ixzz7vrmjBkLZ
 
             }
+
             }
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
 
+        return "String not found";
     }
 }
 

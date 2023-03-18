@@ -5,6 +5,9 @@ USE !!player for player name
 -->
 <strings id="fr">
     <string>
+        <str_0>
+            Introduction
+        </str_0>
         <str_1>
             Introduction
         </str_1>
