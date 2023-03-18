@@ -1,4 +1,6 @@
 package info.tardieu.maxime.aripo_teure.gameClasses.enemy;
 
-public class AbstractEnemy {
+import info.tardieu.maxime.aripo_teure.gameClasses.Character;
+
+public abstract class AbstractEnemy extends Character {
 }

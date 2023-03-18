@@ -5,7 +5,7 @@ public class GameTurn {
     private Level[] levels;
     public void start(String language){
         this.player = new Wizard();
-        this.levels = LevelInfo.getLevels(language);
+        this.levels = StoryBuilder.getLevels(language);
 
 
 

@@ -1,18 +1,19 @@
 package info.tardieu.maxime.aripo_teure.gameClasses.enemy;
 
 import info.tardieu.maxime.aripo_teure.gameClasses.Character;
+import info.tardieu.maxime.aripo_teure.gameClasses.spell.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameClasses.spell.Spell;
 
-public class Boss extends Character {
+public class Boss extends AbstractEnemy {
     private String name;
     private int healthPoints;
     private int manaa;
-    private Spell[] spellsLearned;
-    private Spell[] spellsWeak;
+    private AbstractSpell[] spellsLearned;
+    private AbstractSpell[] spellsWeak;
 
     private int damage;
 
-    public Boss(String name, int healthPoints, int manaa, Spell[] spellsLearned, Spell[] spellsWeak, int damage) {
+    public Boss(String name, int healthPoints, int manaa, AbstractSpell[] spellsLearned, AbstractSpell[] spellsWeak, int damage) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.manaa = manaa;

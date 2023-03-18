@@ -12,7 +12,7 @@ USE !!player for player name
             Introduction
         </str_1>
         <str_2>
-            Welcome player, what is your name ?
+            DEBUG STRING (TO BE REMOVED)
         </str_2>
     </string>
 

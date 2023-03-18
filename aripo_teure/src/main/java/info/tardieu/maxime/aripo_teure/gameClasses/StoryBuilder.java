@@ -1,19 +1,19 @@
 package info.tardieu.maxime.aripo_teure.gameClasses;
 
-import info.tardieu.maxime.aripo_teure.GameLoop;
 import info.tardieu.maxime.aripo_teure.StoryFetch;
+import info.tardieu.maxime.aripo_teure.gameClasses.attributes.SpellEffect;
 import info.tardieu.maxime.aripo_teure.gameClasses.enemy.Boss;
-import info.tardieu.maxime.aripo_teure.gameClasses.enemy.Enemy;
+import info.tardieu.maxime.aripo_teure.gameClasses.spell.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameClasses.spell.Spell;
 
 import java.util.Hashtable;
 
-public class LevelInfo {
+public class StoryBuilder {
 
 
    public static Level[] getLevels(String language) {
        StoryFetch sf = new StoryFetch(language);
-       Hashtable<String,Spell> spells = getSpells(language);
+       Hashtable<String,AbstractSpell> spells = getSpells(language);
 
 
        Level[] story_array = {
@@ -23,10 +23,10 @@ public class LevelInfo {
                                new Boss(sf.getString(1),
                                        100,
                                        10,
-                                       new Spell[]{
+                                       new AbstractSpell[]{
                                                spells.get("papte")
                                        },
-                                       new Spell[]{
+                                       new AbstractSpell[]{
                                                spells.get("papte")
                                        },
                                        5)},
@@ -43,12 +43,21 @@ public class LevelInfo {
         return story_array;
    };
 
-   public static Hashtable<String,Spell> getSpells(String language){
+   public static Hashtable<String, AbstractSpell> getSpells(String language){
        StoryFetch sf = new StoryFetch(language);
-       Hashtable<String,Spell> hash_spells = new Hashtable<String,Spell>();
+       Hashtable<String,AbstractSpell> hash_spells = new Hashtable<String,AbstractSpell>();
 
         String wingardiumLeviosa = sf.getString(2);
-        hash_spells.put(wingardiumLeviosa, new Spell());
+        String wingardiumLeviosaEffect = sf.getString(2);
+        hash_spells.put(wingardiumLeviosa, new Spell(
+                20,
+                100,
+                20,
+                0,
+                wingardiumLeviosa,
+                new SpellEffect(),
+                90
+        ));
 
 
 
