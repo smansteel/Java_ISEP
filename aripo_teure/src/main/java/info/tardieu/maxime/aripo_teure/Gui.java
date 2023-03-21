@@ -26,9 +26,7 @@ public class Gui implements UserInteract {
 
     @Override
     public int getMaxStoryid(){
-        StoryFetch doggo = new StoryFetch();
-
-        return  doggo.getMaxId();
+        return 0 ;
     }
     @Override
     public void displayMessage(String message){

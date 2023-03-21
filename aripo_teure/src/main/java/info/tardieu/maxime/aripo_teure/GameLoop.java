@@ -45,6 +45,7 @@ public class GameLoop  {
     public void start(){
         this.UserInterface.displayMessage(System.getProperty("os.name"));
         this.UserInterface.displayStory(this.level, this.language);
+        this.turn = new GameTurn();
         this.turn.start(this.language, this.UserInterface);
         this.play();
 
