@@ -1,10 +1,9 @@
 package info.tardieu.maxime.aripo_teure;
 
-import info.tardieu.maxime.aripo_teure.gameClasses.GameTurn;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+import info.tardieu.maxime.aripo_teure.ui.Cli;
+import info.tardieu.maxime.aripo_teure.ui.Gui;
+import info.tardieu.maxime.aripo_teure.ui.UserInteract;
+import info.tardieu.maxime.aripo_teure.gameclasses.GameTurn;
 
 public class GameLoop  {
 
@@ -43,8 +42,7 @@ public class GameLoop  {
     }
 
     public void start(){
-        this.UserInterface.displayMessage(System.getProperty("os.name"));
-        this.UserInterface.displayStory(this.level, this.language);
+        this.UserInterface.displayFromXML(this.level);
         this.turn = new GameTurn();
         this.turn.start(this.language, this.UserInterface);
         this.play();

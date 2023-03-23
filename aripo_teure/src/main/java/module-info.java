@@ -9,4 +9,8 @@ module info.tardieu.maxime.aripo_teure {
 
     opens info.tardieu.maxime.aripo_teure to javafx.fxml;
     exports info.tardieu.maxime.aripo_teure;
+    exports info.tardieu.maxime.aripo_teure.iomanagement;
+    opens info.tardieu.maxime.aripo_teure.iomanagement to javafx.fxml;
+    exports info.tardieu.maxime.aripo_teure.ui;
+    opens info.tardieu.maxime.aripo_teure.ui to javafx.fxml;
 }
