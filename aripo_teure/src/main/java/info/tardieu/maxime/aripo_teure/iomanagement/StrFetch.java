@@ -52,7 +52,7 @@ public class StrFetch {
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
 
-                    return getValue("str_"+id, element);
+                    return getValue("str_"+id, element).trim();
 
                     //Read more: https://javarevisited.blogspot.com/2011/12/parse-xml-file-in-java-example-tutorial.html#ixzz7vrmjBkLZ
 

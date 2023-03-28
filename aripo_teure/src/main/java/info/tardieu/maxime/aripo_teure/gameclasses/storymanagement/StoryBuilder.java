@@ -2,6 +2,7 @@ package info.tardieu.maxime.aripo_teure.gameclasses.storymanagement;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.LevelType;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.iomanagement.StrFetch;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
@@ -60,6 +61,7 @@ public class StoryBuilder {
        String wingardiumLeviosaDescription = sf.getString(4);
         String wingardiumLeviosaEffect = sf.getString(5);
         hash_spells.put("wingardium", new Spell(
+                Spells.WINGARDIUM_LEVIOSA,
                 20,
                 100,
                 20,

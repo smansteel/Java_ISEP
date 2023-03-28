@@ -20,10 +20,12 @@ public class GameTurn {
         this.player = new Wizard();
         this.language = language;
         String name = userInterface.askName(this.language);
+
         this.player.setName(name) ;
         this.levels = StoryBuilder.getLevels(language);
         userInterface.displayMessage(name);
         this.userInterface = userInterface;
+        this.userInterface.setPlayerName(name);
         nextTile =0;
 
         this.levels =  StoryBuilder.getLevels(this.language);
@@ -54,14 +56,13 @@ public class GameTurn {
         while(player.isAlive() && enemy.isAlive()){
         boolean foundAction = false;
 
-            Actions action =  this.userInterface.askAction();
+            Object action =  this.userInterface.askAction(player);
 
-
+        /*
         switch (action) {
             case SPELL -> player.castSpell(this.userInterface.askSpell(), enemy);
             case POTION -> player.usePotion(this.userInterface.askPotion());
-        }
-        userInterface.displayMessage("chcoie" + action);
+        }*/
 
         //this.userInterface.askSpell();
         //checkInteraction(player, enemy, );

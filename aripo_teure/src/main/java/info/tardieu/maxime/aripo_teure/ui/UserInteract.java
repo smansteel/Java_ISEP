@@ -7,15 +7,18 @@ import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 
 public interface UserInteract {
     String language = "en";
+    String playername = "Wizard";
     public void displayFromXML(int id);
+    public void setPlayerName(String name);
     public int getMaxStoryid();
     public void displayMessage(String message);
     public void start() throws Exception;
     public String askName(String language);
     public void displaySpells(Wizard wiazrd);
-    public Actions askAction();
-    public AbstractSpell askSpell();
-    public Potion askPotion();
+    public Object askAction(Wizard player);
+    public AbstractSpell askSpell(Wizard player);
+    public Potion askPotion(Wizard player);
+    public void displayInfos(Wizard player);
 
 
 }

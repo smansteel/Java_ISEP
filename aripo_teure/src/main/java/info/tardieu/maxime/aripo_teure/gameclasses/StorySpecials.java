@@ -18,13 +18,13 @@ public class StorySpecials {
     }
 
     public static boolean checkSpellInteraction(Wizard player, Boss enemy, AbstractSpell attack){
-        if ((attack.getName().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
+        if ((attack.getNameStr().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
             return true;
 
-        } else if ((enemy.getType() == Bosses.DEATHEATER)&& (attack.getName().equalsIgnoreCase("Sectumsempra"))) {
+        } else if ((enemy.getType() == Bosses.DEATHEATER)&& (attack.getNameStr().equalsIgnoreCase("Sectumsempra"))) {
             return true;
 
-        }else if ((enemy.getType() == Bosses.VOLDEMORT)&& (attack.getName().equalsIgnoreCase("expelliarmus"))) {
+        }else if ((enemy.getType() == Bosses.VOLDEMORT)&& (attack.getNameStr().equalsIgnoreCase("expelliarmus"))) {
             return true;}
             else{
             return false;
@@ -33,7 +33,7 @@ public class StorySpecials {
     }
 
     public static boolean checkTrollInteraction(Wizard player, AbstractEnemy enemy, AbstractSpell attack){
-        if ((attack.getName().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
+        if ((attack.getNameStr().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
             return true;}
         else {
             return false;

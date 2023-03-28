@@ -25,4 +25,15 @@ public class Wand {
         return this.core;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public Woods getWood() {
+        return wood;
+    }
 }

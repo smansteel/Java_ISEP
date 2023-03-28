@@ -40,6 +40,18 @@ public class Wizard extends Character {
         this.name = name;
     }
 
+    public Pet getPet() {
+        return pet;
+    }
+
+    public Wand getWand() {
+        return wand;
+    }
+
+    public House getHouse() {
+        return house;
+    }
+
     public Hashtable<String, AbstractSpell> getKnownSpells() {
         return knownSpells;
     }

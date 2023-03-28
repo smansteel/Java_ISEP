@@ -23,6 +23,11 @@ public class Gui implements UserInteract {
     }
 
     @Override
+    public void setPlayerName(String name) {
+
+    }
+
+    @Override
     public int getMaxStoryid(){
         return 0 ;
     }
@@ -57,17 +62,22 @@ public class Gui implements UserInteract {
     }
 
     @Override
-    public Actions askAction() {
+    public Object askAction(Wizard player) {
         return null;
     }
 
     @Override
-    public AbstractSpell askSpell() {
+    public AbstractSpell askSpell(Wizard player) {
         return null;
     }
 
     @Override
-    public Potion askPotion() {
+    public Potion askPotion(Wizard player) {
         return null;
+    }
+
+    @Override
+    public void displayInfos(Wizard player) {
+
     }
 }

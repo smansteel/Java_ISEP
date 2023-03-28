@@ -17,9 +17,9 @@ public class Effect {
 
     public void applyEffect(Wizard player, AbstractEnemy enemy, Character[] target)
     {
-        if (this.effect == )
-        if (target.length==1){
+        /*if (this.effect == )
+        if (target.length==1){}*/
 
-        }
+
     }
 }

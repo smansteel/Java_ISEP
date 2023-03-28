@@ -6,7 +6,7 @@ USE !!player for player name
 <strings  id="en">
     <string>
         <str_0>
-            Game DESC
+            !!player
         </str_0>
         <str_1>
             Introduction
@@ -42,7 +42,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number11
         </str_11>
         <str_12>
-            DEBUG STRING (TO BE REMOVED) number12
+            What is your name, Wizard ?
         </str_12>
         <str_13>
             DEBUG STRING (TO BE REMOVED) number13
@@ -78,7 +78,7 @@ USE !!player for player name
             Use a potion
         </str_23>
         <str_24>
-            DEBUG STRING (TO BE REMOVED) number24
+            No spells available
         </str_24>
         <str_25>
             DEBUG STRING (TO BE REMOVED) number25
@@ -96,25 +96,25 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number29
         </str_29>
         <str_30>
-            DEBUG STRING (TO BE REMOVED) number30
+            Player informations :
         </str_30>
         <str_31>
-            DEBUG STRING (TO BE REMOVED) number31
+            Name
         </str_31>
         <str_32>
-            DEBUG STRING (TO BE REMOVED) number32
+            House
         </str_32>
         <str_33>
-            DEBUG STRING (TO BE REMOVED) number33
+            Wand
         </str_33>
         <str_34>
-            DEBUG STRING (TO BE REMOVED) number34
+                Wand size
         </str_34>
         <str_35>
-            DEBUG STRING (TO BE REMOVED) number35
+                Wand wood
         </str_35>
         <str_36>
-            DEBUG STRING (TO BE REMOVED) number36
+                Wand core
         </str_36>
         <str_37>
             DEBUG STRING (TO BE REMOVED) number37
