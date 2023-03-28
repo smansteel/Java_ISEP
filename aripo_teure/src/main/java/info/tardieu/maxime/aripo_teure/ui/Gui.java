@@ -1,6 +1,11 @@
 package info.tardieu.maxime.aripo_teure.ui;
 
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
+import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
+
 public class Gui implements UserInteract {
 
     GuiExtended JFXImplementation;
@@ -44,5 +49,25 @@ public class Gui implements UserInteract {
     @Override
     public String askName(String language) {
         return language;
+    }
+
+    @Override
+    public void displaySpells(Wizard wiazrd) {
+
+    }
+
+    @Override
+    public Actions askAction() {
+        return null;
+    }
+
+    @Override
+    public AbstractSpell askSpell() {
+        return null;
+    }
+
+    @Override
+    public Potion askPotion() {
+        return null;
     }
 }

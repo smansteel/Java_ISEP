@@ -16,14 +16,7 @@ public class Spell extends AbstractSpell {
 
 
     public Spell(int hitProbability, int damageWeak, int damage, int damageRange, String name, String description, Effect effect, int effectProbability) {
-        this.hitProbability = hitProbability;
-        this.damageWeak = damageWeak;
-        this.damage = damage;
-        this.damageRange = damageRange;
-        this.name = name;
-        this.description = description;
-        this.effect = effect;
-        this.effectProbability = effectProbability;
+        super(hitProbability, damageWeak, damage, damageRange, name, description, effect, effectProbability);
     }
 
 }

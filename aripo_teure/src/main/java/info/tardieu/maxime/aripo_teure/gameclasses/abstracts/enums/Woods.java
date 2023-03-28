@@ -1,4 +1,4 @@
-package info.tardieu.maxime.aripo_teure.gameclasses.wand;
+package info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums;
 
 import java.util.Random;
 

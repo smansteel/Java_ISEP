@@ -12,4 +12,8 @@ public class ForbiddenSpell extends AbstractSpell {
     private String description; // its description
     private Effect effect; // its effect
     private int effectProbability;
+
+    public ForbiddenSpell(int hitProbability, int damageWeak, int damage, int damageRange, String name, String description, Effect effect, int effectProbability) {
+        super(hitProbability, damageWeak, damage, damageRange, name, description, effect, effectProbability);
+    }
 }

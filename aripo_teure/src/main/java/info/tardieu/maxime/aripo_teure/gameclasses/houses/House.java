@@ -1,5 +1,7 @@
 package info.tardieu.maxime.aripo_teure.gameclasses.houses;
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
+
 public class House {
     private HouseList houseIn;
 

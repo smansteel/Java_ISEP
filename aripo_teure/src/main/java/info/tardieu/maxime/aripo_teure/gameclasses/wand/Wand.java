@@ -1,5 +1,8 @@
 package info.tardieu.maxime.aripo_teure.gameclasses.wand;
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Core;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Woods;
+
 import java.util.Random;
 
 public class Wand {
@@ -17,6 +20,9 @@ public class Wand {
         this.core = Core.randomCore();
         this.size = new Random().nextInt(89+1) +10;
         this.wood = Woods.randomWood();
+    }
+    public Core getCore(){
+        return this.core;
     }
 
 }

@@ -1,4 +1,4 @@
-package info.tardieu.maxime.aripo_teure.gameclasses.houses;
+package info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums;
 
 public enum HouseList {
     Gryffindor,

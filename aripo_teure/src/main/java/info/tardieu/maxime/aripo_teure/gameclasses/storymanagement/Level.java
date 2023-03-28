@@ -1,6 +1,7 @@
 package info.tardieu.maxime.aripo_teure.gameclasses.storymanagement;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.LevelType;
 
 public class Level {
     private Character[] enemies;
@@ -29,5 +30,17 @@ public class Level {
     }
     public String getStartString(){
         return this.startString;
+    }
+
+    public Character[] getEnemies() {
+        return enemies;
+    }
+
+    public String getWinString() {
+        return winString;
+    }
+
+    public String getLossString() {
+        return lossString;
     }
 }

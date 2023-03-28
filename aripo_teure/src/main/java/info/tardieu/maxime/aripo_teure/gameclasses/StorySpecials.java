@@ -1,0 +1,42 @@
+package info.tardieu.maxime.aripo_teure.gameclasses;
+
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Core;
+import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
+
+public class StorySpecials {
+    public static boolean checkInteraction(Wizard player, Boss enemy, AbstractSpell attack){
+        if ((player.getWandCore() == Core.PHOENIX_FEATHER) && (enemy.getType() == Bosses.VOLDEMORT)){
+            return true;
+
+        }else{
+            return false;
+        }
+    }
+
+    public static boolean checkSpellInteraction(Wizard player, Boss enemy, AbstractSpell attack){
+        if ((attack.getName().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
+            return true;
+
+        } else if ((enemy.getType() == Bosses.DEATHEATER)&& (attack.getName().equalsIgnoreCase("Sectumsempra"))) {
+            return true;
+
+        }else if ((enemy.getType() == Bosses.VOLDEMORT)&& (attack.getName().equalsIgnoreCase("expelliarmus"))) {
+            return true;}
+            else{
+            return false;
+
+        }
+    }
+
+    public static boolean checkTrollInteraction(Wizard player, AbstractEnemy enemy, AbstractSpell attack){
+        if ((attack.getName().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
+            return true;}
+        else {
+            return false;
+        }
+    }
+}

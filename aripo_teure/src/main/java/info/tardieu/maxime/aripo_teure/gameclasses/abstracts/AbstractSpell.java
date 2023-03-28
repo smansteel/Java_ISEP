@@ -11,4 +11,47 @@ public abstract class AbstractSpell {
     private String description; // its description
     private Effect effect; // its effect
     private int effectProbability;
+
+    public AbstractSpell(int hitProbability, int damageWeak, int damage, int damageRange, String name, String description, Effect effect, int effectProbability) {
+        this.hitProbability = hitProbability;
+        this.damageWeak = damageWeak;
+        this.damage = damage;
+        this.damageRange = damageRange;
+        this.name = name;
+        this.description = description;
+        this.effect = effect;
+        this.effectProbability = effectProbability;
+    }
+
+    public int getHitProbability() {
+        return hitProbability;
+    }
+
+    public int getDamageWeak() {
+        return damageWeak;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public int getDamageRange() {
+        return damageRange;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Effect getEffect() {
+        return effect;
+    }
+
+    public int getEffectProbability() {
+        return effectProbability;
+    }
+
+    public String getName(){
+        return this.name;
+    }
 }

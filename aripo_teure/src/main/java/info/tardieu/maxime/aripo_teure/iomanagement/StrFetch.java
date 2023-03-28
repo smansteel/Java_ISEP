@@ -22,35 +22,6 @@ public class StrFetch {
         return node.getNodeValue();
     }
 
-    public int getMaxId(){
-
-        // Instantiate the Factory
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-
-        try {
-
-            dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-
-            // parse XML file
-            DocumentBuilder db = dbf.newDocumentBuilder();
-
-            Document doc = db.parse(new File("src/main/java/info/tardieu/maxime/aripo_teure/story/en.xml"));
-
-            doc.getDocumentElement().normalize();
-
-            System.out.println("Root Element :" + doc.getDocumentElement().getNodeName());
-            System.out.println("------");
-
-            // get <staff>
-            NodeList list = doc.getElementsByTagName("strings");
-
-            return list.getLength();
-
-        } catch (ParserConfigurationException | SAXException | IOException e) {
-            e.printStackTrace();
-            return 0;
-        }
-    }
 
     public StrFetch(String language) {
         this.language = language;
@@ -66,17 +37,13 @@ public class StrFetch {
 
             dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 
-            // parse XML file
             DocumentBuilder db = dbf.newDocumentBuilder();
 
             Document doc = db.parse(new File("src/main/java/info/tardieu/maxime/aripo_teure/story/" + language + ".xml"));
 
             doc.getDocumentElement().normalize();
 
-            //System.out.println("Root Element :" + doc.getDocumentElement().getNodeName());
-            //System.out.println("------");
 
-            // get <staff>
             NodeList list = doc.getElementsByTagName("strings");
 
             for (int temp = 0; temp < list.getLength(); temp++) {
@@ -84,7 +51,7 @@ public class StrFetch {
                 Node node = list.item(temp);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    //System.out.println("Title Symbol: " + getValue("str_"+id, element));
+
                     return getValue("str_"+id, element);
 
                     //Read more: https://javarevisited.blogspot.com/2011/12/parse-xml-file-in-java-example-tutorial.html#ixzz7vrmjBkLZ
@@ -92,6 +59,7 @@ public class StrFetch {
             }
 
             }
+
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
