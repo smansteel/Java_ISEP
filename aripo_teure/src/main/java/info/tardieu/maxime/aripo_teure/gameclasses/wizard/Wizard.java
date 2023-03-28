@@ -3,6 +3,7 @@ package info.tardieu.maxime.aripo_teure.gameclasses.wizard;
 import info.tardieu.maxime.aripo_teure.gameclasses.StorySpecials;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
 import info.tardieu.maxime.aripo_teure.gameclasses.houses.House;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Pet;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
@@ -26,6 +27,15 @@ public class Wizard extends Character {
     private Hashtable<String, Potion> potions;
 
 
+    public Wizard( ) {
+        this.pet = Pet.randomPet();
+        this.wand = new Wand("");
+        this.house = new House();
+        this.name = name;
+    }
+    public void setWandName(String wandName){
+        wand.setName(wandName);
+    }
 
     @Override
     public void attack(Character target, Spell spell) {

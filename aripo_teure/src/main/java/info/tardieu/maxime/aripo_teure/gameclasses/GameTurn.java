@@ -15,15 +15,17 @@ public class GameTurn {
     private String language;
     private UserInteract userInterface;
     private int nextTile;
+    private boolean lastRoundPlayed;
     private Level[] levels;
     public void start(String language, UserInteract userInterface){
         this.player = new Wizard();
         this.language = language;
         String name = userInterface.askName(this.language);
-
+        String wandName = userInterface.askStringXML(13);
+        this.player.setWandName(wandName);
         this.player.setName(name) ;
         this.levels = StoryBuilder.getLevels(language);
-        userInterface.displayMessage(name);
+        //userInterface.displayMessage(name);
         this.userInterface = userInterface;
         this.userInterface.setPlayerName(name);
         nextTile =0;
@@ -35,9 +37,10 @@ public class GameTurn {
 
     }
     public void next(){
+        userInterface.clrScrn();
         switch(this.levels[nextTile].getLevelType()) {
             case BOSS_FIGHT:
-                    userInterface.displayMessage(this.levels[nextTile].getStartString());
+                    userInterface.decorate(this.levels[nextTile].getStartString());
                 bossFight(this.player, (Boss) this.levels[nextTile].getEnemies()[0]);
 
                 break;
@@ -57,7 +60,17 @@ public class GameTurn {
         boolean foundAction = false;
 
             Object action =  this.userInterface.askAction(player);
+            if (action == null){
+                lastRoundPlayed = false;
+            }else{
+                lastRoundPlayed = true;
+            }
 
+
+            if (lastRoundPlayed){
+                //enemy.attack(player);
+                userInterface.displayMessage("Bouhou t ataké");
+            }
         /*
         switch (action) {
             case SPELL -> player.castSpell(this.userInterface.askSpell(), enemy);

@@ -19,6 +19,9 @@ public interface UserInteract {
     public AbstractSpell askSpell(Wizard player);
     public Potion askPotion(Wizard player);
     public void displayInfos(Wizard player);
+    public void decorate(String message);
+    public void clrScrn();
+    public String askStringXML(int question);
 
 
 }

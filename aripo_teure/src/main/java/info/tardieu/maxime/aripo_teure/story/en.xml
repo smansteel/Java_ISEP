@@ -42,10 +42,10 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number11
         </str_11>
         <str_12>
-            What is your name, Wizard ?
+            What is your name, Wizard?
         </str_12>
         <str_13>
-            DEBUG STRING (TO BE REMOVED) number13
+            What do you want to name your wand?
         </str_13>
         <str_14>
             DEBUG STRING (TO BE REMOVED) number14
@@ -81,7 +81,7 @@ USE !!player for player name
             No spells available
         </str_24>
         <str_25>
-            DEBUG STRING (TO BE REMOVED) number25
+            Display Wizard stats
         </str_25>
         <str_26>
             DEBUG STRING (TO BE REMOVED) number26
@@ -96,7 +96,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number29
         </str_29>
         <str_30>
-            Player informations :
+            Player informations:
         </str_30>
         <str_31>
             Name

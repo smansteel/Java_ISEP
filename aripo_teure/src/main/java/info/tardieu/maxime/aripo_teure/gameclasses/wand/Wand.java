@@ -36,4 +36,8 @@ public class Wand {
     public Woods getWood() {
         return wood;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

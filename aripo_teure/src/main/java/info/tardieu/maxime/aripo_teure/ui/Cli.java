@@ -115,13 +115,16 @@ public class Cli implements UserInteract {
 
     @Override
     public Object askAction(Wizard player) {
-        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23)});
+        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25)});
         //displayMessage(String.valueOf(choice));
         switch (choice)
         {
             case 0: return askSpell(player);
 
             case 1: return Actions.POTION;
+
+            case 2: displayInfos(player);
+                return null;
 
             default:
                 return Actions.FAIL;
@@ -169,23 +172,25 @@ public class Cli implements UserInteract {
 
     @Override
     public void displayInfos(Wizard player) {
+        msgNNL("\n\n");
         displayMessage(fetcher.getString(30));
+        msgNNL("\t");
         displayMessage(fetcher.getString(31)+  " : " + player.getName());
-        displayMessage(fetcher.getString(32)+  " : " + player.getHouse());
+        msgNNL("\t");
+        displayMessage(fetcher.getString(32)+  " : " + player.getHouse().getHouseIn());
+        msgNNL("\t");
         displayMessage(fetcher.getString(33)+  " : " + player.getWand().getName());
+        msgNNL("\t\t");
         displayMessage(fetcher.getString(34)+  " : " + player.getWand().getSize() + " cm");
+        msgNNL("\t\t");
         displayMessage(fetcher.getString(35)+  " : " + player.getWand().getWood().toString());
+        msgNNL("\t\t");
         displayMessage(fetcher.getString(36)+  " : " + player.getWand().getCore().toString());
+        msgNNL("\n\n");
 
     }
 
-    public void decorate(String message){
-        int length = message.length()+8;
-        displayMessage("=".repeat(length));
-        displayMessage("\t"+message);
-        displayMessage("=".repeat(length));
 
-    }
     public void msgNNL(String message){
         System.out.print(message);
     }
@@ -196,6 +201,25 @@ public class Cli implements UserInteract {
         msgNNL("\t");
         displayMessage(message);
         displayMessage("=".repeat(length));
+        msgNNL("\n\n");
 
+    }
+    public void decorate(String message){
+        int length = message.length()+8;
+        displayMessage("=".repeat(length));
+        msgNNL("\t");
+        displayMessage(message);
+        displayMessage("=".repeat(length));
+        msgNNL("\n\n");
+
+    }
+    public void clrScrn(){
+        msgNNL("\n\n\n\n\n\n\n\n\n\n\n\n");
+    }
+
+    @Override
+    public String askStringXML(int question) {
+        displayFromXML(question);
+        return awaitAnswer();
     }
 }

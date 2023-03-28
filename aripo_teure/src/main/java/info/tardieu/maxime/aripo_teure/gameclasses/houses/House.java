@@ -13,4 +13,8 @@ public class House {
     public void setHouseIn(HouseList houseIn) {
         this.houseIn = houseIn;
     }
+
+    public House() {
+        this.houseIn = HouseList.randomHouse();
+    }
 }

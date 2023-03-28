@@ -80,4 +80,19 @@ public class Gui implements UserInteract {
     public void displayInfos(Wizard player) {
 
     }
+
+    @Override
+    public void decorate(String message) {
+
+    }
+
+    @Override
+    public void clrScrn() {
+
+    }
+
+    @Override
+    public String askStringXML(int question) {
+        return null;
+    }
 }
