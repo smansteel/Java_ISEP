@@ -1,6 +1,7 @@
 Java Repository for all II.1102 Module. <br>
 
 HarryPotter@home is in subfolder aripo_teure <br>
+
 &nbsp;&nbsp;Build and run instructions : <br>
 &nbsp;&nbsp;&nbsp;&nbsp;go to `Java_ISEP/aripo_teure`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Use maven to build : `mvn clean package`<br>
@@ -14,5 +15,6 @@ HarryPotter@home is in subfolder aripo_teure <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`en` for English<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`fr` for French<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nothing more for now :/<br>
+
 
 No other projects are finished for now in this directory
