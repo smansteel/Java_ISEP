@@ -87,6 +87,11 @@ public class Gui implements UserInteract {
     }
 
     @Override
+    public void decorateXML(int id) {
+
+    }
+
+    @Override
     public void clrScrn() {
 
     }

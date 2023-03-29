@@ -20,6 +20,7 @@ public interface UserInteract {
     public Potion askPotion(Wizard player);
     public void displayInfos(Wizard player);
     public void decorate(String message);
+    public void decorateXML(int id);
     public void clrScrn();
     public String askStringXML(int question);
 

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+USE !!player for player name
+-->
+
+<strings id="fr">
+    <string>
+        <str_0>
+            Bienvenue dans Harry Potter à la maison, un projet Java pour l'ISEP. Développé par Maxime TARDIEU en 2023.
+        </str_0>
+        <str_1>
+            Introduction
+        </str_1>
+        <str_2>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 2
+        </str_2>
+        <str_3>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 3
+        </str_3>
+        <str_4>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 4
+        </str_4>
+        <str_5>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 5
+        </str_5>
+        <str_6>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 6
+        </str_6>
+        <str_7>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 7
+        </str_7>
+        <str_8>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 8
+        </str_8>
+        <str_9>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 9
+        </str_9>
+        <str_10>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 10
+        </str_10>
+        <str_11>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 11
+        </str_11>
+        <str_12>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 12
+        </str_12>
+        <str_13>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 13
+        </str_13>
+        <str_14>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 14
+        </str_14>
+        <str_15>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 15
+        </str_15>
+        <str_16>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 16
+        </str_16>
+        <str_17>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 17
+        </str_17>
+        <str_18>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 18
+        </str_18>
+        <str_19>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 19
+        </str_19>
+        <str_20>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 20
+        </str_20>
+        <str_21>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 21
+        </str_21>
+        <str_22>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 22
+        </str_22>
+        <str_23>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 23
+        </str_23>
+        <str_24>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 24
+        </str_24>
+        <str_25>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 25
+        </str_25>
+        <str_26>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 26
+        </str_26>
+        <str_27>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 27
+        </str_27>
+        <str_28>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 28
+        </str_28>
+        <str_29>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 29
+        </str_29>
+        <str_30>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 30
+        </str_30>
+        <str_31>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 31
+        </str_31>
+        <str_32>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 32
+        </str_32>
+        <str_33>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 33
+        </str_33>
+        <str_34>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 34
+        </str_34>
+        <str_35>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 35
+        </str_35>
+        <str_36>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 36
+        </str_36>
+        <str_37>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 37
+        </str_37>
+        <str_38>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 38
+        </str_38>
+        <str_39>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 39
+        </str_39>
+        <str_40>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 40
+        </str_40>
+        <str_41>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 41
+        </str_41>
+        <str_42>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 42
+        </str_42>
+        <str_43>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 43
+        </str_43>
+        <str_44>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 44
+        </str_44>
+        <str_45>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 45
+        </str_45>
+        <str_46>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 46
+        </str_46>
+        <str_47>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 47
+        </str_47>
+        <str_48>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 48
+        </str_48>
+        <str_49>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 49
+        </str_49>
+        <str_50>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 50
+        </str_50>
+        <str_51>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 51
+        </str_51>
+        <str_52>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 52
+        </str_52>
+        <str_53>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 53
+        </str_53>
+        <str_54>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 54
+        </str_54>
+        <str_55>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 55
+        </str_55>
+        <str_56>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 56
+        </str_56>
+        <str_57>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 57
+        </str_57>
+        <str_58>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 58
+        </str_58>
+        <str_59>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 59
+        </str_59>
+        <str_60>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 60
+        </str_60>
+        <str_61>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 61
+        </str_61>
+        <str_62>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 62
+        </str_62>
+        <str_63>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 63
+        </str_63>
+        <str_64>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 64
+        </str_64>
+        <str_65>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 65
+        </str_65>
+        <str_66>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 66
+        </str_66>
+        <str_67>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 67
+        </str_67>
+        <str_68>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 68
+        </str_68>
+        <str_69>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 69
+        </str_69>
+        <str_70>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 70
+        </str_70>
+        <str_71>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 71
+        </str_71>
+        <str_72>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 72
+        </str_72>
+        <str_73>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 73
+        </str_73>
+        <str_74>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 74
+        </str_74>
+        <str_75>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 75
+        </str_75>
+        <str_76>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 76
+        </str_76>
+        <str_77>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 77
+        </str_77>
+        <str_78>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 78
+        </str_78>
+        <str_79>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 79
+        </str_79>
+        <str_80>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 80
+        </str_80>
+        <str_81>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 81
+        </str_81>
+        <str_82>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 82
+        </str_82>
+        <str_83>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 83
+        </str_83>
+        <str_84>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 84
+        </str_84>
+        <str_85>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 85
+        </str_85>
+        <str_86>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 86
+        </str_86>
+        <str_87>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 87
+        </str_87>
+        <str_88>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 88
+        </str_88>
+        <str_89>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 89
+        </str_89>
+        <str_90>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 90
+        </str_90>
+        <str_91>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 91
+        </str_91>
+        <str_92>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 92
+        </str_92>
+        <str_93>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 93
+        </str_93>
+        <str_94>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 94
+        </str_94>
+        <str_95>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 95
+        </str_95>
+        <str_96>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 96
+        </str_96>
+        <str_97>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 97
+        </str_97>
+        <str_98>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 98
+        </str_98>
+        <str_99>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 99
+        </str_99>
+
+    </string>
+
+</strings>

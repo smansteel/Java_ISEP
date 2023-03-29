@@ -14,6 +14,7 @@
         <junit.version>5.9.1</junit.version>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -99,5 +100,11 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources/story</directory>
+                <targetPath>src/main/resources/story</targetPath>
+            </resource>
+        </resources>
     </build>
 </project>

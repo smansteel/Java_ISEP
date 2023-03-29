@@ -196,7 +196,7 @@ public class Cli implements UserInteract {
     }
     public void decorateXML(int id){
         String message = fetcher.getString(id);
-        int length = message.length()+8;
+        int length = message.length()+16;
         displayMessage("=".repeat(length));
         msgNNL("\t");
         displayMessage(message);
@@ -205,7 +205,7 @@ public class Cli implements UserInteract {
 
     }
     public void decorate(String message){
-        int length = message.length()+8;
+        int length = message.length()+16;
         displayMessage("=".repeat(length));
         msgNNL("\t");
         displayMessage(message);
