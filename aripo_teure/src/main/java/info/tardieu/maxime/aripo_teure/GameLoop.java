@@ -42,22 +42,18 @@ public class GameLoop  {
     }
 
     public void start(){
-        this.UserInterface.displayFromXML(this.level);
+        this.UserInterface.decorateXML(0); //Display message about game infos
         this.turn = new GameTurn();
         this.turn.start(this.language, this.UserInterface);
         this.play();
 
     }
 
-
-
     public void play() {
 
         storyId = 1;
         while(true){
            this.turn.next();
-
-
         }
     }
 

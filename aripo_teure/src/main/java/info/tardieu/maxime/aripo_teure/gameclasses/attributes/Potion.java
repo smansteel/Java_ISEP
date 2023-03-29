@@ -10,4 +10,12 @@ public class Potion {
         this.effect = effect;
         this.name = name;
     }
+
+    public Effect getEffect() {
+        return effect;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

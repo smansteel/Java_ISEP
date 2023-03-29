@@ -3,6 +3,7 @@ package info.tardieu.maxime.aripo_teure.gameclasses.enemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
 import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
 
 public class Boss extends AbstractEnemy {
@@ -11,11 +12,13 @@ public class Boss extends AbstractEnemy {
     private int manaa;
     private AbstractSpell[] spellsLearned;
     private AbstractSpell[] spellsWeak;
+    private Bosses type;
 
     private int damage;
 
-    public Boss(String name, int healthPoints, int manaa, AbstractSpell[] spellsLearned, AbstractSpell[] spellsWeak, int damage) {
+    public Boss(String name, Bosses type, int healthPoints, int manaa, AbstractSpell[] spellsLearned, AbstractSpell[] spellsWeak, int damage) {
         this.name = name;
+        this.type = type;
         this.healthPoints = healthPoints;
         this.manaa = manaa;
         this.spellsLearned = spellsLearned;
@@ -27,4 +30,8 @@ public class Boss extends AbstractEnemy {
     public void attack(Character target, Spell spell) {
 
     }
+    public Bosses getType(){
+        return this.type;
+    }
+
 }

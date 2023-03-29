@@ -8,6 +8,21 @@ public abstract class Character {
     private int manaa ;
     public abstract void attack(Character target, Spell spell) ;
 
+    public boolean isAlive(){
+        if(health<0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public void takeDamage(int damage){
+        health = health - damage;
+    }
+    public void kill(){
+        health = 0;
+    }
+
 
 
 
