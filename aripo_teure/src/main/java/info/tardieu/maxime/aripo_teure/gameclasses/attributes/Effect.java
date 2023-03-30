@@ -20,6 +20,8 @@ public class Effect {
         /*if (this.effect == )
         if (target.length==1){}*/
 
-
+    }
+    public Effects getEffect(){
+        return effect;
     }
 }

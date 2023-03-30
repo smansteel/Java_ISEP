@@ -16,7 +16,7 @@ public interface UserInteract {
     public void start() throws Exception;
     public String askName(String language);
     public void displaySpells(Wizard wiazrd);
-    public Object askAction(Wizard player);
+    public Object askAction(Wizard player, AbstractEnemy[] enemies);
     public AbstractSpell askSpell(Wizard player);
     public Item askPotion(Wizard player);
     public void displayInfos(Wizard player);
@@ -30,6 +30,7 @@ public interface UserInteract {
     public void displayEnemyDamages(AbstractEnemy enemy, int damages);
     public void displayEnemyDeath(AbstractEnemy enemy);
     public void displayPlayerDeath(Wizard player, AbstractEnemy enemy);
+    public boolean askAlliance();
 
 
 }

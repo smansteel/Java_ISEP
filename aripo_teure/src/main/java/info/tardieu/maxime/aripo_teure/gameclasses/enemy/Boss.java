@@ -23,6 +23,10 @@ public class Boss extends AbstractEnemy {
         this.damage = damage;
     }
 
+    public Boss clone(){
+        return new Boss(this.name, this.type, this.health, this.maxHealth, this.manaa, this.spellsLearned, this.spellsWeak, this.damage);
+    }
+
 
     public Bosses getType(){
         return this.type;

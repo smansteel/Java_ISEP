@@ -14,84 +14,136 @@ import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
 
 import java.util.Hashtable;
+import java.util.Objects;
 
 public class StoryBuilder {
+    private static Hashtable<String, Boss> getBosses( StrFetch sf, Hashtable<String,AbstractSpell> spells, Hashtable<String, Item> items){
+        Hashtable<String, Boss> hash_boss = new Hashtable<String, Boss>();
+
+        hash_boss.put("dementor", new Boss(sf.getString(65),
+                Bosses.DEMENTOR,
+                200,
+                200,
+                10,
+                new AbstractSpell[]{ //knownspells
+                        spells.get("papte")
+                },
+                new AbstractSpell[]{ //spells weak to
+                        spells.get("expecto")
+                },
+                5));
+
+
+        hash_boss.put("pettigrow", new Boss(sf.getString(90),
+                Bosses.PETTIGROW,
+                400,
+                400,
+                10,
+                new AbstractSpell[]{ //knownspells
+
+                },
+                new AbstractSpell[]{ //spells weak to
+                        spells.get("expecto")
+                },
+                5));
+
+
+        hash_boss.put("umbridge", new Boss(sf.getString(91),
+                Bosses.UMBRIDGE,
+                400,
+                400,
+                10,
+                new AbstractSpell[]{ //knownspells
+                        spells.get("sectum"), spells.get("protego")
+                },
+                new AbstractSpell[]{ //spells weak to
+
+                },
+                5));
+
+
+        hash_boss.put("deatheater", new Boss(sf.getString(92),
+                Bosses.DEATHEATER,
+                500,
+                500,
+                10,
+                new AbstractSpell[]{ //knownspells
+                        spells.get("sectum")
+                },
+                new AbstractSpell[]{ //spells weak to
+
+                },
+                50));
+
+        hash_boss.put("troll", new Boss(sf.getString(110),
+                Bosses.TROLL,
+                100,
+                100,
+                10,
+                new AbstractSpell[]{
+
+                },
+                new AbstractSpell[]{
+
+                },
+                20));
+
+
+        hash_boss.put("basilisk", new Boss(sf.getString(50),
+                Bosses.BASILISK,
+                200,
+                200,
+                10,
+                new AbstractSpell[]{ //knownspells
+
+                },
+                new AbstractSpell[]{ //spells weak to
+
+                },
+                30));
+
+        hash_boss.put("bellatrix", new Boss(sf.getString(92),
+                Bosses.BELLATRIX,
+                1500,
+                1500,
+                10,
+                new AbstractSpell[]{ //knownspells
+                        spells.get("sectum")
+                },
+                new AbstractSpell[]{ //spells weak to
+
+                },
+                50));
 
 
 
 
-   public static Level[] getLevels(String language) {
+        return hash_boss;
+    }
+
+
+
+    public static Level[] getLevels(String language) {
        StrFetch sf = new StrFetch(language);
        Hashtable<String,AbstractSpell> spells = getSpells(language);
        Hashtable<String, Item> items = getItems(language);
-
-       Boss dementor = new Boss(sf.getString(50),
-               Bosses.DEMENTOR,
-               200,
-               200,
-               10,
-               new AbstractSpell[]{ //knownspells
-                       spells.get("papte")
-               },
-               new AbstractSpell[]{ //spells weak to
-                       spells.get("expecto")
-               },
-               5);
+        Hashtable<String, Boss> bosses = getBosses(sf, spells, items);
 
 
-       Boss pettigrow = new Boss(sf.getString(90),
-               Bosses.PETTIGROW,
-               400,
-               400,
-               10,
-               new AbstractSpell[]{ //knownspells
-
-               },
-               new AbstractSpell[]{ //spells weak to
-                       spells.get("expecto")
-               },
-               5);
 
 
-       Boss umbridge = new Boss(sf.getString(91),
-               Bosses.UMBRIDGE,
-               400,
-               400,
-               10,
-               new AbstractSpell[]{ //knownspells
-                    spells.get("sectum"), spells.get("protego")
-               },
-               new AbstractSpell[]{ //spells weak to
 
-               },
-               5);
-
-       Boss deatheater = new Boss(sf.getString(92),
-               Bosses.DEATHEATER,
-               500,
-               500,
-               10,
-               new AbstractSpell[]{ //knownspells
-                       spells.get("sectum")
-               },
-               new AbstractSpell[]{ //spells weak to
-
-               },
-               50);
-
-       Boss bellatrix = new Boss(sf.getString(92),
-               Bosses.BELLATRIX,
-               1500,
-               1500,
-               10,
-               new AbstractSpell[]{ //knownspells
-                       spells.get("sectum")
-               },
-               new AbstractSpell[]{ //spells weak to
-
-               },
-               50);
-
+       Object[] firstRoomObjects ;
+       if(Objects.equals(System.getenv("env"), "DEBUG")){
+           firstRoomObjects = new Object[]{spells.get("wingardium"),
+                   spells.get("protego"),
+                   spells.get("debug"),
+                   spells.get("imperio")};
+       }       else{
+           firstRoomObjects = new Object[]{spells.get("wingardium"),
+                   spells.get("protego"),
+                   spells.get("imperio")};
+       }
 
        Level[] story_array = {
 
@@ -101,7 +153,8 @@ public class StoryBuilder {
 
                        sf.getString(60), //startString
                        sf.getString(61), //endString
-                       new Object[]{spells.get("wingardium"), spells.get("protego"), spells.get("imperio")}
+
+                       firstRoomObjects
 
 
                ),
@@ -110,24 +163,12 @@ public class StoryBuilder {
                ).fillBoss(
                        new Character[]{},
                        new Boss[]{
-                               new Boss(sf.getString(110),
-                                       Bosses.TROLL,
-                                       100,
-                                       100,
-                                       10,
-                                       new AbstractSpell[]{
-
-                                       },
-                                       new AbstractSpell[]{
-
-                                       },
-                                       20)},
+                               bosses.get("troll").clone()
+                                      },
                        sf.getString(111), //startString
                        sf.getString(112), //winString
                        sf.getString(113), //lossString
                        new Object[]{}
-
-
 
 
                ),
@@ -150,22 +191,20 @@ public class StoryBuilder {
                ).fillBoss(
                        new Character[]{},
                        new Boss[]{
-                               new Boss(sf.getString(50),
-                                       Bosses.BASILISK,
-                                       200,
-                                       200,
-                                       10,
-                                       new AbstractSpell[]{ //knownspells
-
-                                       },
-                                       new AbstractSpell[]{ //spells weak to
-
-                                       },
-                                       30)},
+                               bosses.get("basilisk").clone()},
                        sf.getString(62), //startString
                        sf.getString(63), //winString
                        sf.getString(64), //lossString
                        new Object[]{items.get("fang")}
+
+               ),
+               new Level(
+                       LevelType.DISCOVERY
+               ).fillDisco(
+
+                       sf.getString(71), //startString
+                       sf.getString(72), //endString
+                       new Object[]{spells.get("expecto")}
 
                ),
 
@@ -176,7 +215,7 @@ public class StoryBuilder {
                        LevelType.BOSS_FIGHT
                ).fillBoss(
                        new Character[]{},
-                       new Boss[]{dementor, dementor, dementor
+                       new Boss[]{bosses.get("dementor").clone(), bosses.get("dementor").clone(),bosses.get("dementor").clone()
                        },
                        sf.getString(65), //startString
                        sf.getString(66), //winString
@@ -186,10 +225,20 @@ public class StoryBuilder {
                ),
 
                new Level(
+                       LevelType.DISCOVERY
+               ).fillDisco(
+
+                       sf.getString(71), //startString
+                       sf.getString(72), //endString
+                       new Object[]{spells.get("accio")}
+
+               ),
+
+               new Level(
                        LevelType.BOSS_FIGHT
                ).fillBoss(
                        new Character[]{},
-                       new Boss[]{pettigrow
+                       new Boss[]{bosses.get("pettigrow").clone()
                        },
                        sf.getString(68), //startString
                        sf.getString(69), //winString
@@ -198,10 +247,20 @@ public class StoryBuilder {
 
                ),
                new Level(
+                       LevelType.DISCOVERY
+               ).fillDisco(
+
+                       sf.getString(71), //startString
+                       sf.getString(72), //endString
+                       new Object[]{spells.get("sectum")}
+
+               ),
+
+               new Level(
                        LevelType.BOSS_FIGHT
                ).fillBoss(
                        new Character[]{},
-                       new Boss[]{umbridge
+                       new Boss[]{bosses.get("umbridge").clone()
                        },
                        sf.getString(71), //startString
                        sf.getString(72), //winString
@@ -213,7 +272,7 @@ public class StoryBuilder {
                        LevelType.BOSS_FIGHT
                ).fillBoss(
                        new Character[]{},
-                       new Boss[]{deatheater
+                       new Boss[]{bosses.get("deatheater").clone()
                        },
                        sf.getString(75), //startString
                        sf.getString(76), //winString
@@ -234,7 +293,7 @@ public class StoryBuilder {
                        LevelType.BOSS_FIGHT
                ).fillBoss(
                        new Character[]{},
-                       new Boss[]{bellatrix
+                       new Boss[]{bosses.get("bellatrix").clone()
                        },
                        sf.getString(78), //startString
                        sf.getString(79), //winString
@@ -268,7 +327,7 @@ public class StoryBuilder {
                 0,
                 wingardiumLeviosa,
                 wingardiumLeviosaDescription,
-                null,
+                new Effect(Effects.WINGARDIUM_LEVIOSA),
                 90
         ));
 
@@ -278,12 +337,12 @@ public class StoryBuilder {
        hash_spells.put("expecto", new Spell(
                Spells.EXPECTO_PATRONUM,
                90,
-               200,
+               15,
                5,
                0,
                expectoPatronum,
                expectoPatronumDescription,
-               new Effect(Effects.CONFUSED),
+               new Effect(Effects.EXPECTO_PATRONUM),
                90
        ));
 
@@ -370,6 +429,18 @@ public class StoryBuilder {
                75
        ));
 
+       String debug = "debug";
+       hash_spells.put("debug", new Spell(
+               Spells.DEBUG,
+               100,
+               0,
+               12000,
+               0,
+               debug,
+               "debug",
+               new Effect(),
+               100
+       ));
 
 
        return hash_spells;
@@ -387,7 +458,7 @@ public class StoryBuilder {
                 healPotion
         ));
         String fireworksName = sf.getString(41);
-        hash_potions.put("Fireworks", new Item(
+        hash_potions.put("fireworks", new Item(
                 Effects.FIREWORKED,
                 fireworksName
         ));

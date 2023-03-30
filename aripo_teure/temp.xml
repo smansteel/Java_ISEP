@@ -90,7 +90,7 @@ USE !!player for player name
             Nothing to use in your backpack
         </str_27>
         <str_28>
-            DEBUG STRING (TO BE REMOVED) number28
+            Display fight informations (health and enemies)
         </str_28>
         <str_29>
             DEBUG STRING (TO BE REMOVED) number29
@@ -132,7 +132,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number41
         </str_41>
         <str_42>
-            DEBUG STRING (TO BE REMOVED) number42
+            Basilisk tooth
         </str_42>
         <str_43>
             Gryffindor Sword
@@ -393,7 +393,7 @@ USE !!player for player name
             You killed a
         </str_128>
         <str_129>
-            They had
+            , they had
         </str_129>
         <str_130>
             hp
@@ -408,34 +408,34 @@ USE !!player for player name
             You missed your spell
         </str_133>
         <str_134>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 134
+            You missed your throw
         </str_134>
         <str_135>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 135
+            You pick up a rock from aside the troll, and send it flying towards its head.
         </str_135>
         <str_136>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 136
+            The dementor fled as you used your patronus.
         </str_136>
         <str_137>
             DEBOGGAGE TEXTE (A RETIRER) numéro 137
         </str_137>
         <str_138>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 138
+            Pettigrow is getting closer, you go towards Portkey
         </str_138>
         <str_139>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 139
+            You are from House Slytherin, do you want to make an alliance with the deatheaters ?
         </str_139>
         <str_140>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 140
+            Yes
         </str_140>
         <str_141>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 141
+            No
         </str_141>
         <str_142>
             DEBOGGAGE TEXTE (A RETIRER) numéro 142
         </str_142>
         <str_143>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 143
+            You Allie yourself with the Deatheaters, you are now with Bellatrix Lestrange and Voldemort. Well PLayed
         </str_143>
         <str_144>
             DEBOGGAGE TEXTE (A RETIRER) numéro 144
@@ -462,19 +462,19 @@ USE !!player for player name
             hp
         </str_151>
         <str_152>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 152
+            Fight info : Wizard (You)
         </str_152>
         <str_153>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 153
+            Health
         </str_153>
         <str_154>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 154
+            Maximum Health
         </str_154>
         <str_155>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 155
+            Enemy name
         </str_155>
         <str_156>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 156
+            Enemy Health
         </str_156>
         <str_157>
             DEBOGGAGE TEXTE (A RETIRER) numéro 157

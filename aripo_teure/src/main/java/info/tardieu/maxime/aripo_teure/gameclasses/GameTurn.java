@@ -3,6 +3,7 @@ package info.tardieu.maxime.aripo_teure.gameclasses;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
@@ -22,6 +23,7 @@ public class GameTurn {
     private UserInteract userInterface;
     private int nextTile;
     private boolean lastRoundPlayed;
+    int atkCount;
     private Level[] levels;
     public void start(String language, UserInteract userInterface){
         this.player = new Wizard();
@@ -54,12 +56,12 @@ public class GameTurn {
                 userInterface.decorate(this.levels[nextTile].getStartString());
 
 
-                bossFight(this.player,  this.levels[nextTile]);
+                bossFight();
                 nextTile ++;
 
                 break;
             case FIGHT:
-                userInterface.displayMessage("w");
+
                 userInterface.displayMessage(this.levels[nextTile].getStartString());
                 nextTile ++;
                 break;
@@ -71,7 +73,7 @@ public class GameTurn {
                         player.learn(( AbstractSpell )object);
 
                     } else if (object instanceof Item) {
-                        if(StorySpecials.checkSword((Item)object)){
+                        if(StorySpecials.checkBook((Item)object)){
                             if (player.getHouse().getHouseIn().equals(HouseList.Gryffindor)){
                                 this.userInterface.displayFromXML(59);
                                 player.pickUp( (Item) object);
@@ -99,38 +101,58 @@ public class GameTurn {
         System.exit(0);
     }
 
-    public void bossFight(Wizard player, Level level){
-        AbstractEnemy lastenemy = level.getEnemies()[0];
+    public void bossFight(){
+        AbstractEnemy lastenemy = this.levels[nextTile].getEnemies()[0];
 
-        while(player.isAlive() && level.ennemiesAtLeastOneAlive()){
-        boolean foundAction = false;
+        while(player.isAlive() && this.levels[nextTile].ennemiesAtLeastOneAlive()){
 
-            Object action =  this.userInterface.askAction(player);
+            Object action;
+            if(StorySpecials.checkDeathEaterAlliance(player,this.levels[nextTile].getEnemies()[0] )){
+                if (this.userInterface.askAlliance()){
+                    action = Actions.ALLIANCE;
+                }
+                else{
+                    action = Actions.FAIL;
+                }
+            }else{
+                action =  this.userInterface.askAction(player, this.levels[nextTile].getEnemies());
+            }
+
 
             if (action == Actions.FAIL || action == null){
                 lastRoundPlayed = false;
+            }else if (action == Actions.ALLIANCE){
+                lastRoundPlayed = false;
+
+                this.userInterface.displayFromXML(143);
+                for (AbstractEnemy enemy: this.levels[nextTile].getEnemies()
+                ) {
+                    enemy.kill();
+                }
+                this.endgame();
+
             }else{
                 lastRoundPlayed = true;
             }
 
             if (lastRoundPlayed){
                 if(action instanceof AbstractSpell){
-                    if(useSpell(action, level)){
+                    if(useSpell(action)){
                         continue;
                     }
 
                 } else if (action instanceof Item converted) {
-                    useItem(level, converted);
+                    useItem( converted);
                 }
 
-                if (level.getRoomContent().length>0 ){
-                    getItemsFromRoom(level);
+                if (this.levels[nextTile].getRoomContent().length>0 ){
+                    getItemsFromRoom(this.levels[nextTile]);
                 }
-              clearEnemies(level);
+              attackAndClearEnemies();
             }
         }
-        if(!level.ennemiesAtLeastOneAlive()){
-            this.userInterface.displayMessage(level.getWinString());
+        if(!this.levels[nextTile].ennemiesAtLeastOneAlive()){
+            this.userInterface.displayMessage(this.levels[nextTile].getWinString());
         }
         if(!player.isAlive()){
             this.userInterface.displayPlayerDeath(player, lastenemy);
@@ -138,32 +160,54 @@ public class GameTurn {
     }
 
     private void getItemsFromRoom ( Level room){
-        List<Object> roomContent= Arrays.asList(room.getRoomContent());
-        int dropchances = 10;// outta 100
-        if(random(0,100) <dropchances){
-            Item randomItem = (Item) roomContent.get(random(0, room.getRoomContent().length));
+        ArrayList<Object> roomContent= new ArrayList<>(Arrays.asList(room.getRoomContent()));
+        int dropchances = 100;// outta 100
+        if(random(0,100) <dropchances && roomContent.size()>=1){
+            int randomize = random(0, room.getRoomContent().length-1);
+            Item randomItem = (Item) roomContent.remove(randomize);
+
             player.pickUp(randomItem);
-            roomContent.remove(randomItem);
             room.setRoomContent(roomContent.toArray());
 
         }
 
     }
-    private void clearEnemies(Level level){
+    private void attackAndClearEnemies(){
         List<AbstractEnemy> templist = new ArrayList<>();
-        for (AbstractEnemy enemy: level.getEnnemiesAsList()
+        for (AbstractEnemy enemy: this.levels[nextTile].getEnnemiesAsList()
         ) {
+
             if(enemy.isAlive()){
                 this.userInterface.displayEnemyDamages(enemy, enemy.autoAttack(player));
                 templist.add(enemy);
             }
         }
-        level.setEnnemiesAsList(templist);
+        this.levels[nextTile].setEnnemiesAsList(templist);
     }
 
-    private void useItem(Level level, Item converted ){
-        AbstractEnemy choice = this.userInterface.whichEnemy(level);
-        int damages = player.usePotion(converted);
+    private void useItem(Item converted ){
+
+        int damages;
+        AbstractEnemy choice ;
+        if (this.levels[nextTile].getEnemies().length > 1){
+            choice = this.userInterface.whichEnemy(this.levels[nextTile]);
+        }else{
+             choice = this.levels[nextTile].getEnemies()[0];
+        }
+
+        if(StorySpecials.checkBook(converted) && choice.getType() == Bosses.BASILISK){
+            choice.kill();
+            damages = -2;
+
+        }  else if (StorySpecials.checkFireworks(converted) && choice.getType() == Bosses.UMBRIDGE)  {
+            choice.kill();
+            damages = -2;
+
+
+        }else{
+            damages = player.usePotion(converted);
+        }
+
         if (damages >=0 && choice.isAlive()){
             this.userInterface.displayDamages(damages);
 
@@ -176,18 +220,59 @@ public class GameTurn {
             }
 
         }else if(damages == -1){
-            this.userInterface.displayFromXML(133);
+            this.userInterface.displayFromXML(134);
         }
     }
 
-    private boolean useSpell(Object action, Level level){
+    private boolean useSpell(Object action){
         AbstractSpell converted = (AbstractSpell) action;
-
-        AbstractEnemy choice = this.userInterface.whichEnemy(level);
+        AbstractEnemy choice ;
+        if (this.levels[nextTile].getEnemies().length > 1){
+            choice = this.userInterface.whichEnemy(this.levels[nextTile]);
+        }else{
+            choice = this.levels[nextTile].getEnemies()[0];
+        }
         if(choice == null){
             return true;
         }
-        int damages = player.castSpell(converted, choice);
+        int damages;
+
+        if (StorySpecials.checkTrollInteraction(choice, converted)){
+            this.userInterface.displayFromXML(135);
+            choice.kill();
+            damages = -2;
+
+        }else if (StorySpecials.checkPettigrowInteraction( choice, converted)){
+            System.out.println("in");
+            atkCount++;
+            if(atkCount >3){
+
+                this.userInterface.displayFromXML(137);
+                choice.kill();
+
+                damages = -3;
+
+            }else{
+                this.userInterface.displayFromXML(138);
+                damages= 0;
+            }
+
+
+        }else if (StorySpecials.checkDementorInteraction( choice, converted)){
+            this.userInterface.displayFromXML(136);
+            for (AbstractEnemy enemy: this.levels[nextTile].getEnemies()
+            ) {
+                enemy.kill();
+            }
+
+            damages = -3;
+
+        }else{
+            damages = player.castSpell(converted, choice);
+        }
+
+
+
         if (damages >=0 && choice.isAlive()){
             this.userInterface.displayDamages(damages);
 

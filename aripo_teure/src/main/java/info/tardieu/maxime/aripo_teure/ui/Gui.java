@@ -63,7 +63,7 @@ public class Gui implements UserInteract {
     }
 
     @Override
-    public Object askAction(Wizard player) {
+    public Object askAction(Wizard player, AbstractEnemy[] enemies) {
         return null;
     }
 
@@ -130,5 +130,10 @@ public class Gui implements UserInteract {
     @Override
     public void displayPlayerDeath(Wizard player, AbstractEnemy enemy) {
 
+    }
+
+    @Override
+    public boolean askAlliance() {
+        return false;
     }
 }

@@ -135,14 +135,21 @@ public class Cli implements UserInteract {
     }
 
     @Override
-    public Object askAction(Wizard player) {
-        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25)});
+    public Object askAction(Wizard player, AbstractEnemy[] enemies) {
+        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25), fetcher.getString(28)});
         //displayMessage(String.valueOf(choice));
+        if(System.getenv("env").equals("DEBUG")){
+            displayFight(player, enemies);
+        }
+
         switch (choice)
         {
             case 0: return askSpell(player);
 
             case 1: return askPotion(player);
+
+            case 3: displayFight(player, enemies);
+                return null;
 
             case 2: displayInfos(player);
                 return null;
@@ -151,6 +158,26 @@ public class Cli implements UserInteract {
                 return Actions.FAIL;
 
         }
+    }
+
+    private void displayFight(Wizard player,AbstractEnemy[] enemies){
+        msgNNL("\n\n");
+        displayMessage(fetcher.getString(152));
+        msgNNL("\t");
+        msgNNL(fetcher.getString(153)+  ": " + player.getHealth() +  "/ " + player.getMaxHealth());
+        msgNNL("\n");
+
+        for (AbstractEnemy enemy:enemies
+             ) {
+            displayMessage(fetcher.getString(155)+  ": " + enemy.getName());
+            msgNNL("\t");
+            msgNNL(fetcher.getString(156)+  ": " + enemy.getHealth() + " / " + enemy.getMaxHealth());
+            msgNNL("\n");
+
+        }
+        msgNNL("\n");
+
+
     }
 
     @Override
@@ -242,7 +269,7 @@ public class Cli implements UserInteract {
 
     }
     public void clrScrn(){
-        msgNNL("\n\n\n\n\n\n\n\n\n\n\n\n");
+        msgNNL("\n\n");
     }
 
     @Override
@@ -293,7 +320,8 @@ public class Cli implements UserInteract {
         msgNNL(enemy.getName()+" ");
         msgNNL(fetcher.getString(129)+" ");
         msgNNL(String.valueOf(enemy.getMaxHealth())+" ");
-        displayMessage(fetcher.getString(130));displayMessage("");
+        displayMessage(fetcher.getString(130));
+        displayMessage("");
 
     }
 
@@ -305,5 +333,14 @@ public class Cli implements UserInteract {
         msgNNL(enemy.getName());
         msgNNL(".");
 
+    }
+
+    @Override
+    public boolean askAlliance() {
+        int choice = askChoice(fetcher.getString(139), new String[]{fetcher.getString(140), fetcher.getString(141)});
+        if (choice == 0){
+            return true;
+        }
+        return false;
     }
 }

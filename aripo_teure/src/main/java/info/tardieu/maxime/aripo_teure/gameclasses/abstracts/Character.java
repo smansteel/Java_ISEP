@@ -12,10 +12,10 @@ public abstract class Character {
     }
 
     public boolean isAlive(){
-        if(health<0){
-            return false;
-        }else{
+        if(health>0){
             return true;
+        }else{
+            return false;
         }
     }
 

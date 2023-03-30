@@ -2,17 +2,16 @@ package info.tardieu.maxime.aripo_teure.gameclasses;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.*;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Core;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 
 import java.util.Objects;
 
 public class StorySpecials {
-    public static boolean checkInteraction(Wizard player, Boss enemy, AbstractSpell attack){
-        if ((player.getWandCore() == Core.PHOENIX_FEATHER) && (enemy.getType() == Bosses.VOLDEMORT)){
+    public static boolean checkBellatrixInteraction(Wizard player, Boss enemy){
+        if ((player.getWandCore() == Core.PHOENIX_FEATHER) && (enemy.getType() == Bosses.BELLATRIX)){
             return true;
 
         }else{
@@ -20,31 +19,31 @@ public class StorySpecials {
         }
     }
 
-    public static boolean checkSword(Item sword){
-     return Objects.equals(sword.getName(), "sword") ;
+    public static boolean checkBook(Item item){
+
+        return item.getEffect() == Effects.BOOK_DESTROYER;
     }
 
-    public static boolean checkSpellInteraction(Wizard player, Boss enemy, AbstractSpell attack){
-        if ((attack.getNameStr().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
-            return true;
-
-        } else if ((enemy.getType() == Bosses.DEATHEATER)&& (attack.getNameStr().equalsIgnoreCase("Sectumsempra"))) {
-            return true;
-
-        }else if ((enemy.getType() == Bosses.VOLDEMORT)&& (attack.getNameStr().equalsIgnoreCase("expelliarmus"))) {
-            return true;}
-            else{
-            return false;
-
-        }
+    public static boolean checkFireworks(Item item){
+        return item.getEffect() == Effects.FIREWORKED;
     }
 
-    public static boolean checkTrollInteraction(Wizard player, AbstractEnemy enemy, AbstractSpell attack){
-        if ((attack.getNameStr().equalsIgnoreCase("wingardium")) && (enemy.getType() == Bosses.TROLL)){
-            return true;}
-        else {
-            return false;
 
-        }
+    public static boolean checkTrollInteraction( AbstractEnemy enemy, AbstractSpell attack){
+        return (attack.getName() == Spells.WINGARDIUM_LEVIOSA) && (enemy.getType() == Bosses.TROLL);
     }
+    public static boolean checkPettigrowInteraction( AbstractEnemy enemy, AbstractSpell attack){
+        return (attack.getName() == Spells.ACCIO) && (enemy.getType() == Bosses.PETTIGROW);
+    }
+
+    public static boolean checkDementorInteraction(AbstractEnemy enemy, AbstractSpell attack){
+        return (attack.getName() == Spells.EXPECTO_PATRONUM) && (enemy.getType() == Bosses.DEMENTOR);
+    }
+    public static boolean checkDeathEater(AbstractEnemy enemy, AbstractSpell attack){
+        return (attack.getName() == Spells.SECTUMSEMPRA) && (enemy.getType() == Bosses.DEATHEATER);
+    }
+    public static boolean checkDeathEaterAlliance(Wizard player, AbstractEnemy enemy){
+        return (player.getHouse().getHouseIn() == HouseList.Slytherin) && (enemy.getType() == Bosses.DEATHEATER);
+    }
+
 }

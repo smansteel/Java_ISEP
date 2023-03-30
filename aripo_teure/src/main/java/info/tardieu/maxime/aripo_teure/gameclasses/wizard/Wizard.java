@@ -27,8 +27,15 @@ public class Wizard extends Character {
 
 
     public Wizard( ) {
-        maxHealth = 100;
-        health = 100;
+        if(System.getenv("env").equals("DEBUG")){
+            maxHealth = 100000000;
+            health = 100000000;
+        }else{
+            maxHealth = 100;
+            health = 100;
+        }
+
+
         this.pet = Pet.randomPet();
         this.wand = new Wand("");
         this.house = new House();
@@ -84,15 +91,12 @@ public class Wizard extends Character {
         if(spell.getName() == Spells.PROTEGO){
 
         }
-        if( random100() > spell.getHitProbability()){
+        if( random100() <= spell.getHitProbability()){
             int randomDamages = randomRange100(spell.getDamageRange()/100 * spell.getDamage());
             this.attack(enemy, spell.getDamage()* randomDamages);
             return spell.getDamage()* randomDamages;
         }else{
-            if (StorySpecials.checkTrollInteraction(this, enemy, spell)){
-                enemy.kill();
-                return -2;
-            }
+
             return -1;
         }
 
