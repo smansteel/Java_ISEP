@@ -14,6 +14,8 @@ import info.tardieu.maxime.aripo_teure.iomanagement.StrFetch;
 
 import java.util.*;
 
+import static java.lang.Thread.sleep;
+
 public class Cli implements UserInteract {
     private String language;
     private Scanner scanner;
@@ -67,12 +69,18 @@ public class Cli implements UserInteract {
         return scanner.next();
     }
     public void awaitEnter(){
+        try {
+            scanner.nextLine();
+            sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if(playername== null){
             playername ="Harry Potter";
         }
-        displayMessage(fetcher.getString(26));
-        msgNNL(playername+"@home$ ");
-       scanner.hasNext();
+        msgNNL(fetcher.getString(26));
+        msgNNL(" -->");
+        scanner.nextLine();;
     }
 
     @Override
@@ -132,7 +140,7 @@ public class Cli implements UserInteract {
         {
             case 0: return askSpell(player);
 
-            case 1: return Actions.POTION;
+            case 1: return askPotion(player);
 
             case 2: displayInfos(player);
                 return null;
@@ -166,12 +174,12 @@ public class Cli implements UserInteract {
     @Override
     public Potion askPotion(Wizard player) {
 
-        if(player.getKnownSpells().isEmpty()){
-            displayFromXML(24);
+        if(player.getPotions().isEmpty()){
+            displayFromXML(27);
             return null;
         }else{
-            Potion[] knowSpells = (Potion[]) Collections.list(player.getPotions().elements()).toArray();
-        List<String> strlist = null;
+            Potion[] knowSpells = player.getPotions().values().toArray(new Potion[0]);
+            List<String> strlist = new ArrayList<String>();
         for (Potion potion : knowSpells
         ) {
             strlist.add(potion.getName());

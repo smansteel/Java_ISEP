@@ -57,4 +57,8 @@ public abstract class AbstractSpell {
     public String getNameStr(){
         return this.name_str;
     }
+
+    public Spells getName() {
+        return name;
+    }
 }

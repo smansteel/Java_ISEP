@@ -4,6 +4,7 @@ import info.tardieu.maxime.aripo_teure.gameclasses.StorySpecials;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.gameclasses.houses.House;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Pet;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
@@ -80,6 +81,9 @@ public class Wizard extends Character {
     }
 
     public int castSpell(AbstractSpell spell, AbstractEnemy enemy){
+        if(spell.getName() == Spells.PROTEGO){
+            
+        }
         if( random100() > spell.getHitProbability()){
             int randomDamages = randomRange100(spell.getDamageRange()/100 * spell.getDamage());
             this.attack(enemy, spell.getDamage()* randomDamages);
@@ -97,8 +101,8 @@ public class Wizard extends Character {
 
     }
 
-    public void usePotion(Potion potion){
-
+    public int usePotion(Potion potion){
+        return 0;
     }
 
     public void learn(AbstractSpell spell){

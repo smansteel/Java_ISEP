@@ -116,6 +116,22 @@ public class GameTurn {
 
                 } else if (action instanceof Potion) {
                     Potion converted = (Potion) action;
+                    AbstractEnemy choice = this.userInterface.whichEnemy(level);
+                    int damages = player.usePotion(converted);
+                    if (damages >=0 && choice.isAlive()){
+                        this.userInterface.displayDamages(damages);
+
+                    } else if (damages >=0 && !choice.isAlive()){
+                        this.userInterface.displayEnemyDeath(choice);
+
+                    } else if (damages == -2) {
+                        if (!choice.isAlive()){
+                            this.userInterface.displayEnemyDeath(choice);
+                        }
+
+                    }else if(damages == -1){
+                        this.userInterface.displayFromXML(133);
+                    }
                 }
 
 

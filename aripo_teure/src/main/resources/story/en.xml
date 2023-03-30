@@ -75,7 +75,7 @@ USE !!player for player name
             Use a spell
         </str_22>
         <str_23>
-            Use a potion
+            Use an item
         </str_23>
         <str_24>
             No spells available
@@ -87,7 +87,7 @@ USE !!player for player name
             Press enter to continue
         </str_26>
         <str_27>
-            DEBUG STRING (TO BE REMOVED) number27
+            Nothing to use in your backpack
         </str_27>
         <str_28>
             DEBUG STRING (TO BE REMOVED) number28
@@ -135,7 +135,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number42
         </str_42>
         <str_43>
-            DEBUG STRING (TO BE REMOVED) number43
+            Gryffindor Sword
         </str_43>
         <str_44>
             DEBUG STRING (TO BE REMOVED) number44
