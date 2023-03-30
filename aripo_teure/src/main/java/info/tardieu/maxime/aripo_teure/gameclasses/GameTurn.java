@@ -243,7 +243,7 @@ public class GameTurn {
             damages = -2;
 
         }else if (StorySpecials.checkPettigrowInteraction( choice, converted)){
-            System.out.println("in");
+
             atkCount++;
             if(atkCount >3){
 
@@ -266,6 +266,9 @@ public class GameTurn {
             }
 
             damages = -3;
+
+        }
+
 
         }else{
             damages = player.castSpell(converted, choice);

@@ -99,7 +99,7 @@ public class Cli implements UserInteract {
 
         }
     }
-    private int askChoice(String question, String[] choices){
+    private int askChoice(String question, String[] choices, boolean goBack){
         displayMessage(question);
         int len = choices.length;
         int i;
@@ -109,9 +109,12 @@ public class Cli implements UserInteract {
             displayMessage(message);
 
         }
+        if (goBack)
+        {
+            String message = "\t\t("+i+") "+ fetcher.getString(131);
+            displayMessage(message);
+        }
 
-        String message = "\t\t("+i+") "+ fetcher.getString(131);
-        displayMessage(message);
 
         boolean hasAnswered = false;
         while (!hasAnswered){
@@ -136,7 +139,7 @@ public class Cli implements UserInteract {
 
     @Override
     public Object askAction(Wizard player, AbstractEnemy[] enemies) {
-        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25), fetcher.getString(28)});
+        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25), fetcher.getString(28)}, true);
         //displayMessage(String.valueOf(choice));
         if(System.getenv("env").equals("DEBUG")){
             displayFight(player, enemies);
@@ -195,7 +198,7 @@ public class Cli implements UserInteract {
             strlist.add(spell.getNameStr());
         }
         String[] nameArray= strlist.toArray(new String[0]);
-        int choice = askChoice(fetcher.getString(118), nameArray);
+        int choice = askChoice(fetcher.getString(118), nameArray, true);
             if(choice == nameArray.length){
                 return null;
             }
@@ -217,7 +220,7 @@ public class Cli implements UserInteract {
             strlist.add(item.getName());
         }
         String[] nameArray= strlist.toArray(new String[0]);
-        int choice = askChoice(fetcher.getString(119), nameArray);
+        int choice = askChoice(fetcher.getString(119), nameArray, true);
         if(choice == nameArray.length){
             return null;
         }
@@ -285,7 +288,7 @@ public class Cli implements UserInteract {
              ) {
             question.add( enemy.getName()+ "(" + enemy.getHealth() +fetcher.getString(151)+")");
         }
-        int choice = askChoice(fetcher.getString(150), question.toArray(new String[0]));
+        int choice = askChoice(fetcher.getString(150), question.toArray(new String[0]), true);
         if(choice == level.getEnemies().length){
             return null;
         }
@@ -337,7 +340,7 @@ public class Cli implements UserInteract {
 
     @Override
     public boolean askAlliance() {
-        int choice = askChoice(fetcher.getString(139), new String[]{fetcher.getString(140), fetcher.getString(141)});
+        int choice = askChoice(fetcher.getString(139), new String[]{fetcher.getString(140), fetcher.getString(141)}, false);
         if (choice == 0){
             return true;
         }

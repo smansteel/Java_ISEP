@@ -39,9 +39,7 @@ public class StorySpecials {
     public static boolean checkDementorInteraction(AbstractEnemy enemy, AbstractSpell attack){
         return (attack.getName() == Spells.EXPECTO_PATRONUM) && (enemy.getType() == Bosses.DEMENTOR);
     }
-    public static boolean checkDeathEater(AbstractEnemy enemy, AbstractSpell attack){
-        return (attack.getName() == Spells.SECTUMSEMPRA) && (enemy.getType() == Bosses.DEATHEATER);
-    }
+
     public static boolean checkDeathEaterAlliance(Wizard player, AbstractEnemy enemy){
         return (player.getHouse().getHouseIn() == HouseList.Slytherin) && (enemy.getType() == Bosses.DEATHEATER);
     }

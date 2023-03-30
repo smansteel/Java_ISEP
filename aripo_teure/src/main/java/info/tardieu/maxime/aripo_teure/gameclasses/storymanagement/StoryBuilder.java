@@ -380,7 +380,7 @@ public class StoryBuilder {
                Spells.AVADA_KEDAVRA,
                90,
                600,
-               600,
+               400,
                150,
                avada,
                avadaDesc,
