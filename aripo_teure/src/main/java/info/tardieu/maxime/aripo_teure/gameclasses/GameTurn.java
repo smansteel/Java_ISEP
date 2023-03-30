@@ -4,6 +4,7 @@ import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
 import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
@@ -63,7 +64,14 @@ public class GameTurn {
                         player.learn(( AbstractSpell )object);
 
                     } else if (object instanceof Potion) {
-                        player.pickUp( ( Potion ) object);
+                        if(StorySpecials.checkSword((Potion)object)){
+                            if (player.getHouse().getHouseIn().equals(HouseList.Gryffindor)){
+                                this.userInterface.displayFromXML(59);
+                                player.pickUp( ( Potion ) object);
+                            }
+
+                        } else{
+                        player.pickUp( ( Potion ) object);}
                     }
                 }
 

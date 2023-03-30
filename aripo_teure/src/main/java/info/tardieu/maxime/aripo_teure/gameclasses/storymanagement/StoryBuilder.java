@@ -136,8 +136,8 @@ public class StoryBuilder {
                        LevelType.DISCOVERY
                ).fillDisco(
 
-                       sf.getString(62), //startString
-                       sf.getString(63), //endString
+                       sf.getString(71), //startString
+                       sf.getString(72), //endString
                        new Object[]{potions.get("sword")}
 
                ),

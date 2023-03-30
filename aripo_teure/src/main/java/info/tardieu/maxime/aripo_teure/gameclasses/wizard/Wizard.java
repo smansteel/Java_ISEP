@@ -82,7 +82,7 @@ public class Wizard extends Character {
 
     public int castSpell(AbstractSpell spell, AbstractEnemy enemy){
         if(spell.getName() == Spells.PROTEGO){
-            
+
         }
         if( random100() > spell.getHitProbability()){
             int randomDamages = randomRange100(spell.getDamageRange()/100 * spell.getDamage());

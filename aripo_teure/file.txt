@@ -183,7 +183,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number58
         </str_58>
         <str_59>
-            DEBUG STRING (TO BE REMOVED) number59
+            As your house is gryffyndor, during the school year you gained access to the sword of the house
         </str_59>
         <str_60>
             You went to school for a full year, you learned a few spells, Wingardium leviosa, protego and imperio
@@ -219,10 +219,10 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number70
         </str_70>
         <str_71>
-            DEBUG STRING (TO BE REMOVED) number71
+            You went to Hogwarts for one more year, you learned X and X spell
         </str_71>
         <str_72>
-            DEBUG STRING (TO BE REMOVED) number72
+            As usual, use them wisely
         </str_72>
         <str_73>
             DEBUG STRING (TO BE REMOVED) number73
