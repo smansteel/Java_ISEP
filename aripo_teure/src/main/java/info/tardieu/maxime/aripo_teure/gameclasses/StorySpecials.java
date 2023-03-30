@@ -2,8 +2,7 @@ package info.tardieu.maxime.aripo_teure.gameclasses;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
-import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Core;
@@ -21,7 +20,7 @@ public class StorySpecials {
         }
     }
 
-    public static boolean checkSword(Potion sword){
+    public static boolean checkSword(Item sword){
      return Objects.equals(sword.getName(), "sword") ;
     }
 

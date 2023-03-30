@@ -2,17 +2,19 @@ package info.tardieu.maxime.aripo_teure.gameclasses;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
-import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
-import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 import info.tardieu.maxime.aripo_teure.ui.UserInteract;
 import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.StoryBuilder;
 
-import static info.tardieu.maxime.aripo_teure.gameclasses.StorySpecials.checkInteraction;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static info.tardieu.maxime.aripo_teure.utils.Random.random;
 
 public class GameTurn {
     private Wizard player;
@@ -42,6 +44,11 @@ public class GameTurn {
     }
     public void next(){
         userInterface.clrScrn();
+        if(nextTile > this.levels.length){
+            endgame();
+        }else{
+
+
         switch(this.levels[nextTile].getLevelType()) {
             case BOSS_FIGHT:
                 userInterface.decorate(this.levels[nextTile].getStartString());
@@ -63,15 +70,15 @@ public class GameTurn {
                     if (object instanceof  AbstractSpell){
                         player.learn(( AbstractSpell )object);
 
-                    } else if (object instanceof Potion) {
-                        if(StorySpecials.checkSword((Potion)object)){
+                    } else if (object instanceof Item) {
+                        if(StorySpecials.checkSword((Item)object)){
                             if (player.getHouse().getHouseIn().equals(HouseList.Gryffindor)){
                                 this.userInterface.displayFromXML(59);
-                                player.pickUp( ( Potion ) object);
+                                player.pickUp( (Item) object);
                             }
 
                         } else{
-                        player.pickUp( ( Potion ) object);}
+                        player.pickUp( (Item) object);}
                     }
                 }
 
@@ -80,10 +87,16 @@ public class GameTurn {
                 nextTile ++;
                 break;
         }
+        }
 
 
 
 
+    }
+
+    public void endgame(){
+        this.userInterface.displayFromXML(150);
+        System.exit(0);
     }
 
     public void bossFight(Wizard player, Level level){
@@ -93,58 +106,28 @@ public class GameTurn {
         boolean foundAction = false;
 
             Object action =  this.userInterface.askAction(player);
-            if (action == null){
+
+            if (action == Actions.FAIL || action == null){
                 lastRoundPlayed = false;
             }else{
                 lastRoundPlayed = true;
             }
 
-
             if (lastRoundPlayed){
                 if(action instanceof AbstractSpell){
-                    AbstractSpell converted = (AbstractSpell) action;
-                    //enemy.attack(player);
-                    AbstractEnemy choice = this.userInterface.whichEnemy(level);
-                    int damages = player.castSpell(converted, choice);
-                    if (damages >=0 && choice.isAlive()){
-                        this.userInterface.displayDamages(damages);
-
-                    } else if (damages >=0 && !choice.isAlive()){
-                        this.userInterface.displayEnemyDeath(choice);
-
-                    } else if (damages == -2) {
-                        if (!choice.isAlive()){
-                            this.userInterface.displayEnemyDeath(choice);
-                        }
-
-                    }else if(damages == -1){
-                        this.userInterface.displayFromXML(133);
+                    if(useSpell(action, level)){
+                        continue;
                     }
 
-
-                } else if (action instanceof Potion) {
-                    Potion converted = (Potion) action;
-                    AbstractEnemy choice = this.userInterface.whichEnemy(level);
-                    int damages = player.usePotion(converted);
-                    if (damages >=0 && choice.isAlive()){
-                        this.userInterface.displayDamages(damages);
-
-                    } else if (damages >=0 && !choice.isAlive()){
-                        this.userInterface.displayEnemyDeath(choice);
-
-                    } else if (damages == -2) {
-                        if (!choice.isAlive()){
-                            this.userInterface.displayEnemyDeath(choice);
-                        }
-
-                    }else if(damages == -1){
-                        this.userInterface.displayFromXML(133);
-                    }
+                } else if (action instanceof Item converted) {
+                    useItem(level, converted);
                 }
 
-
+                if (level.getRoomContent().length>0 ){
+                    getItemsFromRoom(level);
+                }
+              clearEnemies(level);
             }
-
         }
         if(!level.ennemiesAtLeastOneAlive()){
             this.userInterface.displayMessage(level.getWinString());
@@ -152,15 +135,74 @@ public class GameTurn {
         if(!player.isAlive()){
             this.userInterface.displayPlayerDeath(player, lastenemy);
         }
+    }
+
+    private void getItemsFromRoom ( Level room){
+        List<Object> roomContent= Arrays.asList(room.getRoomContent());
+        int dropchances = 10;// outta 100
+        if(random(0,100) <dropchances){
+            Item randomItem = (Item) roomContent.get(random(0, room.getRoomContent().length));
+            player.pickUp(randomItem);
+            roomContent.remove(randomItem);
+            room.setRoomContent(roomContent.toArray());
+
+        }
 
     }
-    public void playerTurn(){
-
+    private void clearEnemies(Level level){
+        List<AbstractEnemy> templist = new ArrayList<>();
+        for (AbstractEnemy enemy: level.getEnnemiesAsList()
+        ) {
+            if(enemy.isAlive()){
+                this.userInterface.displayEnemyDamages(enemy, enemy.autoAttack(player));
+                templist.add(enemy);
+            }
+        }
+        level.setEnnemiesAsList(templist);
     }
-    public void aiTurn(){
 
-    }
-    public void makeLevel(int level){
+    private void useItem(Level level, Item converted ){
+        AbstractEnemy choice = this.userInterface.whichEnemy(level);
+        int damages = player.usePotion(converted);
+        if (damages >=0 && choice.isAlive()){
+            this.userInterface.displayDamages(damages);
 
+        } else if (damages >=0 && !choice.isAlive()){
+            this.userInterface.displayEnemyDeath(choice);
+
+        } else if (damages == -2) {
+            if (!choice.isAlive()){
+                this.userInterface.displayEnemyDeath(choice);
+            }
+
+        }else if(damages == -1){
+            this.userInterface.displayFromXML(133);
+        }
     }
+
+    private boolean useSpell(Object action, Level level){
+        AbstractSpell converted = (AbstractSpell) action;
+
+        AbstractEnemy choice = this.userInterface.whichEnemy(level);
+        if(choice == null){
+            return true;
+        }
+        int damages = player.castSpell(converted, choice);
+        if (damages >=0 && choice.isAlive()){
+            this.userInterface.displayDamages(damages);
+
+        } else if (damages >=0 && !choice.isAlive()){
+            this.userInterface.displayEnemyDeath(choice);
+
+        } else if (damages == -2) {
+            if (!choice.isAlive()){
+                this.userInterface.displayEnemyDeath(choice);
+            }
+
+        }else if(damages == -1){
+            this.userInterface.displayFromXML(133);
+        }
+        return false;
+    }
+
 }

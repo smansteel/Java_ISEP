@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 USE !!player for player name
--->
 
-<strings id="fr">
+-->
+<strings  id="fr">
     <string>
         <str_0>
             Bienvenue dans Harry Potter à la maison, un projet Java pour l'ISEP. Développé par Maxime TARDIEU en 2023.
@@ -305,7 +305,306 @@ USE !!player for player name
         <str_99>
             DEBOGGAGE TEXTE (A RETIRER) numéro 99
         </str_99>
-
+        <str_100>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 100
+        </str_100>
+        <str_101>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 101
+        </str_101>
+        <str_102>
+            Crucio
+        </str_102>
+        <str_103>
+            Makes small damage, with 50% chance of hitting
+        </str_103>
+        <str_104>
+            Protego
+        </str_104>
+        <str_105>
+            Shield damages, varies with wand length and core
+        </str_105>
+        <str_106>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 106
+        </str_106>
+        <str_107>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 107
+        </str_107>
+        <str_108>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 108
+        </str_108>
+        <str_109>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 109
+        </str_109>
+        <str_110>
+            Troll
+        </str_110>
+        <str_111>
+            You started your fight against the troll that Hermione summoned, beware that the weak point of the troll is its head
+        </str_111>
+        <str_112>
+            Excellent, you won your fight against the troll
+        </str_112>
+        <str_113>
+            You lost your fight against the troll, it only had 100hp :/
+        </str_113>
+        <str_114>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 114
+        </str_114>
+        <str_115>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 115
+        </str_115>
+        <str_116>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 116
+        </str_116>
+        <str_117>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 117
+        </str_117>
+        <str_118>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 118
+        </str_118>
+        <str_119>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 119
+        </str_119>
+        <str_120>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 120
+        </str_120>
+        <str_121>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 121
+        </str_121>
+        <str_122>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 122
+        </str_122>
+        <str_123>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 123
+        </str_123>
+        <str_124>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 124
+        </str_124>
+        <str_125>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 125
+        </str_125>
+        <str_126>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 126
+        </str_126>
+        <str_127>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 127
+        </str_127>
+        <str_128>
+            You killed a
+        </str_128>
+        <str_129>
+            They had
+        </str_129>
+        <str_130>
+            hp
+        </str_130>
+        <str_131>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 131
+        </str_131>
+        <str_132>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 132
+        </str_132>
+        <str_133>
+            You missed your spell
+        </str_133>
+        <str_134>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 134
+        </str_134>
+        <str_135>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 135
+        </str_135>
+        <str_136>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 136
+        </str_136>
+        <str_137>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 137
+        </str_137>
+        <str_138>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 138
+        </str_138>
+        <str_139>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 139
+        </str_139>
+        <str_140>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 140
+        </str_140>
+        <str_141>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 141
+        </str_141>
+        <str_142>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 142
+        </str_142>
+        <str_143>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 143
+        </str_143>
+        <str_144>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 144
+        </str_144>
+        <str_145>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 145
+        </str_145>
+        <str_146>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 146
+        </str_146>
+        <str_147>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 147
+        </str_147>
+        <str_148>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 148
+        </str_148>
+        <str_149>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 149
+        </str_149>
+        <str_150>
+            Choose the ennemy to fight
+        </str_150>
+        <str_151>
+            hp
+        </str_151>
+        <str_152>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 152
+        </str_152>
+        <str_153>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 153
+        </str_153>
+        <str_154>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 154
+        </str_154>
+        <str_155>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 155
+        </str_155>
+        <str_156>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 156
+        </str_156>
+        <str_157>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 157
+        </str_157>
+        <str_158>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 158
+        </str_158>
+        <str_159>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 159
+        </str_159>
+        <str_160>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 160
+        </str_160>
+        <str_161>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 161
+        </str_161>
+        <str_162>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 162
+        </str_162>
+        <str_163>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 163
+        </str_163>
+        <str_164>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 164
+        </str_164>
+        <str_165>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 165
+        </str_165>
+        <str_166>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 166
+        </str_166>
+        <str_167>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 167
+        </str_167>
+        <str_168>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 168
+        </str_168>
+        <str_169>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 169
+        </str_169>
+        <str_170>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 170
+        </str_170>
+        <str_171>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 171
+        </str_171>
+        <str_172>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 172
+        </str_172>
+        <str_173>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 173
+        </str_173>
+        <str_174>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 174
+        </str_174>
+        <str_175>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 175
+        </str_175>
+        <str_176>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 176
+        </str_176>
+        <str_177>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 177
+        </str_177>
+        <str_178>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 178
+        </str_178>
+        <str_179>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 179
+        </str_179>
+        <str_180>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 180
+        </str_180>
+        <str_181>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 181
+        </str_181>
+        <str_182>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 182
+        </str_182>
+        <str_183>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 183
+        </str_183>
+        <str_184>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 184
+        </str_184>
+        <str_185>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 185
+        </str_185>
+        <str_186>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 186
+        </str_186>
+        <str_187>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 187
+        </str_187>
+        <str_188>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 188
+        </str_188>
+        <str_189>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 189
+        </str_189>
+        <str_190>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 190
+        </str_190>
+        <str_191>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 191
+        </str_191>
+        <str_192>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 192
+        </str_192>
+        <str_193>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 193
+        </str_193>
+        <str_194>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 194
+        </str_194>
+        <str_195>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 195
+        </str_195>
+        <str_196>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 196
+        </str_196>
+        <str_197>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 197
+        </str_197>
+        <str_198>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 198
+        </str_198>
+        <str_199>
+            DEBOGGAGE TEXTE (A RETIRER) numéro 199
+        </str_199>
     </string>
 
 </strings>

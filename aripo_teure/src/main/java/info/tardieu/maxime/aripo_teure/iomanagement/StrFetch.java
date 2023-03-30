@@ -37,7 +37,7 @@ public class StrFetch {
 
     public File getFile(InputStream inStream) throws IOException {
 
-        File file =new File("file.txt");
+        File file =new File("temp.xml");
         OutputStream outStream = null;
         outStream = new FileOutputStream(file);
 
@@ -59,6 +59,7 @@ public class StrFetch {
     public StrFetch(String language) {
         this.language = language;
         try{
+            //create temporary file from resources to avoid issues with .jar
             File resource =  getFile( Objects.requireNonNull(getClass().getResourceAsStream("/src/main/resources/story/" + language + ".xml")));
             this.file =resource;
         }

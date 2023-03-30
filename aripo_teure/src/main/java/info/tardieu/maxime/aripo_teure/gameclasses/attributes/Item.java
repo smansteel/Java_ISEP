@@ -3,11 +3,11 @@ package info.tardieu.maxime.aripo_teure.gameclasses.attributes;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Effects;
 
-public class Potion {
+public class Item {
     private Effects effect;
     private String name;
 
-    public Potion(Effects effect, String name) {
+    public Item(Effects effect, String name) {
         this.effect = effect;
         this.name = name;
     }

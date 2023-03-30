@@ -4,6 +4,9 @@ import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.LevelType;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Level {
     private AbstractEnemy[] enemies;
     private Character[] allies;
@@ -44,6 +47,14 @@ public class Level {
     public AbstractEnemy[] getEnemies() {
         return enemies;
     }
+    public List<AbstractEnemy> getEnnemiesAsList(){
+        return Arrays.asList(enemies);
+    }
+
+    public void setEnnemiesAsList(List<AbstractEnemy> enemies){
+        this.enemies = enemies.toArray(new AbstractEnemy[0]);
+
+    }
 
     public String getWinString() {
         return winString;
@@ -58,6 +69,10 @@ public class Level {
 
     public Object[] getRoomContent() {
         return roomContent;
+    }
+    public void setRoomContent(Object[] roomContent) {
+        this.roomContent = roomContent;
+
     }
 
     public boolean ennemiesAtLeastOneAlive(){

@@ -3,15 +3,13 @@ package info.tardieu.maxime.aripo_teure.gameclasses.wizard;
 import info.tardieu.maxime.aripo_teure.gameclasses.StorySpecials;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.gameclasses.houses.House;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Pet;
-import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Core;
 import info.tardieu.maxime.aripo_teure.gameclasses.wand.Wand;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
-import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
 
 
 import java.util.Hashtable;
@@ -25,16 +23,18 @@ public class Wizard extends Character {
     private House house;
     private String name;
     private Hashtable<String, AbstractSpell> knownSpells;
-    private Hashtable<String, Potion> potions;
+    private Hashtable<String, Item> potions;
 
 
     public Wizard( ) {
+        maxHealth = 100;
+        health = 100;
         this.pet = Pet.randomPet();
         this.wand = new Wand("");
         this.house = new House();
         this.name = name;
         this.knownSpells = new Hashtable<String, AbstractSpell>();
-        this.potions =  new Hashtable<String, Potion>();
+        this.potions =  new Hashtable<String, Item>();
     }
     public void setWandName(String wandName){
         wand.setName(wandName);
@@ -66,7 +66,7 @@ public class Wizard extends Character {
         return knownSpells;
     }
 
-    public Hashtable<String, Potion> getPotions() {
+    public Hashtable<String, Item> getPotions() {
         return potions;
     }
     public Core getWandCore(){
@@ -89,8 +89,6 @@ public class Wizard extends Character {
             this.attack(enemy, spell.getDamage()* randomDamages);
             return spell.getDamage()* randomDamages;
         }else{
-            System.out.println(enemy.getType());
-            System.out.println(spell.getNameStr());
             if (StorySpecials.checkTrollInteraction(this, enemy, spell)){
                 enemy.kill();
                 return -2;
@@ -101,14 +99,14 @@ public class Wizard extends Character {
 
     }
 
-    public int usePotion(Potion potion){
+    public int usePotion(Item item){
         return 0;
     }
 
     public void learn(AbstractSpell spell){
         this.knownSpells.put(spell.getNameStr(), spell);
     }
-    public void pickUp(Potion potion){
-        this.potions.put(potion.getName(), potion);
+    public void pickUp(Item item){
+        this.potions.put(item.getName(), item);
     }
 }

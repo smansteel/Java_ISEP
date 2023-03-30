@@ -3,11 +3,8 @@ package info.tardieu.maxime.aripo_teure.ui;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
-import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
-import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 import info.tardieu.maxime.aripo_teure.iomanagement.StrFetch;
@@ -105,12 +102,17 @@ public class Cli implements UserInteract {
     private int askChoice(String question, String[] choices){
         displayMessage(question);
         int len = choices.length;
-        for ( int i =0; i < len; i++
+        int i;
+        for ( i =0; i < len; i++
              ) {
             String message = "\t\t("+i+") "+choices[i];
             displayMessage(message);
 
         }
+
+        String message = "\t\t("+i+") "+ fetcher.getString(131);
+        displayMessage(message);
+
         boolean hasAnswered = false;
         while (!hasAnswered){
             int answer;
@@ -121,7 +123,7 @@ public class Cli implements UserInteract {
             }
 
 
-            if (0<=answer && answer<len){
+            if (0<=answer && answer<=len){
                 return answer;
             }
             else{
@@ -166,26 +168,32 @@ public class Cli implements UserInteract {
             strlist.add(spell.getNameStr());
         }
         String[] nameArray= strlist.toArray(new String[0]);
-        int choice = askChoice("wado", nameArray);
+        int choice = askChoice(fetcher.getString(118), nameArray);
+            if(choice == nameArray.length){
+                return null;
+            }
 
         return player.getKnownSpells().get(nameArray[choice]) ;}
     }
 
     @Override
-    public Potion askPotion(Wizard player) {
+    public Item askPotion(Wizard player) {
 
         if(player.getPotions().isEmpty()){
             displayFromXML(27);
             return null;
         }else{
-            Potion[] knowSpells = player.getPotions().values().toArray(new Potion[0]);
+            Item[] knowSpells = player.getPotions().values().toArray(new Item[0]);
             List<String> strlist = new ArrayList<String>();
-        for (Potion potion : knowSpells
+        for (Item item : knowSpells
         ) {
-            strlist.add(potion.getName());
+            strlist.add(item.getName());
         }
         String[] nameArray= strlist.toArray(new String[0]);
-        int choice = askChoice("wado", nameArray);
+        int choice = askChoice(fetcher.getString(119), nameArray);
+        if(choice == nameArray.length){
+            return null;
+        }
 
         return player.getPotions().get(nameArray[choice]) ;}
     }
@@ -250,18 +258,33 @@ public class Cli implements UserInteract {
              ) {
             question.add( enemy.getName()+ "(" + enemy.getHealth() +fetcher.getString(151)+")");
         }
+        int choice = askChoice(fetcher.getString(150), question.toArray(new String[0]));
+        if(choice == level.getEnemies().length){
+            return null;
+        }
 
-        return level.getEnemies()[askChoice(fetcher.getString(150), question.toArray(new String[0]))];
+        return level.getEnemies()[choice];
     }
 
     @Override
     public void displayDamages(int damages) {
-        msgNNL(fetcher.getString(120));
-        msgNNL(String.valueOf(damages));
-        msgNNL(fetcher.getString(121));
+        msgNNL(fetcher.getString(120) +" ");
+        msgNNL(String.valueOf(damages)+" ");
+        displayMessage(fetcher.getString(121));
+        displayMessage("");
 
 
 
+    }
+
+    @Override
+    public void displayEnemyDamages(AbstractEnemy enemy, int damages) {
+        msgNNL(fetcher.getString(124) +" ");
+        msgNNL(enemy.getName() +" ");
+        msgNNL(fetcher.getString(125) +" ");
+        msgNNL(String.valueOf(damages)+" ");
+        displayMessage(fetcher.getString(121));
+        displayMessage("");
     }
 
     @Override
@@ -270,7 +293,7 @@ public class Cli implements UserInteract {
         msgNNL(enemy.getName()+" ");
         msgNNL(fetcher.getString(129)+" ");
         msgNNL(String.valueOf(enemy.getMaxHealth())+" ");
-        displayMessage(fetcher.getString(130));
+        displayMessage(fetcher.getString(130));displayMessage("");
 
     }
 
@@ -278,7 +301,7 @@ public class Cli implements UserInteract {
     public void displayPlayerDeath(Wizard player, AbstractEnemy enemy) {
         msgNNL(fetcher.getString(123) +" ");
         msgNNL(String.valueOf(player.getMaxHealth())+" ");
-        msgNNL(fetcher.getString(124)+" ");
+        msgNNL(fetcher.getString(126)+" ");
         msgNNL(enemy.getName());
         msgNNL(".");
 

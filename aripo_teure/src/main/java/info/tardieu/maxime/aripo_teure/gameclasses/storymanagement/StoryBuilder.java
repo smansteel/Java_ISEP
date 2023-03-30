@@ -7,7 +7,7 @@ import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.gameclasses.spell.ForbiddenSpell;
 import info.tardieu.maxime.aripo_teure.iomanagement.StrFetch;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
-import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Effect;
 import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
@@ -23,7 +23,7 @@ public class StoryBuilder {
    public static Level[] getLevels(String language) {
        StrFetch sf = new StrFetch(language);
        Hashtable<String,AbstractSpell> spells = getSpells(language);
-       Hashtable<String,Potion> potions = getPotions(language);
+       Hashtable<String, Item> items = getItems(language);
 
        Boss dementor = new Boss(sf.getString(50),
                Bosses.DEMENTOR,
@@ -138,7 +138,7 @@ public class StoryBuilder {
 
                        sf.getString(71), //startString
                        sf.getString(72), //endString
-                       new Object[]{potions.get("sword")}
+                       new Object[]{items.get("sword")}
 
                ),
                 // 2nd level Chambre des secrets
@@ -165,7 +165,7 @@ public class StoryBuilder {
                        sf.getString(62), //startString
                        sf.getString(63), //winString
                        sf.getString(64), //lossString
-                       new Object[]{potions.get("fang")}
+                       new Object[]{items.get("fang")}
 
                ),
 
@@ -206,7 +206,7 @@ public class StoryBuilder {
                        sf.getString(71), //startString
                        sf.getString(72), //winString
                        sf.getString(73), //lossString
-                       new Object[]{potions.get("fireworks")}
+                       new Object[]{items.get("fireworks")}
 
                ),
                new Level(
@@ -227,7 +227,7 @@ public class StoryBuilder {
 
                        sf.getString(60), //startString
                        sf.getString(61), //endString
-                       new Object[]{potions.get("sword")}
+                       new Object[]{items.get("sword")}
 
                ),
                new Level(
@@ -363,7 +363,7 @@ public class StoryBuilder {
                100,
                0,
                0,
-               150,
+               0,
                protego,
                protegoDesc,
                new Effect(Effects.PROTECT),
@@ -376,28 +376,28 @@ public class StoryBuilder {
 
    }
 
-    public static Hashtable<String, Potion> getPotions(String language){
+    public static Hashtable<String, Item> getItems(String language){
         StrFetch sf = new StrFetch(language);
-        Hashtable<String,Potion> hash_potions = new Hashtable<String,Potion>();
+        Hashtable<String, Item> hash_potions = new Hashtable<String, Item>();
 
         String healPotion = sf.getString(40);
 
-        hash_potions.put("heal", new Potion(
+        hash_potions.put("heal", new Item(
                 Effects.HEAL,
                 healPotion
         ));
         String fireworksName = sf.getString(41);
-        hash_potions.put("Fireworks", new Potion(
+        hash_potions.put("Fireworks", new Item(
                 Effects.FIREWORKED,
                 fireworksName
         ));
         String basiliskFangName = sf.getString(42);
-        hash_potions.put("fang", new Potion(
+        hash_potions.put("fang", new Item(
                 Effects.BOOK_DESTROYER,
                 basiliskFangName
         ));
         String gryffyndorSwordName = sf.getString(43);
-        hash_potions.put("sword", new Potion(
+        hash_potions.put("sword", new Item(
                 Effects.BOOK_DESTROYER,
                 gryffyndorSwordName
         ));
