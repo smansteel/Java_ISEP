@@ -37,6 +37,7 @@ public class StorySpecials {
             return true;}
         else {
             return false;
+
         }
     }
 }

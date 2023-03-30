@@ -1,9 +1,11 @@
 package info.tardieu.maxime.aripo_teure.ui;
 
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
+import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 
 public class Gui implements UserInteract {
@@ -97,7 +99,32 @@ public class Gui implements UserInteract {
     }
 
     @Override
+    public void awaitEnter() {
+
+    }
+
+    @Override
     public String askStringXML(int question) {
         return null;
+    }
+
+    @Override
+    public AbstractEnemy whichEnemy(Level level) {
+        return null;
+    }
+
+    @Override
+    public void displayDamages(int damages) {
+
+    }
+
+    @Override
+    public void displayEnemyDeath(AbstractEnemy enemy) {
+
+    }
+
+    @Override
+    public void displayPlayerDeath(Wizard player, AbstractEnemy enemy) {
+
     }
 }

@@ -5,8 +5,6 @@ import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
 
 public class Enemy extends AbstractEnemy {
-    @Override
-    public void attack(Character target, Spell spell) {
 
-    }
+
 }

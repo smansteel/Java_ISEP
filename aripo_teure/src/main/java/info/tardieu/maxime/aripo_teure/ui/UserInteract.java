@@ -1,8 +1,10 @@
 package info.tardieu.maxime.aripo_teure.ui;
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
+import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 
 public interface UserInteract {
@@ -22,7 +24,12 @@ public interface UserInteract {
     public void decorate(String message);
     public void decorateXML(int id);
     public void clrScrn();
+    public void awaitEnter();
     public String askStringXML(int question);
+    public AbstractEnemy whichEnemy(Level level);
+    public void displayDamages(int damages);
+    public void displayEnemyDeath(AbstractEnemy enemy);
+    public void displayPlayerDeath(Wizard player, AbstractEnemy enemy);
 
 
 }

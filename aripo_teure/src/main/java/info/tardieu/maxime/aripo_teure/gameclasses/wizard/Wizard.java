@@ -32,15 +32,14 @@ public class Wizard extends Character {
         this.wand = new Wand("");
         this.house = new House();
         this.name = name;
+        this.knownSpells = new Hashtable<String, AbstractSpell>();
+        this.potions =  new Hashtable<String, Potion>();
     }
     public void setWandName(String wandName){
         wand.setName(wandName);
     }
 
-    @Override
-    public void attack(Character target, Spell spell) {
 
-    }
 
     public String getName() {
         return name;
@@ -80,14 +79,19 @@ public class Wizard extends Character {
         return random(100 - randomRange,100 + randomRange);
     }
 
-    public void castSpell(AbstractSpell spell, AbstractEnemy enemy){
+    public int castSpell(AbstractSpell spell, AbstractEnemy enemy){
         if( random100() > spell.getHitProbability()){
             int randomDamages = randomRange100(spell.getDamageRange()/100 * spell.getDamage());
-            enemy.takeDamage(spell.getDamage()* randomDamages);
+            this.attack(enemy, spell.getDamage()* randomDamages);
+            return spell.getDamage()* randomDamages;
         }else{
+            System.out.println(enemy.getType());
+            System.out.println(spell.getNameStr());
             if (StorySpecials.checkTrollInteraction(this, enemy, spell)){
                 enemy.kill();
+                return -2;
             }
+            return -1;
         }
 
 
@@ -95,5 +99,12 @@ public class Wizard extends Character {
 
     public void usePotion(Potion potion){
 
+    }
+
+    public void learn(AbstractSpell spell){
+        this.knownSpells.put(spell.getNameStr(), spell);
+    }
+    public void pickUp(Potion potion){
+        this.potions.put(potion.getName(), potion);
     }
 }

@@ -1,10 +1,11 @@
 package info.tardieu.maxime.aripo_teure.gameclasses.storymanagement;
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.LevelType;
 
 public class Level {
-    private Character[] enemies;
+    private AbstractEnemy[] enemies;
     private Character[] allies;
     private String startString;
     private String winString;
@@ -14,7 +15,7 @@ public class Level {
     public Level(LevelType type) {
     this.type = type;
     }
-    public Level fillBoss(Character[] allies, Character[] enemies, String startString, String winString, String lossString, Object[] roomContent) {
+    public Level fillBoss(Character[] allies, AbstractEnemy[] enemies, String startString, String winString, String lossString, Object[] roomContent) {
         this.allies = allies;
         this.enemies = enemies;
         this.startString = startString;
@@ -25,6 +26,14 @@ public class Level {
 
     }
 
+    public Level fillDisco(String startString, String endString,  Object[] roomContent){
+
+        this.startString = startString;
+        this.winString = endString;
+        this.roomContent = roomContent;
+        return this;
+    }
+
     public LevelType getLevelType() {
         return type;
     }
@@ -32,15 +41,33 @@ public class Level {
         return this.startString;
     }
 
-    public Character[] getEnemies() {
+    public AbstractEnemy[] getEnemies() {
         return enemies;
     }
 
     public String getWinString() {
         return winString;
     }
+    public String getEndString() {
+        return winString;
+    }
 
     public String getLossString() {
         return lossString;
+    }
+
+    public Object[] getRoomContent() {
+        return roomContent;
+    }
+
+    public boolean ennemiesAtLeastOneAlive(){
+
+        for (Character ennemy: this.enemies
+             ) {
+            if(ennemy.isAlive()){
+                return true;
+            }
+        }
+        return false;
     }
 }

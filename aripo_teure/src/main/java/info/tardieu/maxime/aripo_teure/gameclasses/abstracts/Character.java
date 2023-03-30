@@ -1,12 +1,15 @@
 package info.tardieu.maxime.aripo_teure.gameclasses.abstracts;
 
-import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
-
 public abstract class Character {
-    private String name ;
-    private int health ;
-    private int manaa ;
-    public abstract void attack(Character target, Spell spell) ;
+    protected String name ;
+    protected int health ;
+    protected int maxHealth;
+    protected int manaa ;
+    protected int maxManna;
+    public void attack(Character target, int damage){
+        target.health = target.health - damage;
+
+    }
 
     public boolean isAlive(){
         if(health<0){
@@ -16,11 +19,16 @@ public abstract class Character {
         }
     }
 
-    public void takeDamage(int damage){
-        health = health - damage;
-    }
+
     public void kill(){
         health = 0;
+    }
+
+    public int getHealth(){
+        return this.health;
+    }
+    public int getMaxHealth(){
+        return this.maxHealth;
     }
 
 

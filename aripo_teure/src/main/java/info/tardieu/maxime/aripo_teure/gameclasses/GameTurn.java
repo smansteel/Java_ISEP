@@ -1,7 +1,10 @@
 package info.tardieu.maxime.aripo_teure.gameclasses;
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
+import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
 import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 import info.tardieu.maxime.aripo_teure.ui.UserInteract;
@@ -40,13 +43,33 @@ public class GameTurn {
         userInterface.clrScrn();
         switch(this.levels[nextTile].getLevelType()) {
             case BOSS_FIGHT:
-                    userInterface.decorate(this.levels[nextTile].getStartString());
-                bossFight(this.player, (Boss) this.levels[nextTile].getEnemies()[0]);
+                userInterface.decorate(this.levels[nextTile].getStartString());
+
+
+                bossFight(this.player,  this.levels[nextTile]);
+                nextTile ++;
 
                 break;
             case FIGHT:
                 userInterface.displayMessage("w");
                 userInterface.displayMessage(this.levels[nextTile].getStartString());
+                nextTile ++;
+                break;
+            case DISCOVERY:
+                userInterface.displayMessage(this.levels[nextTile].getStartString());
+                for (Object object: this.levels[nextTile].getRoomContent()
+                     ) {
+                    if (object instanceof  AbstractSpell){
+                        player.learn(( AbstractSpell )object);
+
+                    } else if (object instanceof Potion) {
+                        player.pickUp( ( Potion ) object);
+                    }
+                }
+
+                userInterface.displayMessage(this.levels[nextTile].getEndString());
+                userInterface.awaitEnter();
+                nextTile ++;
                 break;
         }
 
@@ -55,8 +78,10 @@ public class GameTurn {
 
     }
 
-    public void bossFight(Wizard player, Boss enemy){
-        while(player.isAlive() && enemy.isAlive()){
+    public void bossFight(Wizard player, Level level){
+        AbstractEnemy lastenemy = level.getEnemies()[0];
+
+        while(player.isAlive() && level.ennemiesAtLeastOneAlive()){
         boolean foundAction = false;
 
             Object action =  this.userInterface.askAction(player);
@@ -68,17 +93,40 @@ public class GameTurn {
 
 
             if (lastRoundPlayed){
-                //enemy.attack(player);
-                userInterface.displayMessage("Bouhou t ataké");
-            }
-        /*
-        switch (action) {
-            case SPELL -> player.castSpell(this.userInterface.askSpell(), enemy);
-            case POTION -> player.usePotion(this.userInterface.askPotion());
-        }*/
+                if(action instanceof AbstractSpell){
+                    AbstractSpell converted = (AbstractSpell) action;
+                    //enemy.attack(player);
+                    AbstractEnemy choice = this.userInterface.whichEnemy(level);
+                    int damages = player.castSpell(converted, choice);
+                    if (damages >=0 && choice.isAlive()){
+                        this.userInterface.displayDamages(damages);
 
-        //this.userInterface.askSpell();
-        //checkInteraction(player, enemy, );
+                    } else if (damages >=0 && !choice.isAlive()){
+                        this.userInterface.displayEnemyDeath(choice);
+
+                    } else if (damages == -2) {
+                        if (!choice.isAlive()){
+                            this.userInterface.displayEnemyDeath(choice);
+                        }
+
+                    }else if(damages == -1){
+                        this.userInterface.displayFromXML(133);
+                    }
+
+
+                } else if (action instanceof Potion) {
+                    Potion converted = (Potion) action;
+                }
+
+
+            }
+
+        }
+        if(!level.ennemiesAtLeastOneAlive()){
+            this.userInterface.displayMessage(level.getWinString());
+        }
+        if(!player.isAlive()){
+            this.userInterface.displayPlayerDeath(player, lastenemy);
         }
 
     }

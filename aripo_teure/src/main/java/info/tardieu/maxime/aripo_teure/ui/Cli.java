@@ -1,11 +1,14 @@
 package info.tardieu.maxime.aripo_teure.ui;
 
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Potion;
 import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
+import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 import info.tardieu.maxime.aripo_teure.iomanagement.StrFetch;
 
@@ -62,6 +65,14 @@ public class Cli implements UserInteract {
         }
         msgNNL(playername+"@home$ ");
         return scanner.next();
+    }
+    public void awaitEnter(){
+        if(playername== null){
+            playername ="Harry Potter";
+        }
+        displayMessage(fetcher.getString(26));
+        msgNNL(playername+"@home$ ");
+       scanner.hasNext();
     }
 
     @Override
@@ -135,12 +146,13 @@ public class Cli implements UserInteract {
     @Override
     public AbstractSpell askSpell(Wizard player) {
 
-        if(player.getKnownSpells() ==null){
+        if(  player.getKnownSpells().isEmpty()){
             displayFromXML(24);
             return null;
         }else{
-            AbstractSpell[] knownSpells = (AbstractSpell[]) Collections.list(player.getKnownSpells().elements()).toArray();
-        List<String> strlist = null;
+
+            AbstractSpell[] knownSpells =  player.getKnownSpells().values().toArray(new AbstractSpell[0]);
+        List<String> strlist = new ArrayList<String>();
         for (AbstractSpell spell : knownSpells
              ) {
             strlist.add(spell.getNameStr());
@@ -154,7 +166,7 @@ public class Cli implements UserInteract {
     @Override
     public Potion askPotion(Wizard player) {
 
-        if(player.getKnownSpells() ==null){
+        if(player.getKnownSpells().isEmpty()){
             displayFromXML(24);
             return null;
         }else{
@@ -221,5 +233,46 @@ public class Cli implements UserInteract {
     public String askStringXML(int question) {
         displayFromXML(question);
         return awaitAnswer();
+    }
+
+    @Override
+    public AbstractEnemy whichEnemy(Level level) {
+        List<String> question = new ArrayList<>();
+        for (AbstractEnemy enemy: level.getEnemies()
+             ) {
+            question.add( enemy.getName()+ "(" + enemy.getHealth() +fetcher.getString(151)+")");
+        }
+
+        return level.getEnemies()[askChoice(fetcher.getString(150), question.toArray(new String[0]))];
+    }
+
+    @Override
+    public void displayDamages(int damages) {
+        msgNNL(fetcher.getString(120));
+        msgNNL(String.valueOf(damages));
+        msgNNL(fetcher.getString(121));
+
+
+
+    }
+
+    @Override
+    public void displayEnemyDeath(AbstractEnemy enemy) {
+        msgNNL(fetcher.getString(128)+" ");
+        msgNNL(enemy.getName()+" ");
+        msgNNL(fetcher.getString(129)+" ");
+        msgNNL(String.valueOf(enemy.getMaxHealth())+" ");
+        displayMessage(fetcher.getString(130));
+
+    }
+
+    @Override
+    public void displayPlayerDeath(Wizard player, AbstractEnemy enemy) {
+        msgNNL(fetcher.getString(123) +" ");
+        msgNNL(String.valueOf(player.getMaxHealth())+" ");
+        msgNNL(fetcher.getString(124)+" ");
+        msgNNL(enemy.getName());
+        msgNNL(".");
+
     }
 }

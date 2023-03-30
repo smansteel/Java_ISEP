@@ -11,6 +11,9 @@ public enum Effects {
     LUCKY,
     SHAPE_SHIFTED,
     BRUSHED_HAIR,
-    TRUTHFUL
+    TRUTHFUL,
+    FIREWORKED,
+    BOOK_DESTROYER,
+    PROTECT
 
 }
