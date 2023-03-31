@@ -6,7 +6,7 @@
 
     <groupId>info.tardieu.maxime</groupId>
     <artifactId>aripo_teure</artifactId>
-    <version>0.1-DEV</version>
+    <version>1.1</version>
     <name>aripo_teure</name>
 
     <properties>
@@ -69,7 +69,20 @@
     <build>
         <plugins>
             <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <mainClass>info.tardieu.maxime.aripo_teure.Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
