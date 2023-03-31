@@ -250,17 +250,20 @@ public class GameTurn {
             choice.kill();
             damages = -2;
 
-        }else if (converted.getName() == Spells.PROTEGO){
+        }
+        if (converted.getName() == Spells.PROTEGO){
             this.userInterface.displayFromXML(4);
             player.defend();
             damages = 0;
 
-        }else if (converted.getName() == Spells.EXPECTO_PATRONUM){
+        }
+        else if (converted.getName() == Spells.EXPECTO_PATRONUM){
             this.userInterface.displayFromXML(5);
             player.setDamageReduction(75);
             damages = 0;
 
-        }else  if (StorySpecials.checkPettigrowInteraction( choice, converted)){
+        }
+        if (StorySpecials.checkPettigrowInteraction( choice, converted)){
 
             atkCount++;
             if(atkCount >3){

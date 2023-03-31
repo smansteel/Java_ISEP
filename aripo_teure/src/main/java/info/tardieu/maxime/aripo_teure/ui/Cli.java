@@ -24,6 +24,15 @@ public class Cli implements UserInteract {
         scanner = new Scanner(System.in);
         fetcher = new StrFetch(this.language);
     }
+    //What is a unit test ?
+    //A unit test is a piece of code that tests a specific part of the code.
+    //It is used to check if the code is working as expected.
+    //Can you generate it for me ?
+
+
+
+
+
 
     @Override
     public void displayFromXML(int id){
