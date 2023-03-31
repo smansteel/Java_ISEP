@@ -43,7 +43,8 @@ public abstract class AbstractEnemy extends Character {
                 return attack(player, damages);
         }
         else{
-            return attack(player, damage);
+            int damages = random(-damage/3, damage/10);
+            return attack(player, damage + damages);
         }
 
 

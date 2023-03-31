@@ -30,7 +30,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
 
                 },
-                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]), 10));
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]), 20));
 
 
         hash_boss.put("pettigrow", new Boss(sf.getString(82),
@@ -39,6 +39,7 @@ public class StoryBuilder {
                 400,
                 10,
                 new AbstractSpell[]{ //knownspells
+                        spells.get("crucio")
 
                 },
                 (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
@@ -51,10 +52,10 @@ public class StoryBuilder {
                 400,
                 10,
                 new AbstractSpell[]{ //knownspells
-                        spells.get("sectum"), spells.get("protego")
+                        spells.get("sectum"), spells.get("crucio"), spells.get("imperio")
                 },
                 (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
-                10));
+                30));
 
 
         hash_boss.put("deatheater", new Boss(sf.getString(83),
@@ -110,14 +111,14 @@ public class StoryBuilder {
                         spells.get("sectum")
                 },
                 (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
-                30));
+                20));
         hash_boss.put("voldemort", new Boss(sf.getString(86),
                 Bosses.VOLDEMORT,
                 1500,
                 1500,
                 10,
                 new AbstractSpell[]{ //knownspells
-                        spells.get("avada")
+                        spells.get("avada"), spells.get("sectum")
                 },
                 (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 50));

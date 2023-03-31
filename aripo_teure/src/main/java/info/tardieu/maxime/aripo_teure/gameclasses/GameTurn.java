@@ -112,7 +112,7 @@ public class GameTurn {
     public void playerUpgrade(){
         Actions upgrade = this.userInterface.askUpgarde();
         if(upgrade ==Actions.UPGRADE_DAMAGES){
-            player.setDamage(player.getDamage()+10);
+            player.setDamage(player.getDamage()+25);
         }else if(upgrade ==Actions.UPGRADE_HEALTH){
             player.setMaxHealth(player.getMaxHealth()+50);
             player.setHealth(player.getHealth()+50);
