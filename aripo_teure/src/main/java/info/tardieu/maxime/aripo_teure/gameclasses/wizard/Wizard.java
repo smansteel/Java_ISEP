@@ -88,6 +88,12 @@ public class Wizard extends Character {
         if(spell.getName() == Spells.PROTEGO){
             return 0;
         }else{
+            int spellDamages;
+            if (enemy.getSpellsWeakAsList().contains(spell)){
+                spellDamages = spell.getDamageWeak();
+            }else{
+                spellDamages = spell.getDamage();
+            }
             int getHitProb;
             if (this.getHouse().getHouseIn()== HouseList.Ravenclaw){
                 getHitProb = (int) (spell.getHitProbability()*1.2);
@@ -95,12 +101,12 @@ public class Wizard extends Character {
                 getHitProb = (spell.getHitProbability());
             }
             if( random100() <= getHitProb){
-                int randomDamages = randomRange100((int)((float)spell.getDamageRange())/100 * spell.getDamage());
+                int randomDamages = randomRange100((int)((float)spell.getDamageRange()) * spellDamages/100);
                 int ttDamages;
                 if (this.getHouse().getHouseIn()== HouseList.Slytherin){
-                    ttDamages = (int) ((spell.getDamage()* randomDamages/100)*1.2);
+                    ttDamages = (int) ((spellDamages* randomDamages/100)*1.2);
                 }else{
-                    ttDamages =((spell.getDamage()* randomDamages/100));
+                    ttDamages =((spellDamages* randomDamages/100));
                 }
                 return this.attack(enemy, ttDamages);
             }else{
@@ -122,8 +128,12 @@ public class Wizard extends Character {
             }else{
                 heal = 30;
             }
+            if (this.health +heal>this.maxHealth){
+                health = maxHealth;
+            }else{
+                this.health = this.health +heal;
+            }
 
-            this.health = this.health +heal;
 
             item.use();
         }

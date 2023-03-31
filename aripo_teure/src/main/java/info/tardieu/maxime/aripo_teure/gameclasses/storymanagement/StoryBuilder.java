@@ -145,11 +145,11 @@ public class StoryBuilder {
            firstRoomObjects = new Object[]{spells.get("wingardium"),
                    spells.get("protego"),
                    spells.get("debug"),
-                   spells.get("imperio")};
+                   spells.get("crucio")};
        }       else{
            firstRoomObjects = new Object[]{spells.get("wingardium"),
                    spells.get("protego"),
-                   spells.get("imperio")};
+                   spells.get("crucio")};
        }
 
        Level[] story_array = {
@@ -186,10 +186,10 @@ public class StoryBuilder {
 
                        sf.getString(71), //startString
                        sf.getString(72), //endString
-                       new Object[]{items.get("sword"), items.get("heal")}
+                       new Object[]{items.get("sword"), items.get("heal"), spells.get("impero")}
 
                ),
-                // 2nd level Chambre des secrets
+                // 2nd level Chambre des secretscrucio
                // Basilic
                // Épée de Griffondor pour les Griffondor ; Croc du basilic avec Accio pour les autres
 
@@ -237,7 +237,7 @@ public class StoryBuilder {
 
                        sf.getString(73), //startString
                        sf.getString(74), //endString
-                       new Object[]{spells.get("accio")}
+                       new Object[]{spells.get("accio"), items.get("heal")}
 
                ),
 
@@ -399,7 +399,7 @@ public class StoryBuilder {
        hash_spells.put("imperio", new ForbiddenSpell(
                Spells.IMPERIO,
                75,
-               300,
+               200,
                50,
                0,
                imperio,
@@ -412,10 +412,10 @@ public class StoryBuilder {
        String crucioDesc = sf.getString(103);
        hash_spells.put("crucio", new ForbiddenSpell(
                Spells.CRUCIO,
+               65,
                50,
-               20,
                15,
-               0,
+               50,
                crucio,
                crucioDesc,
                null,
@@ -440,8 +440,8 @@ public class StoryBuilder {
        hash_spells.put("debug", new Spell(
                Spells.DEBUG,
                100,
-               0,
-               12000,
+               200000,
+               20000,
                0,
                debug,
                "debug",

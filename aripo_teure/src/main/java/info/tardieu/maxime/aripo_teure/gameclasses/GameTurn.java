@@ -15,6 +15,7 @@ import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.StoryBuilder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import static info.tardieu.maxime.aripo_teure.utils.Random.random;
 
@@ -287,10 +288,13 @@ public class GameTurn {
         if (StorySpecials.checkPettigrowInteraction( choice, converted)){
 
             atkCount++;
-            if(atkCount >3){
+            if(new Random().nextBoolean()){
 
                 this.userInterface.displayFromXML(137);
-                choice.kill();
+                for (AbstractEnemy enemy: this.levels[nextTile].getEnemies()
+                ) {
+                    enemy.kill();
+                }
 
                 damages = -3;
 
