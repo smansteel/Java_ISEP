@@ -267,7 +267,7 @@ public class GameTurn {
 
             damages = -3;
 
-        }
+
 
 
         }else{
