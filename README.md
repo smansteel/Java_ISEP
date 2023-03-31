@@ -1,4 +1,4 @@
-Java Repository for all II.1102 Module. <br>
+Maxime TARDIEU's Java Repository for all ISEP II.1102 Module. <br>
 
 HarryPotter@home is in subfolder aripo_teure:<br>
 --&nbsp;&nbsp;Build and run instructions : <br>

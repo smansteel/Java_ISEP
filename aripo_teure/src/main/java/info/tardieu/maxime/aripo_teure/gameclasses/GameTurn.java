@@ -268,8 +268,6 @@ public class GameTurn {
             damages = -3;
 
 
-
-
         }else{
             damages = player.castSpell(converted, choice);
         }
