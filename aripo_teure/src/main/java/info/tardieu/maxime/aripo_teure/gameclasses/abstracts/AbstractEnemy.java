@@ -16,7 +16,9 @@ public abstract class AbstractEnemy extends Character {
     }
 
     public AbstractEnemy(){
+
         super();
+        damageReduction = 0;
 
     }
 
@@ -29,12 +31,16 @@ public abstract class AbstractEnemy extends Character {
         if (rd.nextBoolean() && spellsLearned.length >1){
             AbstractSpell spell = spellsLearned[random(0, spellsLearned.length)];
             int damages = spell.getDamage() + (random(0, spell.getDamageRange())*spell.getDamage()/100);
-            attack(player, damages);
-            return  damages;
+            if(attack(player, damages)){
+                return  damages;
+            }
+            return  0;
         }
         else{
-            attack(player, damage);
-            return damage;
+            if(attack(player, damage)){
+                return  damage;
+            }
+            return  0;
         }
 
 

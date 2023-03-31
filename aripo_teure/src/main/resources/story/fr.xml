@@ -12,316 +12,323 @@ USE !!player for player name
             Introduction
         </str_1>
         <str_2>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 2
+            DEBUG STRING (TO BE REMOVED)
         </str_2>
         <str_3>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 3
+            Choisissez quelle action effectuer, taper le chiffre
         </str_3>
         <str_4>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 4
+            Vous avez utilisé Protego pour vous défendre
         </str_4>
         <str_5>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 5
+            Vous avez invoqué votre Patronus, il va vous défendre pendant un moment
         </str_5>
         <str_6>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 6
+            DEBUG STRING (TO BE REMOVED) number6
         </str_6>
         <str_7>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 7
+            DEBUG STRING (TO BE REMOVED) number7
         </str_7>
         <str_8>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 8
+            Troll des Toilettes du Donjon
         </str_8>
         <str_9>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 9
+            DEBUG STRING (TO BE REMOVED) number9
         </str_9>
         <str_10>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 10
+            DEBUG STRING (TO BE REMOVED) number10
         </str_10>
         <str_11>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 11
+            DEBUG STRING (TO BE REMOVED) number11
         </str_11>
         <str_12>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 12
+            Quel est ton nom sorcier ?
         </str_12>
         <str_13>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 13
+            Comment veux-tu appeler ta baguette ?
         </str_13>
         <str_14>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 14
+            DEBUG STRING (TO BE REMOVED) number14
         </str_14>
         <str_15>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 15
+            DEBUG STRING (TO BE REMOVED) number15
         </str_15>
         <str_16>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 16
+            DEBUG STRING (TO BE REMOVED) number16
         </str_16>
         <str_17>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 17
+            DEBUG STRING (TO BE REMOVED) number17
         </str_17>
         <str_18>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 18
+            DEBUG STRING (TO BE REMOVED) number18
         </str_18>
         <str_19>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 19
+            DEBUG STRING (TO BE REMOVED) number19
         </str_19>
         <str_20>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 20
+            La valeur entrée n'est pas valide, veuillez en taper une de la liste
         </str_20>
         <str_21>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 21
+            Quelle action souhaitez vous accomplir ce tour ?
         </str_21>
         <str_22>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 22
+            Utiliser un sort
         </str_22>
         <str_23>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 23
+            Utiliser un objet
         </str_23>
         <str_24>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 24
+            Pas de sorts disponibles
         </str_24>
         <str_25>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 25
+            Afficher les stats du sorcier
         </str_25>
         <str_26>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 26
+            Appuyez sur entrer pour continuer
         </str_26>
         <str_27>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 27
+            Pas d'objets dans le sac a dos
         </str_27>
         <str_28>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 28
+            Afficher les informations du combat
         </str_28>
         <str_29>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 29
+            DEBUG STRING (TO BE REMOVED) number29
         </str_29>
         <str_30>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 30
+            Information joueur :
         </str_30>
         <str_31>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 31
+            Nom
         </str_31>
         <str_32>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 32
+            Maison
         </str_32>
         <str_33>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 33
+            Baguette
         </str_33>
         <str_34>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 34
+            Taille de la baguette
         </str_34>
         <str_35>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 35
+            Type de bois
         </str_35>
         <str_36>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 36
+            Coeur de la baguette
         </str_36>
         <str_37>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 37
+            DEBUG STRING (TO BE REMOVED) number37
         </str_37>
         <str_38>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 38
+            Détraqueur
         </str_38>
         <str_39>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 39
+            DEBUG STRING (TO BE REMOVED) number39
         </str_39>
         <str_40>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 40
+            Potion de soin
         </str_40>
         <str_41>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 41
+            DEBUG STRING (TO BE REMOVED) number41
         </str_41>
         <str_42>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 42
+            Croc du Basilique
         </str_42>
         <str_43>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 43
+            Épée Griffondor
         </str_43>
         <str_44>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 44
+            DEBUG STRING (TO BE REMOVED) number44
         </str_44>
         <str_45>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 45
+            DEBUG STRING (TO BE REMOVED) number45
         </str_45>
         <str_46>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 46
+            DEBUG STRING (TO BE REMOVED) number46
         </str_46>
         <str_47>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 47
+            DEBUG STRING (TO BE REMOVED) number47
         </str_47>
         <str_48>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 48
+            DEBUG STRING (TO BE REMOVED) number48
         </str_48>
         <str_49>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 49
+            DEBUG STRING (TO BE REMOVED) number49
         </str_49>
         <str_50>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 50
+            Basilique
         </str_50>
         <str_51>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 51
+            Peter Pettigrow
         </str_51>
         <str_52>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 52
+            Lord Valdemort
         </str_52>
         <str_53>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 53
+            DEBUG STRING (TO BE REMOVED) number53
         </str_53>
         <str_54>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 54
+            DEBUG STRING (TO BE REMOVED) number54
         </str_54>
         <str_55>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 55
+            DEBUG STRING (TO BE REMOVED) number55
         </str_55>
         <str_56>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 56
+            DEBUG STRING (TO BE REMOVED) number56
         </str_56>
         <str_57>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 57
+            DEBUG STRING (TO BE REMOVED) number57
         </str_57>
         <str_58>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 58
+            DEBUG STRING (TO BE REMOVED) number58
         </str_58>
         <str_59>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 59
+            Vu que vous appartenez à Griffondor, vous avez accès à l'épée de la maison
         </str_59>
         <str_60>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 60
+            Vous êtes allés à Poudlard durant une année et vous avez appris Wingardium Leviosa, Imperio et Predego
         </str_60>
         <str_61>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 61
+            Utilisez les avec raison
         </str_61>
         <str_62>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 62
+            Chambre des Secrets (Basilique)
         </str_62>
         <str_63>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 63
+            Vous avez battu le Basilique, bravo
         </str_63>
         <str_64>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 64
+            Vous avez perdu contre le basilique
         </str_64>
         <str_65>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 65
+            Lac de la Forêt interdite (Detraqueurs)
         </str_65>
         <str_66>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 66
+            Vous avez battu les Détraqueurs
         </str_66>
         <str_67>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 67
+            Les Détraqueurs vous ont battus.
         </str_67>
         <str_68>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 68
+            Pettigrow et Valdemort
         </str_68>
         <str_69>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 69
+            Vous avez gagné contre Peter Pettigrow et Valdemort
         </str_69>
         <str_70>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 70
+            Vous avez perdu contre Peter Pettigrow et Valdemort
         </str_70>
         <str_71>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 71
+            Vous êtes allés à Poudlard pour une année supplémentaire, Vous avez appris expecto patronum
         </str_71>
         <str_72>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 72
+            Comme d'habitude utilisez les bien
         </str_72>
         <str_73>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 73
+            Vous avez appris accio a Poudlard cette année
         </str_73>
         <str_74>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 74
+
         </str_74>
         <str_75>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 75
+            Mangemorts
         </str_75>
         <str_76>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 76
+            Vous avez battu les Mangemorts
         </str_76>
         <str_77>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 77
+            Les mangemorts ont été plus fort que vous !!player
         </str_77>
         <str_78>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 78
+           Le combat final, Poudlard (Bellatrix Lestrange, and Lord Valdemort)
         </str_78>
         <str_79>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 79
+            Bien joué
         </str_79>
         <str_80>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 80
+            Bien essayé, vous êtes allés jusqu'au dernier niveau
         </str_80>
         <str_81>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 81
+            Dolorès Ombrage
         </str_81>
         <str_82>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 82
+            Peter Pettigrow
         </str_82>
         <str_83>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 83
+            Mangemort
         </str_83>
         <str_84>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 84
+            Bellatrix Lestrange
         </str_84>
         <str_85>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 85
+            L'ennemi à fait tomber quelque chose, vous le ramassez et le mettez dans votre sac
         </str_85>
         <str_86>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 86
+            Lord Valdemort
         </str_86>
         <str_87>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 87
+            DEBUG STRING (TO BE REMOVED) number87
         </str_87>
         <str_88>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 88
+            DEBUG STRING (TO BE REMOVED) number88
         </str_88>
         <str_89>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 89
+            DEBUG STRING (TO BE REMOVED) number89
         </str_89>
         <str_90>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 90
+            Wingardium Leviosa
         </str_90>
         <str_91>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 91
+            Fait léviter un objet
         </str_91>
         <str_92>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 92
+            Expecto Patronum
         </str_92>
         <str_93>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 93
+            Le sortilège du Patronus est un enchantement visant à faire apparaître un Patronus, un esprit protecteur.
         </str_93>
         <str_94>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 94
+            Accio
         </str_94>
         <str_95>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 95
+            Le sortilège d'Attraction est un enchantement qui permet d'attirer un objet vers soi.
         </str_95>
         <str_96>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 96
+            Sectum Sempra
         </str_96>
         <str_97>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 97
+            Sectumsempra est un sort qui blesse violemment la personne visée. Il a été créé par Severus Rogue.
+            D'après celui-ci, l'utilisation du sort serait un acte de magie noire.
+            Il crée de profondes entailles sur la partie du corps visée, comme si la cible avait été "tailladée par une épée".
+            La victime se vide très rapidement de son sang si rien n'est fait dans les minutes qui suivent.
         </str_97>
         <str_98>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 98
+            Avada Kedavra
         </str_98>
         <str_99>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 99
+            Le sortilège de la Mort, l'un des trois Sortilèges Impardonnables, a pour formule Avada Kedavra.
+            La seule personne ayant résisté à ce sort est Harry Potter.
+            Il est caractérisé par une lumière verte et un bruit semblable à une rafale de vent.
         </str_99>
         <str_100>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 100
+            Impero
         </str_100>
         <str_101>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 101
+            Le sortilège de l'Imperium est l'un des trois Sortilèges Impardonnables. Son incantation est Impero .
+            Il contrôle totalement la personne touchée et n'est pas détectable à l'œil nu.
+            C'est pour cette raison qu'on ne peut pas prouver qui a travaillé pour Voldemort de son plein gré ou sous l'influence du mage noir.
         </str_101>
         <str_102>
             Crucio
         </str_102>
         <str_103>
-            Makes small damage, with 50% chance of hitting
+            Fait de petits dégats avec 50% de chances de toucher.
         </str_103>
         <str_104>
             Protego
         </str_104>
         <str_105>
-            Shield damages, varies with wand length and core
+            Protège totalement des dégats ennemis pendant 1 tour
         </str_105>
         <str_106>
             DEBOGGAGE TEXTE (A RETIRER) numéro 106
@@ -339,13 +346,13 @@ USE !!player for player name
             Troll
         </str_110>
         <str_111>
-            You started your fight against the troll that Hermione summoned, beware that the weak point of the troll is its head
+           Vous combattez le troll, que Hermione à fait apparaitre, son point faible est la tête.
         </str_111>
         <str_112>
-            Excellent, you won your fight against the troll
+            Bravo vous avez battu le troll
         </str_112>
         <str_113>
-            You lost your fight against the troll, it only had 100hp :/
+            Vous avez perdu contre le troll, il n'avait que 100hp :/
         </str_113>
         <str_114>
             DEBOGGAGE TEXTE (A RETIRER) numéro 114
@@ -360,82 +367,82 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 117
         </str_117>
         <str_118>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 118
+            Quel sort voulez vous utiliser
         </str_118>
         <str_119>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 119
+            Quel objet voulez vous utiliser
         </str_119>
         <str_120>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 120
+            Vous avez fait
         </str_120>
         <str_121>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 121
+            dégats
         </str_121>
         <str_122>
             DEBOGGAGE TEXTE (A RETIRER) numéro 122
         </str_122>
         <str_123>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 123
+            Vous êtes mort, vous aviez
         </str_123>
         <str_124>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 124
+            Ennemi
         </str_124>
         <str_125>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 125
+            vous a infligé
         </str_125>
         <str_126>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 126
+            PV et vous êtes morts de
         </str_126>
         <str_127>
             DEBOGGAGE TEXTE (A RETIRER) numéro 127
         </str_127>
         <str_128>
-            You killed a
+            Vous avez tué un
         </str_128>
         <str_129>
-            They had
+            , et ils avait
         </str_129>
         <str_130>
-            hp
+            PV
         </str_130>
         <str_131>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 131
+            Retour arrière
         </str_131>
         <str_132>
             DEBOGGAGE TEXTE (A RETIRER) numéro 132
         </str_132>
         <str_133>
-            You missed your spell
+            Vous avez raté votre sort
         </str_133>
         <str_134>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 134
+            Vous avez raté votre lancé
         </str_134>
         <str_135>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 135
+            Vous soulevez une pierre adjacente au Troll et l'envoyez voler dans sa tête.
         </str_135>
         <str_136>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 136
+            Les Détraqueurs ont fui en voyant votre patronus.
         </str_136>
         <str_137>
             DEBOGGAGE TEXTE (A RETIRER) numéro 137
         </str_137>
         <str_138>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 138
+            Pettigrow se rapproche, Vous vous rapprochez de Portoloin
         </str_138>
         <str_139>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 139
+            Vous êtes un Serpentard, voulez vous faire une alliance avec les Mangemorts?
         </str_139>
         <str_140>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 140
+            Oui
         </str_140>
         <str_141>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 141
+            Non
         </str_141>
         <str_142>
             DEBOGGAGE TEXTE (A RETIRER) numéro 142
         </str_142>
         <str_143>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 143
+            Vous vous alliez avec les Mangemorts, vous êtes dans le camp de Bellatrix Lestrange et Voldemort. Bien joué
         </str_143>
         <str_144>
             DEBOGGAGE TEXTE (A RETIRER) numéro 144
@@ -450,31 +457,31 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 147
         </str_147>
         <str_148>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 148
+            Bravo, vous avez gagné le jeu
         </str_148>
         <str_149>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 149
+            Vous avez fait de votre mieux, peut-être la prochaine fois
         </str_149>
         <str_150>
-            Choose the ennemy to fight
+            Choisissez l'ennemi à viser
         </str_150>
         <str_151>
-            hp
+            PV
         </str_151>
         <str_152>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 152
+            Info de combat : Sorcier !!player (Vous)
         </str_152>
         <str_153>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 153
+            Vie
         </str_153>
         <str_154>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 154
+            Vie Maximale
         </str_154>
         <str_155>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 155
+            Nom de l'ennemi
         </str_155>
         <str_156>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 156
+            Vie de l'ennemi
         </str_156>
         <str_157>
             DEBOGGAGE TEXTE (A RETIRER) numéro 157
@@ -486,16 +493,16 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 159
         </str_159>
         <str_160>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 160
+            Vous êtes un meilleur sorcier, vous avez appris de nouveaux sorts.
         </str_160>
         <str_161>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 161
+
         </str_161>
         <str_162>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 162
+            Vous êtes un des sorcier les plus puissants, vous connaissez tous les sorts
         </str_162>
         <str_163>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 163
+            Vous ferez extrêmement attention lorsque vous les utiliserez
         </str_163>
         <str_164>
             DEBOGGAGE TEXTE (A RETIRER) numéro 164

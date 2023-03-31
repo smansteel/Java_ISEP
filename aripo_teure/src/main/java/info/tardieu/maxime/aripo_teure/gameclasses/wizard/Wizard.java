@@ -3,6 +3,7 @@ package info.tardieu.maxime.aripo_teure.gameclasses.wizard;
 import info.tardieu.maxime.aripo_teure.gameclasses.StorySpecials;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Effects;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.gameclasses.houses.House;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Pet;
@@ -27,7 +28,7 @@ public class Wizard extends Character {
 
 
     public Wizard( ) {
-        if(System.getenv("env").equals("DEBUG")){
+        if(System.getenv("env")!= null && System.getenv("env").equals("DEBUG")){
             maxHealth = 100000000;
             health = 100000000;
         }else{
@@ -89,21 +90,28 @@ public class Wizard extends Character {
 
     public int castSpell(AbstractSpell spell, AbstractEnemy enemy){
         if(spell.getName() == Spells.PROTEGO){
-
-        }
-        if( random100() <= spell.getHitProbability()){
-            int randomDamages = randomRange100(spell.getDamageRange()/100 * spell.getDamage());
-            this.attack(enemy, spell.getDamage()* randomDamages);
-            return spell.getDamage()* randomDamages;
+            return 0;
         }else{
+            if( random100() <= spell.getHitProbability()){
+                int randomDamages = randomRange100((int)((float)spell.getDamageRange())/100 * spell.getDamage());
 
-            return -1;
+                this.attack(enemy, spell.getDamage()* randomDamages/100);
+                return spell.getDamage()* randomDamages/100;
+            }else{
+
+                return -1;
+            }
         }
+
 
 
     }
 
     public int usePotion(Item item){
+        if(item.getEffect()== Effects.HEAL){
+            this.health = this.maxHealth;
+            item.use();
+        }
         return 0;
     }
 

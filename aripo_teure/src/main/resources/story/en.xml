@@ -18,10 +18,10 @@ USE !!player for player name
             Choose what action to do, type the number :)
         </str_3>
         <str_4>
-            DEBUG STRING (TO BE REMOVED) number4
+            You used Protego to defend yourself
         </str_4>
         <str_5>
-            DEBUG STRING (TO BE REMOVED) number5
+           You invoked a Patronus, they will defend you for a while.
         </str_5>
         <str_6>
             DEBUG STRING (TO BE REMOVED) number6
@@ -30,7 +30,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number7
         </str_7>
         <str_8>
-            You started boss 1 : naem : Troll deep in da toilets
+            Troll from the dungeon's bathroom
         </str_8>
         <str_9>
             DEBUG STRING (TO BE REMOVED) number9
@@ -120,13 +120,13 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number37
         </str_37>
         <str_38>
-            DEBUG STRING (TO BE REMOVED) number38
+            Dementor
         </str_38>
         <str_39>
             DEBUG STRING (TO BE REMOVED) number39
         </str_39>
         <str_40>
-            DEBUG STRING (TO BE REMOVED) number40
+            Heal potion
         </str_40>
         <str_41>
             DEBUG STRING (TO BE REMOVED) number41
@@ -159,10 +159,10 @@ USE !!player for player name
             Basilisk
         </str_50>
         <str_51>
-            DEBUG STRING (TO BE REMOVED) number51
+            Peter Pettigrow
         </str_51>
         <str_52>
-            DEBUG STRING (TO BE REMOVED) number52
+            Lord Voldemort
         </str_52>
         <str_53>
             DEBUG STRING (TO BE REMOVED) number53
@@ -192,79 +192,79 @@ USE !!player for player name
             Use them wisely
         </str_61>
         <str_62>
-            You started to fight the Basilisk, you can fight it with your spells or can be smarter and use its weakness
+            Chamber of Secrets (Basilisk)
         </str_62>
         <str_63>
-            DEBUG STRING (TO BE REMOVED) number63
+            You deafeated the Basilisk, congratulations wizard.
         </str_63>
         <str_64>
-            DEBUG STRING (TO BE REMOVED) number64
+            You lost against the Basilisk, maybe next time :)
         </str_64>
         <str_65>
-            Dementors
+            Lake if the Forbidden Forest (Dementors)
         </str_65>
         <str_66>
             You won your fight against the dementors. Next year you will be defeated he said
         </str_66>
         <str_67>
-            DEBUG STRING (TO BE REMOVED) number67
+            You died to the dementors
         </str_67>
         <str_68>
-            Pettigrow
+            Pettigrow and Voldemort
         </str_68>
         <str_69>
-            DEBUG STRING (TO BE REMOVED) number69
+            You won against Voldemort and Pettigrow
         </str_69>
         <str_70>
-            DEBUG STRING (TO BE REMOVED) number70
+            You lost against Voldemort and Pettigrow
         </str_70>
         <str_71>
-            You went to Hogwarts for one more year, you learned X and X spell
+            You went to Hogwarts for one more year, you learned expecto patronum during the year.
         </str_71>
         <str_72>
             As usual, use them wisely
         </str_72>
         <str_73>
-            DEBUG STRING (TO BE REMOVED) number73
+            You attended Hogwarts this year and learned Accio.
         </str_73>
         <str_74>
-            DEBUG STRING (TO BE REMOVED) number74
+            Use it wisely
         </str_74>
         <str_75>
             Deatheaters
         </str_75>
         <str_76>
-            DEBUG STRING (TO BE REMOVED) number76
+            Prepare yourself well during the school year, the next bosses will be harder
         </str_76>
         <str_77>
-            DEBUG STRING (TO BE REMOVED) number77
+            The Deatheaters were stronger than you !!player
         </str_77>
         <str_78>
-            DEBUG STRING (TO BE REMOVED) number78
+            The final fight, Hogwarts (Bellatrix Lestrange, and Lord Voldemort)
         </str_78>
         <str_79>
-            DEBUG STRING (TO BE REMOVED) number79
+            Well played
         </str_79>
         <str_80>
-            DEBUG STRING (TO BE REMOVED) number80
+            Nice try you went to the last level
         </str_80>
         <str_81>
-            DEBUG STRING (TO BE REMOVED) number81
+            Dolores Umbridge
         </str_81>
         <str_82>
-            DEBUG STRING (TO BE REMOVED) number82
+            Peter Pettigrow
         </str_82>
         <str_83>
-            DEBUG STRING (TO BE REMOVED) number83
+            Deatheater
         </str_83>
         <str_84>
-            DEBUG STRING (TO BE REMOVED) number84
+            Bellatrix Lestrange
         </str_84>
         <str_85>
-            DEBUG STRING (TO BE REMOVED) number85
+            The enemy dropped something, you pick it up and put it in your backpack
         </str_85>
         <str_86>
-            DEBUG STRING (TO BE REMOVED) number86
+            Lord Voldemort
         </str_86>
         <str_87>
             DEBUG STRING (TO BE REMOVED) number87
@@ -282,34 +282,43 @@ USE !!player for player name
             Makes an object levitate
         </str_91>
         <str_92>
-            DEBUG STRING (TO BE REMOVED) number92
+            Expecto Patronum
         </str_92>
         <str_93>
-            DEBUG STRING (TO BE REMOVED) number93
+            This ancient and mysterious charm conjures a magical guardian, a projection of all your most positive feelings.
+            The Patronus Charm is difficult, and many witches and wizards are unable to produce a full, corporeal Patronus,
+            a guardian which generally takes the shape of the animal with whom they share the deepest affinity.
+            You may suspect, but you will never truly know what form your Patronus will take until you succeed in conjuring it.
         </str_93>
         <str_94>
-            DEBUG STRING (TO BE REMOVED) number94
+            Accio
         </str_94>
         <str_95>
-            DEBUG STRING (TO BE REMOVED) number95
+            And then he heard it, speeding through the air behind him; he turned and saw his Firebolt hurtling towards
+            him around the edge of the woods, soaring into the enclosure, and stopping dead in mid-air beside him,
+            waiting for him to mount.
         </str_95>
         <str_96>
-            DEBUG STRING (TO BE REMOVED) number96
+            Sectum Sempra
         </str_96>
         <str_97>
-            DEBUG STRING (TO BE REMOVED) number97
+            Sectumsempra was a curse invented by Professor Severus Snape that lacerates the target and causes severe
+            haemorrhaging. Snape created it as a student of Hogwarts, with the intention of using it against his enemies,
+            likely including the Marauders, and it became one of his specialities.
         </str_97>
         <str_98>
-            DEBUG STRING (TO BE REMOVED) number98
+            Avada Kedavra
         </str_98>
         <str_99>
-            DEBUG STRING (TO BE REMOVED) number99
+            There was a flash of blinding green light and a rushing sound, as though a vast, invisible something was
+            soaring through the air — instantaneously the spider rolled over onto its back, unmarked, but unmistakably
+            dead.
         </str_99>
         <str_100>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 100
+            Impero
         </str_100>
         <str_101>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 101
+            One of the three Unforgivable Curses, it allows the caster to control another’s actions.
         </str_101>
         <str_102>
             Crucio
@@ -450,10 +459,10 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 147
         </str_147>
         <str_148>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 148
+            Congratulations, you won the game, see you later
         </str_148>
         <str_149>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 149
+            You did your best, maybe later :)
         </str_149>
         <str_150>
             Choose the ennemy to fight
@@ -486,16 +495,16 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 159
         </str_159>
         <str_160>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 160
+            You are progressing as a wizard and getting better, you learn new spells
         </str_160>
         <str_161>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 161
+
         </str_161>
         <str_162>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 162
+            You are now one of the most powerful wizard, you learnt all the spells.
         </str_162>
         <str_163>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 163
+            You will be extremely careful as when to use theses spells.
         </str_163>
         <str_164>
             DEBOGGAGE TEXTE (A RETIRER) numéro 164

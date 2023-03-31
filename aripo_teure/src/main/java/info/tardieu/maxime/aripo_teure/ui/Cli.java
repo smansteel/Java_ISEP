@@ -141,7 +141,7 @@ public class Cli implements UserInteract {
     public Object askAction(Wizard player, AbstractEnemy[] enemies) {
         int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25), fetcher.getString(28)}, true);
         //displayMessage(String.valueOf(choice));
-        if(System.getenv("env").equals("DEBUG")){
+        if(System.getenv("env")!= null && System.getenv("env").equals("DEBUG")){
             displayFight(player, enemies);
         }
 

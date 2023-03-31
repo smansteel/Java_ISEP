@@ -5,6 +5,7 @@ import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Bosses;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
 import info.tardieu.maxime.aripo_teure.ui.UserInteract;
@@ -97,7 +98,11 @@ public class GameTurn {
     }
 
     public void endgame(){
-        this.userInterface.displayFromXML(150);
+        this.userInterface.displayFromXML(148);
+        System.exit(0);
+    }
+    public void endgame(boolean val){
+        this.userInterface.displayFromXML(149);
         System.exit(0);
     }
 
@@ -105,6 +110,7 @@ public class GameTurn {
         AbstractEnemy lastenemy = this.levels[nextTile].getEnemies()[0];
 
         while(player.isAlive() && this.levels[nextTile].ennemiesAtLeastOneAlive()){
+            player.setDefending(false);
 
             Object action;
             if(StorySpecials.checkDeathEaterAlliance(player,this.levels[nextTile].getEnemies()[0] )){
@@ -156,16 +162,17 @@ public class GameTurn {
         }
         if(!player.isAlive()){
             this.userInterface.displayPlayerDeath(player, lastenemy);
+            endgame(false);
         }
     }
 
     private void getItemsFromRoom ( Level room){
         ArrayList<Object> roomContent= new ArrayList<>(Arrays.asList(room.getRoomContent()));
-        int dropchances = 100;// outta 100
+        int dropchances = 10;//% of chances to drop the item
         if(random(0,100) <dropchances && roomContent.size()>=1){
             int randomize = random(0, room.getRoomContent().length-1);
             Item randomItem = (Item) roomContent.remove(randomize);
-
+            this.userInterface.displayFromXML(85);
             player.pickUp(randomItem);
             room.setRoomContent(roomContent.toArray());
 
@@ -206,6 +213,7 @@ public class GameTurn {
 
         }else{
             damages = player.usePotion(converted);
+
         }
 
         if (damages >=0 && choice.isAlive()){
@@ -242,7 +250,17 @@ public class GameTurn {
             choice.kill();
             damages = -2;
 
-        }else if (StorySpecials.checkPettigrowInteraction( choice, converted)){
+        }else if (converted.getName() == Spells.PROTEGO){
+            this.userInterface.displayFromXML(4);
+            player.defend();
+            damages = 0;
+
+        }else if (converted.getName() == Spells.EXPECTO_PATRONUM){
+            this.userInterface.displayFromXML(5);
+            player.setDamageReduction(75);
+            damages = 0;
+
+        }else  if (StorySpecials.checkPettigrowInteraction( choice, converted)){
 
             atkCount++;
             if(atkCount >3){

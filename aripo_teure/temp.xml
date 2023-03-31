@@ -3,10 +3,10 @@
 USE !!player for player name
 
 -->
-<strings  id="en">
+<strings  id="fr">
     <string>
         <str_0>
-            Welcome to Harry Potter@home, a java project for ISEP. Developped by Maxime TARDIEU in 2023.
+            Bienvenue dans Harry Potter à la maison, un projet Java pour l'ISEP. Développé par Maxime TARDIEU en 2023.
         </str_0>
         <str_1>
             Introduction
@@ -15,13 +15,13 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED)
         </str_2>
         <str_3>
-            Choose what action to do, type the number :)
+            Choisissez quelle action effectuer, taper le chiffre
         </str_3>
         <str_4>
-            DEBUG STRING (TO BE REMOVED) number4
+            Vous avez utilisé Protego pour vous défendre
         </str_4>
         <str_5>
-            DEBUG STRING (TO BE REMOVED) number5
+            Vous avez invoqué votre Patronus, il va vous défendre pendant un moment
         </str_5>
         <str_6>
             DEBUG STRING (TO BE REMOVED) number6
@@ -30,7 +30,7 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number7
         </str_7>
         <str_8>
-            You started boss 1 : naem : Troll deep in da toilets
+            Troll des Toilettes du Donjon
         </str_8>
         <str_9>
             DEBUG STRING (TO BE REMOVED) number9
@@ -42,10 +42,10 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number11
         </str_11>
         <str_12>
-            What is your name, Wizard?
+            Quel est ton nom sorcier ?
         </str_12>
         <str_13>
-            What do you want to name your wand?
+            Comment veux-tu appeler ta baguette ?
         </str_13>
         <str_14>
             DEBUG STRING (TO BE REMOVED) number14
@@ -66,76 +66,76 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number19
         </str_19>
         <str_20>
-             Not a valid value, please input a number from the list
+            La valeur entrée n'est pas valide, veuillez en taper une de la liste
         </str_20>
         <str_21>
-            What action do you want to perform this turn ?
+            Quelle action souhaitez vous accomplir ce tour ?
         </str_21>
         <str_22>
-            Use a spell
+            Utiliser un sort
         </str_22>
         <str_23>
-            Use an item
+            Utiliser un objet
         </str_23>
         <str_24>
-            No spells available
+            Pas de sorts disponibles
         </str_24>
         <str_25>
-            Display Wizard stats
+            Afficher les stats du sorcier
         </str_25>
         <str_26>
-            Press enter to continue
+            Appuyez sur entrer pour continuer
         </str_26>
         <str_27>
-            Nothing to use in your backpack
+            Pas d'objets dans le sac a dos
         </str_27>
         <str_28>
-            Display fight informations (health and enemies)
+            Afficher les informations du combat
         </str_28>
         <str_29>
             DEBUG STRING (TO BE REMOVED) number29
         </str_29>
         <str_30>
-            Player informations:
+            Information joueur :
         </str_30>
         <str_31>
-            Name
+            Nom
         </str_31>
         <str_32>
-            House
+            Maison
         </str_32>
         <str_33>
-            Wand
+            Baguette
         </str_33>
         <str_34>
-                Wand size
+            Taille de la baguette
         </str_34>
         <str_35>
-                Wand wood
+            Type de bois
         </str_35>
         <str_36>
-                Wand core
+            Coeur de la baguette
         </str_36>
         <str_37>
             DEBUG STRING (TO BE REMOVED) number37
         </str_37>
         <str_38>
-            DEBUG STRING (TO BE REMOVED) number38
+            Détraqueur
         </str_38>
         <str_39>
             DEBUG STRING (TO BE REMOVED) number39
         </str_39>
         <str_40>
-            DEBUG STRING (TO BE REMOVED) number40
+            Potion de soin
         </str_40>
         <str_41>
             DEBUG STRING (TO BE REMOVED) number41
         </str_41>
         <str_42>
-            Basilisk tooth
+            Croc du Basilique
         </str_42>
         <str_43>
-            Gryffindor Sword
+            Épée Griffondor
         </str_43>
         <str_44>
             DEBUG STRING (TO BE REMOVED) number44
@@ -156,13 +156,13 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number49
         </str_49>
         <str_50>
-            Basilisk
+            Basilique
         </str_50>
         <str_51>
-            DEBUG STRING (TO BE REMOVED) number51
+            Peter Pettigrow
         </str_51>
         <str_52>
-            DEBUG STRING (TO BE REMOVED) number52
+            Lord Valdemort
         </str_52>
         <str_53>
             DEBUG STRING (TO BE REMOVED) number53
@@ -183,88 +183,88 @@ USE !!player for player name
             DEBUG STRING (TO BE REMOVED) number58
         </str_58>
         <str_59>
-            As your house is gryffyndor, during the school year you gained access to the sword of the house
+            Vu que vous appartenez à Griffondor, vous avez accès à l'épée de la maison
         </str_59>
         <str_60>
-            You went to school for a full year, you learned a few spells, Wingardium leviosa, protego and imperio
+            Vous êtes allés à Poudlard durant une année et vous avez appris Wingardium Leviosa, Imperio et Predego
         </str_60>
         <str_61>
-            Use them wisely
+            Utilisez avec raison
         </str_61>
         <str_62>
-            You started to fight the Basilisk, you can fight it with your spells or can be smarter and use its weakness
+            Chambre des Secrets (Basilique)
         </str_62>
         <str_63>
-            DEBUG STRING (TO BE REMOVED) number63
+            Vous avez battu le Basilique, bravo
         </str_63>
         <str_64>
-            DEBUG STRING (TO BE REMOVED) number64
+            Vous avez perdu contre le basilique
         </str_64>
         <str_65>
-            Dementors
+            Lac de la Forêt interdite (Detraqueurs)
         </str_65>
         <str_66>
-            You won your fight against the dementors. Next year you will be defeated he said
+            Vous avez battu les Détraqueurs
         </str_66>
         <str_67>
-            DEBUG STRING (TO BE REMOVED) number67
+            Les Détraqueurs vous ont battus.
         </str_67>
         <str_68>
-            Pettigrow
+            Pettigrow et Valdemort
         </str_68>
         <str_69>
-            DEBUG STRING (TO BE REMOVED) number69
+            Vous avez gagné contre Peter Pettigrow et Valdemort
         </str_69>
         <str_70>
-            DEBUG STRING (TO BE REMOVED) number70
+            Vous avez perdu contre Peter Pettigrow et Valdemort
         </str_70>
         <str_71>
-            You went to Hogwarts for one more year, you learned X and X spell
+            Vous êtes allés à Poudlard pour une année supplémentaire, Vous avez appris expecto patronum
         </str_71>
         <str_72>
-            As usual, use them wisely
+            Comme d'habitude utilisez les bien
         </str_72>
         <str_73>
-            DEBUG STRING (TO BE REMOVED) number73
+            Vous avez appris accio a Poudlard cette année
         </str_73>
         <str_74>
-            DEBUG STRING (TO BE REMOVED) number74
+
         </str_74>
         <str_75>
-            Deatheaters
+            Mangemorts
         </str_75>
         <str_76>
-            DEBUG STRING (TO BE REMOVED) number76
+            Vous avez battu les Mangemorts
         </str_76>
         <str_77>
-            DEBUG STRING (TO BE REMOVED) number77
+            Les mangemorts ont été plus fort que vous !!player
         </str_77>
         <str_78>
-            DEBUG STRING (TO BE REMOVED) number78
+           Le combat final, Poudlard (Bellatrix Lestrange, and Lord Valdemort)
         </str_78>
         <str_79>
-            DEBUG STRING (TO BE REMOVED) number79
+            Bien joué
         </str_79>
         <str_80>
-            DEBUG STRING (TO BE REMOVED) number80
+            Bien essayé, vous êtes allés jusqu'au dernier niveau
         </str_80>
         <str_81>
-            DEBUG STRING (TO BE REMOVED) number81
+            Dolorès Ombrage
         </str_81>
         <str_82>
-            DEBUG STRING (TO BE REMOVED) number82
+            Peter Pettigrow
         </str_82>
         <str_83>
-            DEBUG STRING (TO BE REMOVED) number83
+            Mangemort
         </str_83>
         <str_84>
-            DEBUG STRING (TO BE REMOVED) number84
+            Bellatrix Lestrange
         </str_84>
         <str_85>
-            DEBUG STRING (TO BE REMOVED) number85
+            L'ennemi à fait tomber quelque chose, vous le ramassez et le mettez dans votre sac
         </str_85>
         <str_86>
-            DEBUG STRING (TO BE REMOVED) number86
+            Lord Valdemort
         </str_86>
         <str_87>
             DEBUG STRING (TO BE REMOVED) number87
@@ -279,49 +279,56 @@ USE !!player for player name
             Wingardium Leviosa
         </str_90>
         <str_91>
-            Makes an object levitate
+            Fait léviter un objet
         </str_91>
         <str_92>
-            DEBUG STRING (TO BE REMOVED) number92
+            Expecto Patronum
         </str_92>
         <str_93>
-            DEBUG STRING (TO BE REMOVED) number93
+            Le sortilège du Patronus est un enchantement visant à faire apparaître un Patronus, un esprit protecteur.
         </str_93>
         <str_94>
-            DEBUG STRING (TO BE REMOVED) number94
+            Accio
         </str_94>
         <str_95>
-            DEBUG STRING (TO BE REMOVED) number95
+            Le sortilège d'Attraction est un enchantement qui permet d'attirer un objet vers soi.
         </str_95>
         <str_96>
-            DEBUG STRING (TO BE REMOVED) number96
+            Sectum Sempra
         </str_96>
         <str_97>
-            DEBUG STRING (TO BE REMOVED) number97
+            Sectumsempra est un sort qui blesse violemment la personne visée. Il a été créé par Severus Rogue.
+            D'après celui-ci, l'utilisation du sort serait un acte de magie noire.
+            Il crée de profondes entailles sur la partie du corps visée, comme si la cible avait été "tailladée par une épée".
+            La victime se vide très rapidement de son sang si rien n'est fait dans les minutes qui suivent.
         </str_97>
         <str_98>
-            DEBUG STRING (TO BE REMOVED) number98
+            Avada Kedavra
         </str_98>
         <str_99>
-            DEBUG STRING (TO BE REMOVED) number99
+            Le sortilège de la Mort, l'un des trois Sortilèges Impardonnables, a pour formule Avada Kedavra.
+            La seule personne ayant résisté à ce sort est Harry Potter.
+            Il est caractérisé par une lumière verte et un bruit semblable à une rafale de vent.
         </str_99>
         <str_100>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 100
+            Impero
         </str_100>
         <str_101>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 101
+            Le sortilège de l'Imperium est l'un des trois Sortilèges Impardonnables. Son incantation est Impero .
+            Il contrôle totalement la personne touchée et n'est pas détectable à l'œil nu.
+            C'est pour cette raison qu'on ne peut pas prouver qui a travaillé pour Voldemort de son plein gré ou sous l'influence du mage noir.
         </str_101>
         <str_102>
             Crucio
         </str_102>
         <str_103>
-            Makes small damage, with 50% chance of hitting
+            Fait de petits dégats avec 50% de chances de toucher.
         </str_103>
         <str_104>
             Protego
         </str_104>
         <str_105>
-            Shield damages, varies with wand length and core
+            Protège totalement des dégats ennemis pendant 1 tour
         </str_105>
         <str_106>
             DEBOGGAGE TEXTE (A RETIRER) numéro 106
@@ -339,13 +346,13 @@ USE !!player for player name
             Troll
         </str_110>
         <str_111>
-            You started your fight against the troll that Hermione summoned, beware that the weak point of the troll is its head
+           Vous combattez le troll, que Hermione à fait apparaitre, son point faible est la tête.
         </str_111>
         <str_112>
-            Excellent, you won your fight against the troll
+            Bravo vous avez battu le troll
         </str_112>
         <str_113>
-            You lost your fight against the troll, it only had 100hp :/
+            Vous avez perdu contre le troll, il n'avait que 100hp :/
         </str_113>
         <str_114>
             DEBOGGAGE TEXTE (A RETIRER) numéro 114
@@ -360,82 +367,82 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 117
         </str_117>
         <str_118>
-            What spell do you want to use?
+            Quel sort voulez vous utiliser
         </str_118>
         <str_119>
-            What item do you want to use?
+            Quel objet voulez vous utiliser
         </str_119>
         <str_120>
-            You inflicted
+            Vous avez fait
         </str_120>
         <str_121>
-            damages
+            dégats
         </str_121>
         <str_122>
             DEBOGGAGE TEXTE (A RETIRER) numéro 122
         </str_122>
         <str_123>
-            PLayer died, you had
+            Vous êtes mort, vous aviez
         </str_123>
         <str_124>
-            Enemy
+            Ennemi
         </str_124>
         <str_125>
-             inflicted you
+            vous a infligé
         </str_125>
         <str_126>
-            HP and died to
+            PV et vous êtes morts de
         </str_126>
         <str_127>
             DEBOGGAGE TEXTE (A RETIRER) numéro 127
         </str_127>
         <str_128>
-            You killed a
+            Vous avez tué un
         </str_128>
         <str_129>
-            , they had
+            , et ils avait
         </str_129>
         <str_130>
-            hp
+            PV
         </str_130>
         <str_131>
-            Go back
+            Retour arrière
         </str_131>
         <str_132>
             DEBOGGAGE TEXTE (A RETIRER) numéro 132
         </str_132>
         <str_133>
-            You missed your spell
+            Vous avez raté votre sort
         </str_133>
         <str_134>
-            You missed your throw
+            Vous avez raté votre lancé
         </str_134>
         <str_135>
-            You pick up a rock from aside the troll, and send it flying towards its head.
+            Vous soulevez une pierre adjacente au Troll et l'envoyez voler dans sa tête.
         </str_135>
         <str_136>
-            The dementor fled as you used your patronus.
+            Les Détraqueurs ont fui en voyant votre patronus.
         </str_136>
         <str_137>
             DEBOGGAGE TEXTE (A RETIRER) numéro 137
         </str_137>
         <str_138>
-            Pettigrow is getting closer, you go towards Portkey
+            Pettigrow se rapproche, Vous vous rapprochez de Portoloin
         </str_138>
         <str_139>
-            You are from House Slytherin, do you want to make an alliance with the deatheaters ?
+            Vous êtes un Serpentard, voulez vous faire une alliance avec les Mangemorts?
         </str_139>
         <str_140>
-            Yes
+            Oui
         </str_140>
         <str_141>
-            No
+            Non
         </str_141>
         <str_142>
             DEBOGGAGE TEXTE (A RETIRER) numéro 142
         </str_142>
         <str_143>
-            You Ally yourself with the Deatheaters, you are now with Bellatrix Lestrange and Voldemort. Well PLayed
+            Vous vous alliez avec les Mangemorts, vous êtes dans le camp de Bellatrix Lestrange et Voldemort. Bien joué
         </str_143>
         <str_144>
             DEBOGGAGE TEXTE (A RETIRER) numéro 144
@@ -450,31 +457,31 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 147
         </str_147>
         <str_148>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 148
+            Bravo, vous avez gagné le jeu
         </str_148>
         <str_149>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 149
+            Vous avez fait de votre mieux, peut-être la prochaine fois
         </str_149>
         <str_150>
-            Choose the ennemy to fight
+            Choisissez l'ennemi à viser
         </str_150>
         <str_151>
-            hp
+            PV
         </str_151>
         <str_152>
-            Fight info : Wizard (You)
+            Info de combat : Sorcier !!player (Vous)
         </str_152>
         <str_153>
-            Health
+            Vie
         </str_153>
         <str_154>
-            Maximum Health
+            Vie Maximale
         </str_154>
         <str_155>
-            Enemy name
+            Nom de l'ennemi
         </str_155>
         <str_156>
-            Enemy Health
+            Vie de l'ennemi
         </str_156>
         <str_157>
             DEBOGGAGE TEXTE (A RETIRER) numéro 157
@@ -486,16 +493,16 @@ USE !!player for player name
             DEBOGGAGE TEXTE (A RETIRER) numéro 159
         </str_159>
         <str_160>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 160
+            Vous êtes un meilleur sorcier, vous avez appris de nouveaux sorts.
         </str_160>
         <str_161>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 161
+
         </str_161>
         <str_162>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 162
+            Vous êtes un des sorcier les plus puissants, vous connaissez tous les sorts
         </str_162>
         <str_163>
-            DEBOGGAGE TEXTE (A RETIRER) numéro 163
+            Vous ferez extrêmement attention lorsque vous les utiliserez
         </str_163>
         <str_164>
             DEBOGGAGE TEXTE (A RETIRER) numéro 164
