@@ -3,12 +3,9 @@ package info.tardieu.maxime.aripo_teure.gameclasses.wizard;
 import info.tardieu.maxime.aripo_teure.gameclasses.StorySpecials;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.Character;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Effects;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Spells;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.*;
 import info.tardieu.maxime.aripo_teure.gameclasses.houses.House;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Pet;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
-import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Core;
 import info.tardieu.maxime.aripo_teure.gameclasses.wand.Wand;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 
@@ -22,7 +19,6 @@ public class Wizard extends Character {
     private Pet pet;
     private Wand wand;
     private House house;
-    private String name;
     private Hashtable<String, AbstractSpell> knownSpells;
     private Hashtable<String, Item> potions;
 
@@ -36,7 +32,7 @@ public class Wizard extends Character {
             health = 100;
         }
 
-
+        this.damage = 5;
         this.pet = Pet.randomPet();
         this.wand = new Wand("");
         this.house = new House();
@@ -92,11 +88,21 @@ public class Wizard extends Character {
         if(spell.getName() == Spells.PROTEGO){
             return 0;
         }else{
-            if( random100() <= spell.getHitProbability()){
+            int getHitProb;
+            if (this.getHouse().getHouseIn()== HouseList.Ravenclaw){
+                getHitProb = (int) (spell.getHitProbability()*1.2);
+            }else{
+                getHitProb = (spell.getHitProbability());
+            }
+            if( random100() <= getHitProb){
                 int randomDamages = randomRange100((int)((float)spell.getDamageRange())/100 * spell.getDamage());
-
-                this.attack(enemy, spell.getDamage()* randomDamages/100);
-                return spell.getDamage()* randomDamages/100;
+                int ttDamages;
+                if (this.getHouse().getHouseIn()== HouseList.Slytherin){
+                    ttDamages = (int) ((spell.getDamage()* randomDamages/100)*1.2);
+                }else{
+                    ttDamages =((spell.getDamage()* randomDamages/100));
+                }
+                return this.attack(enemy, ttDamages);
             }else{
 
                 return -1;
@@ -109,7 +115,16 @@ public class Wizard extends Character {
 
     public int usePotion(Item item){
         if(item.getEffect()== Effects.HEAL){
-            this.health = this.maxHealth;
+
+            int heal;
+            if (this.getHouse().getHouseIn()== HouseList.Hufflepuff){
+                heal = 50;
+            }else{
+                heal = 30;
+            }
+
+            this.health = this.health +heal;
+
             item.use();
         }
         return 0;

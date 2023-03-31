@@ -13,6 +13,8 @@ import info.tardieu.maxime.aripo_teure.gameclasses.enemy.Boss;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
 import info.tardieu.maxime.aripo_teure.gameclasses.spell.Spell;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Objects;
 
@@ -28,10 +30,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
 
                 },
-                new AbstractSpell[]{ //spells weak to
-                        spells.get("expecto")
-                },
-                10));
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]), 10));
 
 
         hash_boss.put("pettigrow", new Boss(sf.getString(82),
@@ -42,9 +41,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
 
                 },
-                new AbstractSpell[]{ //spells weak to
-                        spells.get("expecto")
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 15));
 
 
@@ -56,9 +53,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
                         spells.get("sectum"), spells.get("protego")
                 },
-                new AbstractSpell[]{ //spells weak to
-                        spells.get("sectum")
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 10));
 
 
@@ -70,9 +65,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
                         spells.get("sectum")
                 },
-                new AbstractSpell[]{ //spells weak to
-
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 12));
 
         hash_boss.put("troll", new Boss(sf.getString(110),
@@ -83,9 +76,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{
                         spells.get("crucio")
                 },
-                new AbstractSpell[]{
-
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 10));
 
 
@@ -97,9 +88,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
                         spells.get("crucio")
                 },
-                new AbstractSpell[]{ //spells weak to
-
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 15));
 
         hash_boss.put("bellatrix", new Boss(sf.getString(84),
@@ -108,11 +97,9 @@ public class StoryBuilder {
                 1500,
                 10,
                 new AbstractSpell[]{ //knownspells
-                        spells.get("sectum")
+                        spells.get("sectum"), spells.get("avada")
                 },
-                new AbstractSpell[]{ //spells weak to
-
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 50));
         hash_boss.put("voldemort_weak", new Boss(sf.getString(86),
                 Bosses.VOLDEMORT,
@@ -122,9 +109,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
                         spells.get("sectum")
                 },
-                new AbstractSpell[]{ //spells weak to
-
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 30));
         hash_boss.put("voldemort", new Boss(sf.getString(86),
                 Bosses.VOLDEMORT,
@@ -134,9 +119,7 @@ public class StoryBuilder {
                 new AbstractSpell[]{ //knownspells
                         spells.get("avada")
                 },
-                new AbstractSpell[]{ //spells weak to
-
-                },
+                (new ArrayList<>(spells.values())).toArray(new AbstractSpell[0]),
                 50));
 
 
@@ -404,8 +387,8 @@ public class StoryBuilder {
                Spells.AVADA_KEDAVRA,
                90,
                600,
-               75,
-               150,
+               175,
+               50,
                avada,
                avadaDesc,
                null,

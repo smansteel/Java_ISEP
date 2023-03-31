@@ -9,7 +9,7 @@ import static info.tardieu.maxime.aripo_teure.utils.Random.random;
 public abstract class AbstractEnemy extends Character {
     protected AbstractSpell[] spellsLearned;
     protected AbstractSpell[] spellsWeak;
-    protected int damage;
+
 
     public Bosses getType(){
         return null;
@@ -31,16 +31,10 @@ public abstract class AbstractEnemy extends Character {
         if (rd.nextBoolean() && spellsLearned.length >1){
             AbstractSpell spell = spellsLearned[random(0, spellsLearned.length)];
             int damages = spell.getDamage() + (random(0, spell.getDamageRange())*spell.getDamage()/100);
-            if(attack(player, damages)){
-                return  damages;
-            }
-            return  0;
+                return attack(player, damages);
         }
         else{
-            if(attack(player, damage)){
-                return  damage;
-            }
-            return  0;
+            return attack(player, damage);
         }
 
 

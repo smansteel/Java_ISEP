@@ -40,6 +40,7 @@ public class GameTurn {
         nextTile =0;
 
         this.levels =  StoryBuilder.getLevels(this.language);
+        this.userInterface.displayInfos(player);
 
 
 
@@ -58,6 +59,7 @@ public class GameTurn {
 
 
                 bossFight();
+                playerUpgrade();
                 nextTile ++;
 
                 break;
@@ -106,6 +108,21 @@ public class GameTurn {
         System.exit(0);
     }
 
+    public void playerUpgrade(){
+        Actions upgrade = this.userInterface.askUpgarde();
+        if(upgrade ==Actions.UPGRADE_DAMAGES){
+            player.setDamage(player.getDamage()+10);
+        }else if(upgrade ==Actions.UPGRADE_HEALTH){
+            player.setMaxHealth(player.getMaxHealth()+50);
+            player.setHealth(player.getHealth()+50);
+        }
+
+        this.userInterface.displayUpgrade(upgrade, player);
+
+    }
+
+
+
     public void bossFight(){
         AbstractEnemy lastenemy = this.levels[nextTile].getEnemies()[0];
 
@@ -121,7 +138,7 @@ public class GameTurn {
                     action = Actions.FAIL;
                 }
             }else{
-                action =  this.userInterface.askAction(player, this.levels[nextTile].getEnemies());
+                action =  this.userInterface.askAction(player, this.levels[nextTile]);
             }
 
 
@@ -149,6 +166,10 @@ public class GameTurn {
 
                 } else if (action instanceof Item converted) {
                     useItem( converted);
+                }
+                else if (action instanceof AbstractEnemy converted) {
+                    player.attack( converted, player.getDamage());
+                    this.userInterface.displayDamages(player.getDamage());
                 }
 
                 if (this.levels[nextTile].getRoomContent().length>0 ){

@@ -18,7 +18,7 @@ public class Wand {
         this.damageMultiplier = new Random().nextInt(50+1) +75;
         this.damageMultiplierForbidden = new Random().nextInt(50+1) +75;
         this.core = Core.randomCore();
-        this.size = new Random().nextInt(89+1) +10;
+        this.size = new Random().nextInt(19+1) +10;
         this.wood = Woods.randomWood();
     }
     public Core getCore(){

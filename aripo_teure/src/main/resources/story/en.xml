@@ -33,22 +33,22 @@ USE !!player for player name
             Troll from the dungeon's bathroom
         </str_8>
         <str_9>
-            DEBUG STRING (TO BE REMOVED) number9
+            Attack
         </str_9>
         <str_10>
-            DEBUG STRING (TO BE REMOVED) number10
+            What do you want to upgrade ?
         </str_10>
         <str_11>
-            DEBUG STRING (TO BE REMOVED) number11
+            Damages
         </str_11>
         <str_12>
             What is your name, Wizard?
         </str_12>
         <str_13>
-            What do you want to name your wand?
+            What do you want to name you wand?
         </str_13>
         <str_14>
-            DEBUG STRING (TO BE REMOVED) number14
+            Health
         </str_14>
         <str_15>
             DEBUG STRING (TO BE REMOVED) number15
@@ -69,7 +69,7 @@ USE !!player for player name
              Not a valid value, please input a number from the list
         </str_20>
         <str_21>
-            What action do you want to perform this turn ?
+            What action do you want to perform against
         </str_21>
         <str_22>
             Use a spell
@@ -267,10 +267,10 @@ USE !!player for player name
             Lord Voldemort
         </str_86>
         <str_87>
-            DEBUG STRING (TO BE REMOVED) number87
+            You now have :
         </str_87>
         <str_88>
-            DEBUG STRING (TO BE REMOVED) number88
+            You now do :
         </str_88>
         <str_89>
             DEBUG STRING (TO BE REMOVED) number89
@@ -348,7 +348,7 @@ USE !!player for player name
             Troll
         </str_110>
         <str_111>
-            You started your fight against the troll that Hermione summoned, beware that the weak point of the troll is its head
+            Dungeon, Bathroom (Troll)
         </str_111>
         <str_112>
             Excellent, you won your fight against the troll

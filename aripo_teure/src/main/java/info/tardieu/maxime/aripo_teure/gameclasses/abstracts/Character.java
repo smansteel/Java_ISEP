@@ -1,5 +1,8 @@
 package info.tardieu.maxime.aripo_teure.gameclasses.abstracts;
 
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.HouseList;
+import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
+
 public abstract class Character {
     protected String name ;
     protected int health ;
@@ -7,13 +10,26 @@ public abstract class Character {
     protected int manaa ;
     protected boolean isDefending;
     protected float damageReduction; //%
+    protected int damage;
+
     protected int maxManna;
-    public boolean attack(Character target, int damage){
+    public int attack(Character target, int damage){
         if (!target.isDefending()){
-            target.setHealth((int) (target.getHealth() - (damage)*(100-damageReduction)/100)) ;
-            return true;
+            int damages;
+
+            if(target instanceof Wizard && ((Wizard) target).getHouse().getHouseIn()== HouseList.Gryffindor){
+
+
+                damages = (int) ((damage)*(100-(target.getDamageReduction()*1.2))/100);
+            }else{
+
+                damages = (int) (  (damage)*(100-target.getDamageReduction())/100);
+            }
+
+            target.setHealth(target.getHealth() - damages) ;
+            return  damages;
         }
-        return false;
+        return 0;
     }
 
     public void setDamageReduction(int damageReduction) {
@@ -22,6 +38,10 @@ public abstract class Character {
 
     public void defend(){
         this.isDefending = true;
+    }
+
+    public float getDamageReduction() {
+        return damageReduction;
     }
 
     public void setHealth(int health) {
@@ -57,8 +77,15 @@ public abstract class Character {
         return this.maxHealth;
     }
 
+    public void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
+    }
 
+    public int getDamage() {
+        return damage;
+    }
 
-
-
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
 }

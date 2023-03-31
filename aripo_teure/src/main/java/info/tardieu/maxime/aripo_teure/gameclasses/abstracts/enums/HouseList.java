@@ -8,7 +8,7 @@ public enum HouseList {
     Hufflepuff,
     Slytherin;
 
-    public static HouseList randomHouse()  {
+    public static HouseList sortingHat()  {
         HouseList[] random = values();
         return random[new Random().nextInt(random.length)];
     }

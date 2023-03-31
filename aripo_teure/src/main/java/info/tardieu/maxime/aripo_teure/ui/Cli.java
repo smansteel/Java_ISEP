@@ -147,8 +147,10 @@ public class Cli implements UserInteract {
     }
 
     @Override
-    public Object askAction(Wizard player, AbstractEnemy[] enemies) {
-        int choice = askChoice(fetcher.getString(21), new String[]{fetcher.getString(22), fetcher.getString(23), fetcher.getString(25), fetcher.getString(28)}, true);
+    public Object askAction(Wizard player, Level level) {
+        AbstractEnemy[] enemies = level.getEnemies();
+        String question = fetcher.getString(21)+" "+ level.getEnemies()[0].getName() +" ?";
+        int choice = askChoice(question, new String[]{fetcher.getString(9), fetcher.getString(22), fetcher.getString(23), fetcher.getString(25), fetcher.getString(28)}, false);
         //displayMessage(String.valueOf(choice));
         if(System.getenv("env")!= null && System.getenv("env").equals("DEBUG")){
             displayFight(player, enemies);
@@ -156,15 +158,21 @@ public class Cli implements UserInteract {
 
         switch (choice)
         {
-            case 0: return askSpell(player);
+            case 0: if(enemies.length>1){
+                return whichEnemy(level);
+            }else{
+                return enemies[0];
+            }
 
-            case 1: return askPotion(player);
+            case 1: return askSpell(player);
 
-            case 3: displayFight(player, enemies);
-                return null;
+            case 2: return askPotion(player);
 
-            case 2: displayInfos(player);
-                return null;
+            case 4: displayFight(player, enemies);
+                return Actions.FAIL;
+
+            case 3: displayInfos(player);
+                return Actions.FAIL;
 
             default:
                 return Actions.FAIL;
@@ -354,5 +362,31 @@ public class Cli implements UserInteract {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Actions askUpgarde() {
+
+        return switch (askChoice(fetcher.getString(10), new String[]{fetcher.getString(11), fetcher.getString(14)}, false)) {
+            case 0 -> Actions.UPGRADE_DAMAGES;
+            case 1 -> Actions.UPGRADE_HEALTH;
+            default -> null;
+        };
+
+    }
+
+    @Override
+    public void displayUpgrade(Actions action, Wizard player) {
+
+        if(action == Actions.UPGRADE_HEALTH){
+            msgNNL(fetcher.getString(87));
+            displayMessage(player.getHealth() + " / "+player.getMaxHealth() +" "+ fetcher.getString(130));
+        } else if (action == Actions.UPGRADE_DAMAGES) {
+            msgNNL(fetcher.getString(88));
+            displayMessage(player.getDamage() +" "+ fetcher.getString(11));
+
+        }
+
+        msgNNL("\n\n");
     }
 }

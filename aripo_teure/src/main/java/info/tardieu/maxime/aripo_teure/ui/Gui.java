@@ -3,6 +3,7 @@ package info.tardieu.maxime.aripo_teure.ui;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
@@ -63,7 +64,7 @@ public class Gui implements UserInteract {
     }
 
     @Override
-    public Object askAction(Wizard player, AbstractEnemy[] enemies) {
+    public Object askAction(Wizard player, Level level) {
         return null;
     }
 
@@ -135,5 +136,15 @@ public class Gui implements UserInteract {
     @Override
     public boolean askAlliance() {
         return false;
+    }
+
+    @Override
+    public Actions askUpgarde() {
+        return null;
+    }
+
+    @Override
+    public void displayUpgrade(Actions action, Wizard player) {
+
     }
 }

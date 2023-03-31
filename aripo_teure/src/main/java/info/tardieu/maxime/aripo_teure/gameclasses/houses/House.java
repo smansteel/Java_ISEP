@@ -15,6 +15,6 @@ public class House {
     }
 
     public House() {
-        this.houseIn = HouseList.randomHouse();
+        this.houseIn = HouseList.sortingHat();
     }
 }

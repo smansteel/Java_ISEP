@@ -2,6 +2,7 @@ package info.tardieu.maxime.aripo_teure.ui;
 
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractEnemy;
 import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.AbstractSpell;
+import info.tardieu.maxime.aripo_teure.gameclasses.abstracts.enums.Actions;
 import info.tardieu.maxime.aripo_teure.gameclasses.attributes.Item;
 import info.tardieu.maxime.aripo_teure.gameclasses.storymanagement.Level;
 import info.tardieu.maxime.aripo_teure.gameclasses.wizard.Wizard;
@@ -16,7 +17,7 @@ public interface UserInteract {
     public void start() throws Exception;
     public String askName(String language);
     public void displaySpells(Wizard wiazrd);
-    public Object askAction(Wizard player, AbstractEnemy[] enemies);
+    public Object askAction(Wizard player, Level level);
     public AbstractSpell askSpell(Wizard player);
     public Item askPotion(Wizard player);
     public void displayInfos(Wizard player);
@@ -31,6 +32,9 @@ public interface UserInteract {
     public void displayEnemyDeath(AbstractEnemy enemy);
     public void displayPlayerDeath(Wizard player, AbstractEnemy enemy);
     public boolean askAlliance();
+    public Actions askUpgarde();
+    public void displayUpgrade(Actions action, Wizard player);
+
 
 
 }
